@@ -70,18 +70,34 @@ module.exports = function(grunt) {
         src: 'stylesheets/ab.less',
         dest: 'dist/css/<%= pkg.name %>.css'
       },
+    },
+    copy: {
+      fonts: {
+        expand: true,
+        flatten: true,
+        cwd: 'fonts/',
+        src: '**',
+        dest: 'dist/fonts/'
+      },
+      bootstrapFonts : {
+        expand: true,
+        flatten: true,
+        cwd: 'bootstrap/fonts/',
+        src: '**',
+        dest: 'dist/fonts/'
+      }
+    },
+    clean : {
+      dist: 'dist'
     }
   });
 
   // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-nodeunit');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-less');
+  require('load-grunt-tasks')(grunt, { scope: 'devDependencies' });
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'nodeunit', 'concat', 'uglify', 'less']);
+  grunt.registerTask('default', ['jshint', 'nodeunit', 'concat', 'uglify', 'less', 'copy']);
+  grunt.registerTask('copyAssets', ['copy:fonts', 'copy:bootstrapFonts'])
+  grunt.registerTask('dist', ['clean:dist', 'less:compileCore', 'copyAssets']);
 
 };

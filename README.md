@@ -9,7 +9,8 @@ This README would normally document whatever steps are necessary to get your app
 * npm install
 
 ### Usage guidelines ###
-* grunt less:compileCore
+* grunt less:compileCore (just css compile)
+* grunt dist (to create package)
 
 ### Contribution guidelines ###
 
