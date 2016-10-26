@@ -1,0 +1,179 @@
+.bold() {
+  font-weight: bold;
+}
+
+.fsize(@font-size) {
+  font-size: unit(@font-size, px);
+}
+
+.fweight(@font-weight) {
+  font-weight: @font-weight;
+}
+
+.lheight(@line-height) {
+  line-height: unit(@line-height, px);
+}
+
+.transition(@transition) {
+  -webkit-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
+
+.transform(@transform) {
+  -webkit-transform: @transform;
+      -ms-transform: @transform; // IE9 only
+       -o-transform: @transform;
+          transform: @transform;
+}
+
+.transition-transform(@transition) {
+  -webkit-transition: -webkit-transform @transition;
+     -moz-transition: -moz-transform @transition;
+       -o-transition: -o-transform @transition;
+          transition: transform @transition;
+}
+
+
+// Edited version of .button-variant - from Bootstrap
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+.button-variant-santafe(@color; @background; @border; @color-hover; @background-hover; @border-hover) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+  max-height: 48px;
+
+  &:active,
+  &:focus,
+  &:hover {
+    box-shadow: none;
+    outline: none;
+    @media (min-width: @screen-sm-min) {
+      color: @color-hover;
+      background-color: @background-hover;
+          border-color: @border-hover;
+    }
+  }
+
+  &.focus,
+  &.active {
+    color: @color-hover;
+    background-color: @background-hover;
+        border-color: @border-hover;
+    box-shadow: none;
+    outline: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: @background;
+          border-color: @border;
+    }
+  }
+
+  .badge {
+    color: @background;
+    background-color: @color;
+  }
+
+  .transition(~"color 150ms ease, background-color 150ms ease, border-color 150ms ease");
+
+}
+
+// Button sizes
+.button-size-santafe(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius; @border-width: 1px;) {
+  padding: @padding-vertical @padding-horizontal;
+  font-size: @font-size;
+  line-height: @line-height;
+  border-radius: @border-radius;
+  border-width: @border-width;
+}
+
+.button-label-santafe() {
+  .label {
+    padding: 0px;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    text-align: inherit;
+    border-radius: 0px;
+    top: 0px;
+  }
+}
+
+.rect(@size) {
+  width: unit(@size, px);
+  height: unit(@size, px);
+}
+
+.absolute-center {
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.fawesome(@size: 14px) {
+  font: normal normal normal @size/1 FontAwesome;
+}
+
+.fix-buttons() {
+  @media (max-width: @screen-xs-max) {
+    .slds-button {
+      &.btn {
+        & + .slds-button {
+          &.btn {
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.santafe-links() {
+  //div:not(.listContent):not(.uiDatePickerGrid):not(.menuList) {
+  //  a:not(.btn):not(.slds-th__action):not(.triggerLink):not(.trigger-link):not(.menuItemLink):not(.forceSearchSearchMruItem):not(.inlineEditTrigger):not(.tabHeader):not(.show-more):not(.edit-link):not(.datePicker-openIcon):not(.forceOutputLookup):not([role="menuItem"]) {
+  a {
+    &.sf-link {
+      .fsize(14);
+      .fweight(normal);
+      text-decoration: underline;
+      color: @black;
+      &:visited {
+        color: @black;
+      }
+      &:hover {
+        color: @chestnut;
+      }
+      .transition(color 100ms ease);
+    }
+  }
+}
+
+.aspect-ratio(@width, @height) {
+    position: relative;
+    &:before{
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: ((@height / @width) * 100%);
+    }
+
+    > .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}

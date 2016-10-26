@@ -1,0 +1,128 @@
+// _variables.less
+// Holds all variables used in project
+// -----------------------------------
+
+//== Colours
+
+// Black and dark colours
+@black: rgba(0, 0, 0, 1);                   // #000000
+@medium-jungle-green: rgba(41, 51, 60, 1);  // #29333C
+@mjgreen: @medium-jungle-green;             // #29333C
+@outer-space: rgba(69, 79, 88, 1);          // #454F58
+@ospace: @outer-space;                      // #454F58
+
+// Greys
+@pastel-gray: rgba(204, 204, 204, 1);       // #CCCCCC
+@pgray: @pastel-gray;                       // #CCCCCC
+@gainsboro: rgba(217, 217, 217, 1);         // #D9D9D9
+@platinum: rgba(229, 229, 229, 1);          // #E5E5E5
+@white-smoke: rgba(247, 247, 247, 1);       // #F7F7F7
+@wsmoke: @white-smoke;                      // #F7F7F7
+@white: rgba(255, 255, 255, 1);             // #FFFFFF
+@border-gray: rgba(151, 151, 151, 1);       // #979797
+
+// Reds
+@harvard-crimson: rgba(208, 2, 27, 1);      // #D0021B
+@hcrimson: @harvard-crimson;                // #D0021B
+@red: rgba(240, 20, 22, 1);                 // #F01416
+@chestnut: rgba(220, 87, 97, 1);            // #DC5761
+@pastel-red: rgba(246, 97, 109, 1);         // #F6616D
+@pred: @pastel-red;                         // #F6616D
+@btn-red: rgba(210, 0, 13, 1);              // #D2000D
+
+// Green
+@malachite: rgba(2, 195, 94, 1);            // #02C35E
+@success-bg: rgba(237, 248, 236, 1);        // #EDF8EC
+@green-check: rgba(0, 155, 102, 1);
+
+// Blue
+@blue: rgba(0, 134, 241, 1);                // #0086F1
+
+@orange: rgba(255, 160, 53, 1);             // #FFA035
+
+@star: rgb(255, 181, 0);
+
+//== Typography variables
+
+// Title
+@title-size: 64;
+@title-size-mob: 32;
+@title-line: 77;
+@title-line-mob: 38;
+
+// Headers
+@h1-size: 32;
+@h1-size-mob: 24;
+@h1-line: 42;
+@h1-line-mob: 29;
+
+@h2-size: 24;
+@h2-size-mob: 18;
+@h2-line: 32;
+@h2-line-mob: 22;
+
+@h3-size: 18;
+@h3-size-mob: 16;
+@h3-line: 26;
+@h3-line-mob: 19;
+
+@h4-size: 16;
+@h4-size-mob: 14;
+@h4-line: 18;
+@h4-line-mob: 16;
+
+@p-size: 14;
+@p-line: 24;
+
+@p2-size: 12;
+@p2-line: 18;
+
+
+// Paragraphs
+
+//== Bootstrap variables
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `@screen-xs` as of v3.0.1
+@screen-xs:                  320px;
+//** Deprecated `@screen-xs-min` as of v3.2.0
+@screen-xs-min:              @screen-xs;
+//** Deprecated `@screen-phone` as of v3.0.1
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `@screen-sm` as of v3.0.1
+//@screen-sm:                  688px;
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+//** Deprecated `@screen-tablet` as of v3.0.1
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `@screen-md` as of v3.0.1
+@screen-md:                  960px;
+@screen-md-min:              @screen-md;
+//** Deprecated `@screen-desktop` as of v3.0.1
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `@screen-lg` as of v3.0.1
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+//** Deprecated `@screen-lg-desktop` as of v3.0.1
+@screen-lg-desktop:          @screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+
+// Salesforce tokens
+@mq-small:            ~"only screen and (max-width: 47.9375em)";
+@mq-medium:           ~"only screen and (min-width: 48em)";
+@mq-medium-landscape: ~"only screen and (min-width: 48em) and (min-aspect-ratio: 4/3)";
+@mq-large:            ~"only screen and (min-width: 64.0625em)";
