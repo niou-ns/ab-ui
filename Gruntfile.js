@@ -54,7 +54,7 @@ module.exports = function(grunt) {
     },
     watch: {
       less: {
-        files: ['stylesheets/*.{less}'],
+        files: 'stylesheets/**/*.less',
         tasks: ['less:compileCore']
       },
     },
