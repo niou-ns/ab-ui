@@ -1,0 +1,39 @@
+.header {
+  .menu {
+    &-item {
+      &-link {
+        color: @black;
+        border-radius: 0;
+        &:hover, &:focus {
+          background: none;
+          border-bottom: 3px solid @fuel-yellow;
+        }
+      }
+      &.active{
+        a, a:hover{
+          color: @black;
+          font-weight: bold;
+          background: none;
+          border-bottom: 3px solid @fuel-yellow;
+        }
+      }
+    }
+  }
+  .icon-menu {
+    &-item {
+      &-link {
+        color: @black;
+        &:hover, &:focus {
+          background: none;
+        }
+      }
+      &-link.avatar {
+        padding: 0;
+        & img{
+          border-radius: 0 0 50% 50%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
