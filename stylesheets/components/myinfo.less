@@ -1,0 +1,60 @@
+.my-info {
+	&-avatar {
+		& img {
+			border-radius: 70px;
+			width: 150px;
+		}
+	}
+	.nav-section {
+    padding-right: 0px;
+    .my-info-nav {
+      padding-top: 30px;
+      &-item {
+      	border-bottom: 1px solid @black;
+        &-link, &-link:hover, &-link:focus {
+          color: @black;
+          .font-size(1.5);
+          background: none;
+        }
+      }
+      &-item.active {
+        a, a:hover, a:focus{
+            color: @black;
+            font-weight: bold;
+            .font-size(1.5);
+            background: none;
+          }
+      }
+    }
+  }
+	.title-container {
+    border-bottom: 1px solid @black;
+    margin-bottom: 20px;
+    .title {
+      color: @black;
+      font-weight: bold;
+      .font-size(2);
+    }
+    .actions-container {
+    	margin-top: 5px;
+    }
+  }
+  &-data {
+    .row {
+      margin-bottom: 20px;
+    }
+  	&-label {
+  		color: @black;
+  		.font-size(1.5);
+  		font-weight: bold;
+  		margin: 0 0 5px;
+  	}
+  	&-text {
+			color: @black;
+  	}
+  }
+  .separator {
+    border-bottom: 1px solid @black;
+    margin: 10px 0;
+  }
+}

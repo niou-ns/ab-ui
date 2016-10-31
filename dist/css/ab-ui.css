@@ -6721,9 +6721,32 @@ button.close {
     display: none !important;
   }
 }
+/* ==========================================================================
+   General mixins
+   ========================================================================== */
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+.small-gutter > [class*='col-'] {
+  padding-right: 1px;
+  padding-left: 1px;
+}
+.no-margin {
+  margin: 0px;
+}
 @font-face {
   font-family: 'boing-medium';
   src: url('../../fonts/boing/Boing-Medium.eot') format('enbedded-opentype'), url('../../fonts/boing/Boing-Medium.ttf') format('truetype'), url('../../fonts/boing/Boing-Medium.woff') format('woff'), url('../../fonts/boing/Boing-Medium.svg#boing-medium') format('svg');
+}
+/* ==========================================================================
+   Form Elements
+   ========================================================================== */
+.custom-form-group input,
+.custom-form-group select {
+  border: 1px solid #000000;
+  border-radius: 0;
+  padding: 3px 6px;
 }
 .my-team-client-tile .tile-image img {
   border-radius: 50%;
@@ -6885,5 +6908,65 @@ button.close {
   padding: 2px 0px;
   display: block;
   text-decoration: underline;
+}
+.my-info-avatar img {
+  border-radius: 70px;
+  width: 150px;
+}
+.my-info .nav-section {
+  padding-right: 0px;
+}
+.my-info .nav-section .my-info-nav {
+  padding-top: 30px;
+}
+.my-info .nav-section .my-info-nav-item {
+  border-bottom: 1px solid #000000;
+}
+.my-info .nav-section .my-info-nav-item-link,
+.my-info .nav-section .my-info-nav-item-link:hover,
+.my-info .nav-section .my-info-nav-item-link:focus {
+  color: #000000;
+  font-size: 15px;
+  font-size: 1.5rem;
+  background: none;
+}
+.my-info .nav-section .my-info-nav-item.active a,
+.my-info .nav-section .my-info-nav-item.active a:hover,
+.my-info .nav-section .my-info-nav-item.active a:focus {
+  color: #000000;
+  font-weight: bold;
+  font-size: 15px;
+  font-size: 1.5rem;
+  background: none;
+}
+.my-info .title-container {
+  border-bottom: 1px solid #000000;
+  margin-bottom: 20px;
+}
+.my-info .title-container .title {
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+  font-size: 2rem;
+}
+.my-info .title-container .actions-container {
+  margin-top: 5px;
+}
+.my-info-data .row {
+  margin-bottom: 20px;
+}
+.my-info-data-label {
+  color: #000000;
+  font-size: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0 5px;
+}
+.my-info-data-text {
+  color: #000000;
+}
+.my-info .separator {
+  border-bottom: 1px solid #000000;
+  margin: 10px 0;
 }
 /*# sourceMappingURL=ab-ui.css.map */
