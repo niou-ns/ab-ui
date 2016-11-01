@@ -6762,21 +6762,25 @@ button.close {
    ========================================================================== */
 .custom-form-group input,
 .custom-form-group select {
-  border: 1px solid #000000;
-  border-radius: 0;
+  border: none;
   padding: 3px 6px;
   -webkit-transition: 250ms border-color ease;
   -moz-transition: 250ms border-color ease;
   -o-transition: 250ms border-color ease;
   transition: 250ms border-color ease;
+  box-shadow: none;
 }
 .custom-form-group input:focus,
 .custom-form-group select:focus,
 .custom-form-group input:active,
 .custom-form-group select:active {
-  border: 1px solid #6288d9;
   outline: none;
   box-shadow: none;
+}
+.custom-form-group select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 .my-team-client-tile .tile-image img {
   border-radius: 50%;
@@ -6955,6 +6959,7 @@ button.close {
   text-decoration: underline;
 }
 .my-info-avatar img {
+  margin-bottom: 30px;
   border-radius: 70px;
   width: 150px;
 }

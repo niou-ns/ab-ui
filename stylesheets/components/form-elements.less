@@ -4,14 +4,18 @@
 
 .custom-form-group {
 	input, select{
-		border: 1px solid @black;
-		border-radius: 0;
+		border: none;
 		padding: 3px 6px;
 		.transition(~"250ms border-color ease");
+		box-shadow: none;
 		&:focus, &:active {
-			border: 1px solid @havelock-blue;
 			outline: none;
 			box-shadow: none;
 		}
+	}
+	select {
+		-webkit-appearance: none;
+   	-moz-appearance:    none;
+   	appearance:         none;
 	}
 }
