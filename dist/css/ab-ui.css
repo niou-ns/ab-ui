@@ -6741,6 +6741,9 @@ button.close {
 .no-margin {
   margin: 0px;
 }
+.mdi {
+  font-size: 20px;
+}
 @font-face {
   font-family: 'boing-medium';
   src: url('../../fonts/boing/Boing-Medium.eot') format('enbedded-opentype'), url('../../fonts/boing/Boing-Medium.ttf') format('truetype'), url('../../fonts/boing/Boing-Medium.woff') format('woff'), url('../../fonts/boing/Boing-Medium.svg#boing-medium') format('svg');
