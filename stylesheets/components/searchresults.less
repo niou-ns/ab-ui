@@ -1,0 +1,31 @@
+.search-result {
+  .title-container {
+    border-bottom: 1px solid @black;
+    margin-bottom: 20px;
+    .title {
+      color: @black;
+      font-weight: bold;
+      .font-size(2);
+    }
+  }
+  &-item {
+    margin-bottom: 10px;
+    &-section {
+      margin-top: 3px;
+      &-name {
+        .font-size(1);
+      }
+      &-icon {
+        .font-size(2);
+      }
+    }
+    &-title {
+      .font-size(2);
+      font-weight: bold;
+      margin: 0;
+    }
+    &-description {
+      .font-size(1.3);
+    }
+  }
+}

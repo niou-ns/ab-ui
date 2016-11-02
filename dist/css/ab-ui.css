@@ -6766,7 +6766,8 @@ button.close {
 .custom-form-group input,
 .custom-form-group select {
   border: none;
-  padding: 3px 6px;
+  border-radius: 0px;
+  padding: 0;
   -webkit-transition: 250ms border-color ease;
   -moz-transition: 250ms border-color ease;
   -o-transition: 250ms border-color ease;
@@ -6908,6 +6909,7 @@ button.close {
 }
 .links .title-container {
   border-bottom: 1px solid #000000;
+  margin-bottom: 20px;
 }
 .links .title-container .title {
   color: #000000;
@@ -7021,5 +7023,39 @@ button.close {
 .my-info .separator {
   border-bottom: 1px solid #000000;
   margin: 10px 0;
+}
+.search-result .title-container {
+  border-bottom: 1px solid #000000;
+  margin-bottom: 20px;
+}
+.search-result .title-container .title {
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+  font-size: 2rem;
+}
+.search-result-item {
+  margin-bottom: 10px;
+}
+.search-result-item-section {
+  margin-top: 3px;
+}
+.search-result-item-section-name {
+  font-size: 10px;
+  font-size: 1rem;
+}
+.search-result-item-section-icon {
+  font-size: 20px;
+  font-size: 2rem;
+}
+.search-result-item-title {
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+.search-result-item-description {
+  font-size: 13px;
+  font-size: 1.3rem;
 }
 /*# sourceMappingURL=ab-ui.css.map */
