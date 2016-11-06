@@ -13,40 +13,45 @@
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <i class="mdi mdi-menu" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"></i>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+            <i class="mdi mdi-menu"></i>
+          </button>
         </div>
 
         <ul class="nav navbar-nav navbar-right navbar-icons">
           <li class="icon-menu-item">
-            <a class="icon-menu-item-link" href="javascript:void(0)"><i class="mdi mdi-search"></i></a>
+            <a class="icon-menu-item-link" href="javascript:void(0)" title="Search"><i class="mdi mdi-search"></i></a>
           </li>
           <li class="icon-menu-item">
-            <a class="icon-menu-item-link" href="javascript:void(0)"><i class="mdi mdi-playlist-add-check"></i></a>
+            <a class="icon-menu-item-link" href="javascript:void(0)" title="Requests"><i class="mdi mdi-playlist-add-check"></i></a>
           </li>
           <li class="icon-menu-item">
-            <a class="icon-menu-item-link" href="javascript:void(0)"><i class="mdi mdi-flash-on"></i></a>
+            <a class="icon-menu-item-link" href="javascript:void(0)" title="Actions"><i class="mdi mdi-flash-on"></i></a>
           </li>
           <li class="icon-menu-item">
-            <a class="icon-menu-item-link" href="javascript:void(0)"><i class="mdi mdi-notifications"></i></a>
+            <a class="icon-menu-item-link" href="javascript:void(0)" title="Notifications"><i class="mdi mdi-notifications"></i></a>
           </li>
           <li>
             <a class="icon-menu-item-link avatar" href="javascript:void(0)"><img src="images/th_profile_avatar.png" /></a>
           </li>
-          <li class="icon-menu-item">
-            <a class="icon-menu-item-link" href="javascript:void(0)"><i class="mdi mdi-arrow-downward"></i></a>
+          <li class="dropdown">
+            <a class="icon-menu-item-link" href="javascript:void(0)" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="mdi mdi-arrow-downward"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Change profile picture</a></li>
+            </ul>
           </li>
         </ul>
 
         <div class="clearfix visible-xs"></div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="nav navbar-nav navbar-left collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="nav navbar-nav navbar-left collapse navbar-collapse" id="main-menu">
             <ul class="nav navbar-nav menu">
-              <li class="menu-item active"><a class="menu-item-link" href="javascript:void(0)">Home</a></li>
-              <li class="menu-item"><a class="menu-item-link" href="javascript:void(0)">My Info</a></li>
-              <li class="menu-item"><a class="menu-item-link" href="javascript:void(0)">My Team</a></li>
+              <li class="menu-item active"><a class="menu-item-link" href="search.html">Home</a></li>
+              <li class="menu-item"><a class="menu-item-link" href="myinfo.html">My Info</a></li>
+              <li class="menu-item"><a class="menu-item-link" href="myteam.html">My Team</a></li>
               <li class="menu-item"><a class="menu-item-link" href="javascript:void(0)">Our Company</a></li>
-              <li class="menu-item"><a class="menu-item-link" href="javascript:void(0)">Links</a></li>
+              <li class="menu-item"><a class="menu-item-link" href="links.html">Links</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->

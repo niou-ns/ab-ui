@@ -85,10 +85,30 @@ module.exports = function(grunt) {
         cwd: 'bootstrap/fonts/',
         src: '**',
         dest: 'dist/fonts/'
+      },
+      jsExtras: {
+        expand: true,
+        flatten: true,
+        cwd: 'extras/js/',
+        src: '*/*',
+        dest: 'dist/js/'
+      },
+      jsBootstrap: {
+        expand: true,
+        flatten: true,
+        cwd: 'bootstrap/dist/js/',
+        src: 'bootstrap.min.js',
+        dest: 'dist/js/'
+      },
+      resourceBundle: {
+        expand: true,
+        cwd: 'dist',
+        src: '*/*',
+        dest: '../sfdc/ab-des/resource-bundles/AB_ui.resource/'
       }
     },
     clean : {
-      dist: 'dist'
+      dist: 'dist',
     }
   });
 
@@ -97,7 +117,8 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('default', ['jshint', 'nodeunit', 'concat', 'uglify', 'less', 'copy']);
-  grunt.registerTask('copyAssets', ['copy:fonts', 'copy:bootstrapFonts'])
+  grunt.registerTask('copyAssets', ['copy:fonts', 'copy:bootstrapFonts', 'copy:jsExtras', 'copy:jsBootstrap'])
   grunt.registerTask('dist', ['clean:dist', 'less:compileCore', 'copyAssets']);
+  grunt.registerTask('deploy', ['dist', 'copy:resourceBundle']);
 
 };
