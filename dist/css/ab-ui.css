@@ -9842,11 +9842,23 @@ button.close {
 .search .news-link {
   margin: 10px 0 0 0;
 }
+.search .news-link a,
+.search .news-link a:hover,
+.search .news-link a:visited {
+  color: #000000;
+  text-decoration: none;
+}
 .news .search-link-container {
   margin: 10px 0 0 0;
 }
 .news .search-link {
   margin: 10px 0 0 0;
+}
+.news .search-link a,
+.news .search-link a:hover,
+.news .search-link a:visited {
+  color: #000000;
+  text-decoration: none;
 }
 .news-container {
   margin: 50px 0 0 0;
@@ -9951,7 +9963,8 @@ button.close {
   border-bottom: 3px solid #edb92c;
 }
 .header .menu-item.active a,
-.header .menu-item.active a:hover {
+.header .menu-item.active a:hover,
+.header .menu-item.active a:focus {
   color: #000000;
   font-weight: bold;
   background: none;
@@ -10075,6 +10088,12 @@ button.close {
 }
 .my-info .title-container .actions-container {
   margin-top: 5px;
+}
+.my-info .title-container .actions-container .actions-link,
+.my-info .title-container .actions-container .actions-link:hover,
+.my-info .title-container .actions-container .actions-link:visited {
+  color: #000000;
+  text-decoration: none;
 }
 .my-info-data .row {
   margin-bottom: 20px;
