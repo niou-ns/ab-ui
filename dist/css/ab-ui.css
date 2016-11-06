@@ -9860,9 +9860,90 @@ button.close {
 .news-item img {
   margin: 0 0 10px 0;
 }
+.navbar-ab {
+  border-radius: 0px;
+  border: none;
+}
+@media (max-width: 767px) {
+  .navbar-ab .mdi {
+    font-size: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-ab .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar-ab .container .navbar-collapse {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .navbar-ab .container .navbar-left {
+    order: -1;
+  }
+  .navbar-ab .container .navbar-right {
+    order: 1;
+    display: flex;
+    align-items: center;
+  }
+  .navbar-ab .navbar-nav.menu > li {
+    padding: 0px 1px;
+  }
+}
+@media (max-width: 767px) {
+  .navbar-ab .navbar-header {
+    display: block;
+    float: left;
+  }
+  .navbar-ab .navbar-header .mdi-menu {
+    color: #000000;
+    padding: 10px;
+    line-height: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-ab .navbar-header {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .navbar-ab .navbar-icons {
+    margin-top: 0px;
+  }
+  .navbar-ab .navbar-icons.navbar-right {
+    float: right;
+  }
+}
+@media (max-width: 767px) {
+  .navbar-ab .navbar-icons > li {
+    float: left;
+  }
+  .navbar-ab .navbar-icons > li > a {
+    padding: 10px;
+  }
+}
+.navbar-ab .navbar-icons > li > a.avatar img {
+  max-width: 100px;
+}
+@media (max-width: 991px) {
+  .navbar-ab .navbar-icons > li > a.avatar img {
+    max-width: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .navbar-ab .navbar-icons > li > a.avatar img {
+    max-width: 50px;
+  }
+}
 .header .menu-item-link {
   color: #000000;
   border-radius: 0;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: 250ms border-color ease;
+  -moz-transition: 250ms border-color ease;
+  -o-transition: 250ms border-color ease;
+  transition: 250ms border-color ease;
 }
 .header .menu-item-link:hover,
 .header .menu-item-link:focus {
@@ -9878,10 +9959,15 @@ button.close {
 }
 .header .icon-menu-item-link {
   color: #000000;
+  -webkit-transition: 250ms color ease;
+  -moz-transition: 250ms color ease;
+  -o-transition: 250ms color ease;
+  transition: 250ms color ease;
 }
 .header .icon-menu-item-link:hover,
 .header .icon-menu-item-link:focus {
   background: none;
+  color: #686c78;
 }
 .header .icon-menu-item-link.avatar {
   padding: 0;

@@ -1,9 +1,97 @@
+.navbar {
+  &-ab {
+    border-radius: 0px;
+    border: none;
+
+    @media (max-width: @screen-xs-max) {
+      .mdi {
+        font-size: 24px;
+      }
+    }
+
+    @media (min-width: @screen-sm-min) {
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .navbar-collapse {
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+        .navbar-left {
+          order: -1;
+        }
+        .navbar-right {
+          order: 1;
+          display: flex;
+          align-items: center;
+        }
+      }
+      .navbar-nav {
+        &.menu {
+          & > li {
+              padding: 0px 1px;
+          }
+        }
+      }
+    }
+
+    .navbar {
+      &-header {
+        @media (max-width: @screen-xs-max) {
+          display: block;
+          float: left;
+          .mdi-menu {
+            color: @black;
+            padding: 10px;
+            line-height: 20px;
+          }
+        }
+        @media (min-width: @screen-sm-min) {
+          display: none;
+        }
+      }
+      &-icons {
+        @media (max-width: @screen-xs-max) {
+          margin-top: 0px;
+          &.navbar-right {
+            float: right;
+          }
+        }
+        & > li {
+          @media (max-width: @screen-xs-max) {
+            float: left;
+            & > a {
+              padding: 10px;
+            }
+          }
+          & > a {
+            &.avatar {
+              img {
+                @media (max-width: @screen-sm-max) {
+                  max-width: 60px;
+                }
+                @media (max-width: @screen-xs-max) {
+                  max-width: 50px;
+                }
+                max-width: 100px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .header {
   .menu {
     &-item {
       &-link {
         color: @black;
         border-radius: 0;
+        border-bottom: 3px solid transparent;
+        .transition(~"250ms border-color ease");
         &:hover, &:focus {
           background: none;
           border-bottom: 3px solid @fuel-yellow;
@@ -23,8 +111,10 @@
     &-item {
       &-link {
         color: @black;
+        .transition(~"250ms color ease");
         &:hover, &:focus {
           background: none;
+          color: @shuttle-gray;
         }
       }
       &-link.avatar {
