@@ -9880,6 +9880,54 @@ button.close {
   .navbar-ab .mdi {
     font-size: 24px;
   }
+  .navbar-ab .nav > li.dropdown {
+    position: static;
+  }
+  .navbar-ab .nav > li.dropdown .dropdown-menu {
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    left: auto;
+    right: 0px;
+    top: 48px;
+  }
+}
+.navbar-ab .nav > li .notifications,
+.navbar-ab .nav > li.open .notifications {
+  color: #000000;
+  border: 1px solid #000000;
+}
+.navbar-ab .nav > li .notifications.dropdown-menu,
+.navbar-ab .nav > li.open .notifications.dropdown-menu {
+  padding: 0px;
+}
+@media (max-width: 767px) {
+  .navbar-ab .nav > li .notifications.dropdown-menu,
+  .navbar-ab .nav > li.open .notifications.dropdown-menu {
+    width: 100%;
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    left: auto;
+    right: 0px;
+    top: 48px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-ab .nav > li .notifications.dropdown-menu,
+  .navbar-ab .nav > li.open .notifications.dropdown-menu {
+    width: 480px;
+    top: 72%;
+  }
+}
+.navbar-ab .nav > li .notifications-header,
+.navbar-ab .nav > li.open .notifications-header {
+  padding: 10px;
+  border-bottom: 1px solid #000000;
+}
+.navbar-ab .nav > li .notifications-list,
+.navbar-ab .nav > li.open .notifications-list {
+  padding: 15px;
 }
 @media (min-width: 768px) {
   .navbar-ab .container {
@@ -9921,6 +9969,11 @@ button.close {
     display: none;
   }
 }
+@media (min-width: 768px) {
+  .navbar-ab .navbar-icons {
+    position: relative;
+  }
+}
 @media (max-width: 767px) {
   .navbar-ab .navbar-icons {
     margin-top: 0px;
@@ -9950,6 +10003,21 @@ button.close {
     max-width: 50px;
   }
 }
+.navbar-ab .navbar-icons .icon-notifications-counter:after {
+  content: attr(data-badge);
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 10px;
+  background: #e0771c;
+  color: #ffffff;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  border-radius: 50%;
+  font-family: Arial;
+}
 .header .menu-item-link {
   color: #000000;
   border-radius: 0;
@@ -9971,6 +10039,9 @@ button.close {
   font-weight: bold;
   background: none;
   border-bottom: 3px solid #edb92c;
+}
+.header .icon-menu-item-notifications {
+  position: static;
 }
 .header .icon-menu-item-link {
   color: #000000;

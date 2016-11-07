@@ -28,14 +28,35 @@
           <li class="icon-menu-item">
             <a class="icon-menu-item-link" href="javascript:void(0)" title="Actions"><i class="mdi mdi-flash-on"></i></a>
           </li>
-          <li class="icon-menu-item">
-            <a class="icon-menu-item-link" href="javascript:void(0)" title="Notifications"><i class="mdi mdi-notifications"></i></a>
+          <li class="icon-menu-item icon-menu-item-notifications">
+            <a class="icon-menu-item-link" href="javascript:void(0)" title="Notifications" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <i class="mdi mdi-notifications icon-notifications icon-notifications-counter" data-badge="100"></i>
+            </a>
+
+            <div class="dropdown-menu notifications">
+              <div class="notifications-header">
+                <div class="row">
+                  <div class="col-xs-8">
+                    <span>Notifications</span>
+                  </div>
+                  <div class="col-xs-4 text-right">
+                    <i class="mdi mdi-notifications"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="notifications-list">
+
+              </div>
+            </div>
+
           </li>
           <li>
             <a class="icon-menu-item-link avatar" href="javascript:void(0)"><img src="images/th_profile_avatar.png" /></a>
           </li>
           <li class="dropdown">
-            <a class="icon-menu-item-link" href="javascript:void(0)" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="mdi mdi-arrow-downward"></i></a>
+            <a class="icon-menu-item-link" href="javascript:void(0)" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <i class="mdi mdi-arrow-downward"></i>
+            </a>
             <ul class="dropdown-menu">
               <li><a href="#">Change profile picture</a></li>
             </ul>

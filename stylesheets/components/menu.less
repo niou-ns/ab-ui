@@ -7,6 +7,24 @@
       .mdi {
         font-size: 24px;
       }
+      .nav {
+        & > li {
+          &.dropdown {
+            position: static;
+            .dropdown-menu {
+              .dropdown-menu-mobile();
+            }
+          }
+        }
+      }
+    }
+
+    .nav {
+      & > li {
+        &, &.open {
+          .include-notifications();
+        }        
+      }
     }
 
     @media (min-width: @screen-sm-min) {
@@ -54,6 +72,9 @@
         }
       }
       &-icons {
+        @media (min-width: @screen-sm-min) {
+          position: relative;
+        }
         @media (max-width: @screen-xs-max) {
           margin-top: 0px;
           &.navbar-right {
@@ -78,6 +99,26 @@
                 }
                 max-width: 100px;
               }
+            }
+          }
+        }
+
+        .icon-notifications {
+          &-counter {
+            &:after {
+              content: attr(data-badge);
+              position: absolute;
+              top: -8px;
+              right: -8px;
+              font-size: 10px;
+              background: @zest;
+              color: @white;
+              width: 18px;
+              height: 18px;
+              text-align:center;
+              line-height: 18px;
+              border-radius:50%;
+              font-family: Arial;
             }
           }
         }
@@ -111,6 +152,9 @@
   }
   .icon-menu {
     &-item {
+      &-notifications {
+        position: static;
+      }
       &-link {
         color: @black;
         .transition(~"250ms color ease");
@@ -142,6 +186,40 @@
       &:hover {
         background-color: @athens-gray;
       }
+    }
+  }
+}
+
+.dropdown-menu-mobile() {
+  position: absolute;
+  background-color: @white;
+  border: 1px solid @black;
+  left: auto;
+  right: 0px;
+  top: 48px;
+}
+
+.include-notifications() {
+  .notifications {
+    color: @black;
+    border: 1px solid @black;
+    &.dropdown-menu {
+      padding: 0px;
+      @media (max-width: @screen-xs-max) {
+        width: 100%;
+        .dropdown-menu-mobile();
+      }
+      @media (min-width: @screen-sm-min) {
+        width: 480px;
+        top: 72%;
+      }
+    }
+    &-header {
+      padding: 10px;
+      border-bottom: 1px solid @black;
+    }
+    &-list {
+      padding: 15px;
     }
   }
 }
