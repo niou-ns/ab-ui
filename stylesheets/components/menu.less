@@ -220,6 +220,13 @@
     }
     &-list {
       padding: 15px;
+      @media (max-width: @screen-xs-max) {
+        max-height: 200px;
+      }
+      @media (min-width: @screen-sm-min) {
+        max-height: 300px;
+      }
+      overflow-y: scroll;
       .notification {
         &-record {
           margin-bottom: 10px;
@@ -241,6 +248,10 @@
           font-size: 12px;
         }
       }
+    }
+    &-button {
+      padding: 10px;
+      text-align: center;
     }
   }
 }
