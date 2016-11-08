@@ -9929,6 +9929,29 @@ button.close {
 .navbar-ab .nav > li.open .notifications-list {
   padding: 15px;
 }
+.navbar-ab .nav > li .notifications-list .notification-record,
+.navbar-ab .nav > li.open .notifications-list .notification-record {
+  margin-bottom: 10px;
+}
+.navbar-ab .nav > li .notifications-list .notification-record a,
+.navbar-ab .nav > li.open .notifications-list .notification-record a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+.navbar-ab .nav > li .notifications-list .notification-record a:hover,
+.navbar-ab .nav > li.open .notifications-list .notification-record a:hover {
+  text-decoration: underline;
+}
+.navbar-ab .nav > li .notifications-list .notification-date,
+.navbar-ab .nav > li.open .notifications-list .notification-date {
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 12px;
+}
 @media (min-width: 768px) {
   .navbar-ab .container {
     display: flex;
@@ -10003,7 +10026,7 @@ button.close {
     max-width: 50px;
   }
 }
-.navbar-ab .navbar-icons .icon-notifications-counter:after {
+.navbar-ab .navbar-icons .icon-badge-counter:after {
   content: attr(data-badge);
   position: absolute;
   top: -8px;
