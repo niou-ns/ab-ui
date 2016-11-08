@@ -9979,6 +9979,10 @@ button.close {
   padding: 10px;
   text-align: center;
 }
+.navbar-ab .nav > li.open.icon-menu-item > a {
+  color: #d7892a;
+  background-color: #ffffff;
+}
 @media (min-width: 768px) {
   .navbar-ab .container {
     display: flex;
@@ -10092,6 +10096,9 @@ button.close {
 }
 .header .icon-menu-item-notifications {
   position: static;
+}
+.header .icon-menu-item.active .icon-menu-item-link {
+  color: #d7892a;
 }
 .header .icon-menu-item-link {
   color: #000000;
