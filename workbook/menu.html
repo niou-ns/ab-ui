@@ -19,10 +19,19 @@
         </div>
 
         <ul class="nav navbar-nav navbar-right navbar-icons">
-          <li class="icon-menu-item">
-            <a class="icon-menu-item-link" href="javascript:void(0)" title="Search">
+          <li class="icon-menu-item dropdown">
+            <a class="icon-menu-item-link search-dropdown-toggle" href="javascript:void(0)" title="Search" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               <i class="mdi mdi-search"></i>
             </a>
+            <div class="search-dropdown dropdown-menu">
+              <div class="col-xs-12">
+                <form>
+                  <div class="form-group">
+                    <input type="search" class="form-control" placeholder="Search" required="required" />
+                  </div>
+                </form>
+              </div>
+            </div>
           </li>
           <li class="icon-menu-item">
             <a class="icon-menu-item-link" href="javascript:void(0)" title="Requests">

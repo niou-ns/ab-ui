@@ -9769,6 +9769,15 @@ button.close {
   -moz-appearance: none;
   appearance: none;
 }
+.form-control::-moz-placeholder {
+  font-size: 14px;
+}
+.form-control:-ms-input-placeholder {
+  font-size: 14px;
+}
+.form-control::-webkit-input-placeholder {
+  font-size: 14px;
+}
 .my-team-client-tile .tile-image img {
   border-radius: 50%;
   margin: 0 auto;
@@ -10118,6 +10127,24 @@ button.close {
 }
 .dropdown-menu > li > a:hover {
   background-color: #c2b5b5;
+}
+.dropdown-menu.search-dropdown .form-group {
+  margin-bottom: 0px;
+}
+.dropdown-menu.search-dropdown .form-group input {
+  border-radius: 0px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid #000000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.dropdown-menu.search-dropdown .form-group input:focus,
+.dropdown-menu.search-dropdown .form-group input:active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
 }
 .links .title-container {
   border-bottom: 1px solid #000000;

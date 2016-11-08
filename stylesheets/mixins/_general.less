@@ -16,3 +16,13 @@
 .mdi {
 	font-size: @icon-size;
 }
+
+// Placeholder text
+.placeholder-fix() {
+  // Firefox
+  &::-moz-placeholder {
+    font-size: 14px;
+  }
+  &:-ms-input-placeholder { font-size: 14px; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { font-size: 14px; } // Safari and Chrome
+}
