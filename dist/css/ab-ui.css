@@ -10032,7 +10032,7 @@ button.close {
   top: -8px;
   right: -8px;
   font-size: 10px;
-  background: #e0771c;
+  background: #d7892a;
   color: #ffffff;
   width: 18px;
   height: 18px;
@@ -10053,7 +10053,7 @@ button.close {
 .header .menu-item-link:hover,
 .header .menu-item-link:focus {
   background: none;
-  border-bottom: 3px solid #edb92c;
+  border-bottom: 3px solid #d7892a;
 }
 .header .menu-item.active a,
 .header .menu-item.active a:hover,
@@ -10061,7 +10061,7 @@ button.close {
   color: #000000;
   font-weight: bold;
   background: none;
-  border-bottom: 3px solid #edb92c;
+  border-bottom: 3px solid #d7892a;
 }
 .header .icon-menu-item-notifications {
   position: static;
@@ -10076,7 +10076,7 @@ button.close {
 .header .icon-menu-item-link:hover,
 .header .icon-menu-item-link:focus {
   background: none;
-  color: #686c78;
+  color: #c2b5b5;
 }
 .header .icon-menu-item-link.avatar {
   padding: 0;
@@ -10099,7 +10099,7 @@ button.close {
   transition: 250ms background-color ease;
 }
 .dropdown-menu > li > a:hover {
-  background-color: #e6e8ed;
+  background-color: #c2b5b5;
 }
 .links .title-container {
   border-bottom: 1px solid #000000;
