@@ -9928,6 +9928,19 @@ button.close {
 .navbar-ab .nav > li .notifications-list,
 .navbar-ab .nav > li.open .notifications-list {
   padding: 15px;
+  overflow-y: scroll;
+}
+@media (max-width: 767px) {
+  .navbar-ab .nav > li .notifications-list,
+  .navbar-ab .nav > li.open .notifications-list {
+    max-height: 200px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-ab .nav > li .notifications-list,
+  .navbar-ab .nav > li.open .notifications-list {
+    max-height: 300px;
+  }
 }
 .navbar-ab .nav > li .notifications-list .notification-record,
 .navbar-ab .nav > li.open .notifications-list .notification-record {
@@ -9951,6 +9964,11 @@ button.close {
   font-style: italic;
   font-weight: lighter;
   font-size: 12px;
+}
+.navbar-ab .nav > li .notifications-button,
+.navbar-ab .nav > li.open .notifications-button {
+  padding: 10px;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .navbar-ab .container {
