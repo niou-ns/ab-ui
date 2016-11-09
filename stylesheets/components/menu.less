@@ -8,11 +8,13 @@
         font-size: 24px;
       }
       .nav {
-        & > li {
-          &.dropdown {
-            position: static;
-            .dropdown-menu {
-              .dropdown-menu-mobile();
+        &.navbar-right {
+          & > li {
+            &.dropdown {
+              position: static;
+              .dropdown-menu {
+                .dropdown-menu-mobile();
+              }
             }
           }
         }
@@ -29,6 +31,12 @@
             & > a {
               color: @brandy-punch;
               background-color: @white;
+            }
+          }
+          &.menu-item {
+            & > a {
+              background-color: @white;
+              border-color: @brandy-punch;
             }
           }
         }
@@ -138,6 +146,30 @@
 .header {
   .menu {
     &-item {
+      &.dropdown {
+        & > a {
+          padding-right: 20px;
+        }
+        .mdi-arrow-drop-down {
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+          line-height: 36px;
+          font-size: 28px;
+          @media (max-width: @screen-xs-max) {
+            right: 0px;
+            width: 60px;
+            text-align: center;
+          }
+          @media (min-width: @screen-sm-min) {
+            right: -15px;
+          }
+          .transition(~"250ms color ease");
+          &:hover {
+            color: @brandy-punch;
+          }
+        }
+      }
       &-link {
         color: @black;
         border-radius: 0;

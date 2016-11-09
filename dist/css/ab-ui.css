@@ -9889,10 +9889,10 @@ button.close {
   .navbar-ab .mdi {
     font-size: 24px;
   }
-  .navbar-ab .nav > li.dropdown {
+  .navbar-ab .nav.navbar-right > li.dropdown {
     position: static;
   }
-  .navbar-ab .nav > li.dropdown .dropdown-menu {
+  .navbar-ab .nav.navbar-right > li.dropdown .dropdown-menu {
     position: absolute;
     background-color: #ffffff;
     border: 1px solid #000000;
@@ -9983,6 +9983,10 @@ button.close {
   color: #d7892a;
   background-color: #ffffff;
 }
+.navbar-ab .nav > li.open.menu-item > a {
+  background-color: #ffffff;
+  border-color: #d7892a;
+}
 @media (min-width: 768px) {
   .navbar-ab .container {
     display: flex;
@@ -10071,6 +10075,35 @@ button.close {
   line-height: 18px;
   border-radius: 50%;
   font-family: Arial;
+}
+.header .menu-item.dropdown > a {
+  padding-right: 20px;
+}
+.header .menu-item.dropdown .mdi-arrow-drop-down {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  line-height: 36px;
+  font-size: 28px;
+  -webkit-transition: 250ms color ease;
+  -moz-transition: 250ms color ease;
+  -o-transition: 250ms color ease;
+  transition: 250ms color ease;
+}
+@media (max-width: 767px) {
+  .header .menu-item.dropdown .mdi-arrow-drop-down {
+    right: 0px;
+    width: 60px;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .header .menu-item.dropdown .mdi-arrow-drop-down {
+    right: -15px;
+  }
+}
+.header .menu-item.dropdown .mdi-arrow-drop-down:hover {
+  color: #d7892a;
 }
 .header .menu-item-link {
   color: #000000;
@@ -10309,5 +10342,24 @@ button.close {
 .search-result-item-description {
   font-size: 13px;
   font-size: 1.3rem;
+}
+.notifications-list .notification-record {
+  margin-bottom: 10px;
+}
+.notifications-list .notification-record a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+.notifications-list .notification-record a:hover {
+  text-decoration: underline;
+}
+.notifications-list .notification-date {
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 12px;
 }
 /*# sourceMappingURL=ab-ui.css.map */
