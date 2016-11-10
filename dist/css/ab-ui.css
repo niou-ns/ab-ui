@@ -10520,6 +10520,9 @@ button.close {
   border: none;
   background: none;
   outline: none;
+  color: #000000;
+  font-size: 13px;
+  font-size: 1.3rem;
 }
 .my-info .title-container {
   border-bottom: 1px solid #000000;
