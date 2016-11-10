@@ -10051,6 +10051,15 @@ button.close {
   border-bottom: 1px solid #000000;
   color: #000000;
 }
+.search .inputbox::-moz-placeholder {
+  font-size: 14px;
+}
+.search .inputbox:-ms-input-placeholder {
+  font-size: 14px;
+}
+.search .inputbox::-webkit-input-placeholder {
+  font-size: 14px;
+}
 .search .inputbox:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
