@@ -10514,6 +10514,12 @@ button.close {
   font-size: 1.5rem;
   background: none;
 }
+.my-info .nav-section-print-btn,
+.my-info .nav-section-print-btn:focus {
+  border: none;
+  background: none;
+  outline: none;
+}
 .my-info .title-container {
   border-bottom: 1px solid #000000;
   margin-bottom: 20px;
