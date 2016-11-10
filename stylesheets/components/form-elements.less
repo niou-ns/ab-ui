@@ -24,3 +24,40 @@
 .form-control {
   .placeholder-fix();
 }
+
+/*******************************/
+/** Override Bootstrap styles **/
+/*******************************/
+
+.form-control {
+	border-color: @black;
+	border-radius: 0px;
+	color: @black;
+	-webkit-box-shadow: none;
+					box-shadow: none;
+	&:focus, &:active {
+		outline: none;
+		box-shadow: none;
+	}
+}
+
+/**************************/
+/** Override SLDS styles **/
+/**************************/
+
+.uiInput--input .input,
+.uiInput--input.input {
+	&.form-control {
+		color: @black;
+		border-radius: 0px;
+		border: 1px solid @black;
+		display: block;
+		min-height: 0;
+		padding: 6px 12px;
+		line-height: 1.42857143;
+		&:focus {
+			border-color: black;
+			box-shadow: none;
+		}
+	}
+}
