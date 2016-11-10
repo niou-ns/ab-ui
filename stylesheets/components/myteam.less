@@ -1,7 +1,16 @@
 .my-team {
   &-client-tile {
+    padding-top: 10px;
+    padding-bottom: 10px;
     .tile {
       &-image {
+        text-align: center;
+        i {
+          &.mdi {
+            font-size: 80px;
+            display: block;
+          }
+        }
         img {
           border-radius: 50%;
           margin: 0 auto;
@@ -12,6 +21,20 @@
       }
       &-controls {
         text-align: right;
+        .mdi-settings {
+          opacity: 0;
+          margin-left: 5px;
+          &.active {
+            opacity: 1;
+            cursor: pointer;
+          }
+        }
+        i {
+          &.mdi {
+            color: @black;
+            .team-hover();
+          }
+        }
       }
       &-data {
         padding-top: 15px;
@@ -30,10 +53,30 @@
               &.mail-link {
                 text-decoration: underline;
               }
+              .team-hover();
             }
           }
         }
       }
     }
+  }
+
+  .mdi-close {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    .team-hover();
+  }
+
+  .subteam-active, .subteam {
+    background-color: rgb(242, 242, 242);
+  }
+
+}
+
+.team-hover() {
+  .transition(~"250ms ease color");
+  &:hover {
+    color: @brandy-punch;
   }
 }

@@ -1074,7 +1074,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333333;
+  color: #000;
   background-color: #fff;
 }
 input,
@@ -2899,7 +2899,7 @@ select[multiple].input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373;
+  color: #404040;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -5007,7 +5007,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #333333;
+  color: #000;
 }
 .alert {
   padding: 15px;
@@ -9736,6 +9736,10 @@ button.close {
   align-items: center;
   justify-content: center;
 }
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
 .box-absolute {
   position: absolute;
   top: 0px;
@@ -9778,6 +9782,17 @@ button.close {
 .form-control::-webkit-input-placeholder {
   font-size: 14px;
 }
+.my-team-client-tile {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.my-team-client-tile .tile-image {
+  text-align: center;
+}
+.my-team-client-tile .tile-image i.mdi {
+  font-size: 80px;
+  display: block;
+}
 .my-team-client-tile .tile-image img {
   border-radius: 50%;
   margin: 0 auto;
@@ -9787,6 +9802,24 @@ button.close {
 }
 .my-team-client-tile .tile-controls {
   text-align: right;
+}
+.my-team-client-tile .tile-controls .mdi-settings {
+  opacity: 0;
+  margin-left: 5px;
+}
+.my-team-client-tile .tile-controls .mdi-settings.active {
+  opacity: 1;
+  cursor: pointer;
+}
+.my-team-client-tile .tile-controls i.mdi {
+  color: #000000;
+  -webkit-transition: 250ms ease color;
+  -moz-transition: 250ms ease color;
+  -o-transition: 250ms ease color;
+  transition: 250ms ease color;
+}
+.my-team-client-tile .tile-controls i.mdi:hover {
+  color: #d7892a;
 }
 .my-team-client-tile .tile-data {
   padding-top: 15px;
@@ -9798,9 +9831,32 @@ button.close {
 .my-team-client-tile .tile-data .client-links a {
   color: #000000;
   display: block;
+  -webkit-transition: 250ms ease color;
+  -moz-transition: 250ms ease color;
+  -o-transition: 250ms ease color;
+  transition: 250ms ease color;
 }
 .my-team-client-tile .tile-data .client-links a.mail-link {
   text-decoration: underline;
+}
+.my-team-client-tile .tile-data .client-links a:hover {
+  color: #d7892a;
+}
+.my-team .mdi-close {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 24px;
+  -webkit-transition: 250ms ease color;
+  -moz-transition: 250ms ease color;
+  -o-transition: 250ms ease color;
+  transition: 250ms ease color;
+}
+.my-team .mdi-close:hover {
+  color: #d7892a;
+}
+.my-team .subteam-active,
+.my-team .subteam {
+  background-color: #f2f2f2;
 }
 .search {
   position: relative;
