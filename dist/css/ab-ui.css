@@ -6733,10 +6733,10 @@ button.close {
   .siteforceNapiliBody .cCenterPanel {
     max-width: none;
   }
-  .siteforceNapiliBody .cCenterPanel .contentRegion.slds-col--padded {
-    padding-right: 0px;
-    padding-left: 0px;
-  }
+}
+.siteforceNapiliBody .cCenterPanel .contentRegion.slds-col--padded {
+  padding-right: 0px;
+  padding-left: 0px;
 }
 /* FONT PATH
  * -------------------------- */
@@ -9875,6 +9875,15 @@ button.close {
   width: 100%;
   height: 100%;
 }
+.top-row .btn {
+  margin-top: 20px;
+}
+.btn .mdi {
+  font-size: 14px;
+}
+.btn .mdi:first-child {
+  margin-right: 5px;
+}
 .btn {
   border-radius: 0px;
 }
@@ -10641,6 +10650,10 @@ button.close {
   font-weight: lighter;
   font-size: 12px;
 }
+.nav-pagination {
+  border-top: 1px solid #000000;
+  text-align: center;
+}
 .pagination .mdi {
   font-size: 14px;
 }
@@ -10649,7 +10662,8 @@ button.close {
   border-radius: 0px;
   color: #000000;
 }
-.pagination > li > a:hover {
+.pagination > li > a:hover,
+.pagination > li > a:focus {
   background-color: #ffffff;
   color: #b4431a;
 }
@@ -10657,7 +10671,8 @@ button.close {
   background-color: #ffffff;
   color: #d7892a;
 }
-.pagination > .active > a:hover {
+.pagination > .active > a:hover,
+.pagination > .active > a:focus {
   background-color: #ffffff;
   color: #d7892a;
 }

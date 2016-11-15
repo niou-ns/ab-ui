@@ -1,13 +1,13 @@
 // Override standard Salesforce CSS
 
-@media only screen and (min-aspect-ratio: 4/3) and (min-width: 48em), only screen and (min-width: 64.0625em) {
-  .siteforceNapiliBody .cCenterPanel {
+.siteforceNapiliBody .cCenterPanel {
+  @media only screen and (min-aspect-ratio: 4/3) and (min-width: 48em), only screen and (min-width: 64.0625em) {
     max-width: none;
-    .contentRegion {
-      &.slds-col--padded {
-        padding-right: 0px;
-        padding-left: 0px;
-      }
+  }
+  .contentRegion {
+    &.slds-col--padded {
+      padding-right: 0px;
+      padding-left: 0px;
     }
   }
 }
