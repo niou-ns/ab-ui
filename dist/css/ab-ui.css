@@ -9953,7 +9953,8 @@ button.close {
 /** Override Bootstrap styles **/
 /*******************************/
 .form-control {
-  border-color: #000000;
+  border: none;
+  /* border-color: @black; */
   border-radius: 0px;
   color: #000000;
   -webkit-box-shadow: none;
@@ -9977,7 +9978,8 @@ button.close {
 /**************************/
 .uiInput--input .input.form-control,
 .uiInput--input.input.form-control {
-  border-color: #000000;
+  border: none;
+  /* border-color: @black; */
   border-radius: 0px;
   color: #000000;
   -webkit-box-shadow: none;
@@ -10007,7 +10009,8 @@ button.close {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-color: #000000;
+  border: none;
+  /* border-color: @black; */
   border-radius: 0px;
   color: #000000;
   -webkit-box-shadow: none;
