@@ -6729,6 +6729,15 @@ button.close {
     display: none !important;
   }
 }
+@media only screen and (min-aspect-ratio: 4/3) and (min-width: 48em), only screen and (min-width: 64.0625em) {
+  .siteforceNapiliBody .cCenterPanel {
+    max-width: none;
+  }
+  .siteforceNapiliBody .cCenterPanel .contentRegion.slds-col--padded {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
 /* FONT PATH
  * -------------------------- */
 @font-face {
@@ -9862,6 +9871,10 @@ button.close {
   left: 0px;
   right: 0px;
 }
+.autofit {
+  width: 100%;
+  height: 100%;
+}
 .btn {
   border-radius: 0px;
 }
@@ -9943,6 +9956,11 @@ button.close {
 .my-team-header {
   border-bottom: 1px solid #000000;
   margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  .my-team-header {
+    padding-bottom: 10px;
+  }
 }
 @media (min-width: 768px) {
   .my-team-header .title-holder {
