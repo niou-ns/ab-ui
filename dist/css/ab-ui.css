@@ -9951,7 +9951,8 @@ button.close {
 .uiInput--input.input.form-control {
   color: #000000;
   border-radius: 0px;
-  border: 1px solid #000000;
+  /*border: 1px solid @black;*/
+  border: none;
   display: block;
   min-height: 0;
   padding: 6px 12px;
