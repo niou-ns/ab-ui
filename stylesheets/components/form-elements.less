@@ -23,8 +23,6 @@
   .placeholder-fix();
 }
 
-@padding-base-horizontal: 0px;
-
 .form-group {
 	&-select {
 		position: relative;
@@ -52,6 +50,8 @@
 /** Override Bootstrap styles **/
 /*******************************/
 
+@padding-inputs-horizontal: 0px;
+
 .form-control-function() {
 	//* From git commit - client requested to remove borders *//
 	border: none;
@@ -62,7 +62,7 @@
 					box-shadow: none;
 	// Copied from Bootstrap forms.less
 	height: @input-height-base;
-	padding: @padding-base-vertical @padding-base-horizontal;
+	padding: @padding-base-vertical @padding-inputs-horizontal;
 	line-height: @line-height-base;
 	// **** //
 	.transition(~"250ms border-color ease");
@@ -98,7 +98,7 @@
 		.none-appearance();
 		// Include previous class
 		.form-control-function();
-		padding: @padding-base-vertical 20px @padding-base-vertical @padding-base-horizontal;
+		padding: @padding-base-vertical 20px @padding-base-vertical @padding-inputs-horizontal;
 		background: none;
 
 		height: @input-height-base;
