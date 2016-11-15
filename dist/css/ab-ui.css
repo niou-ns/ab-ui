@@ -9929,6 +9929,26 @@ button.close {
 .form-control::-webkit-input-placeholder {
   font-size: 14px;
 }
+.form-group-select {
+  position: relative;
+}
+.form-group-select:after {
+  content: "\e5cf";
+  font: normal normal normal 14px/1 "Material Design Icons";
+  font-size: 20px;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 1;
+  position: relative;
+  word-wrap: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  position: absolute;
+  right: 2px;
+  top: calc((34px / 2) - 10px);
+}
 /*******************************/
 /** Override Bootstrap styles **/
 /*******************************/
@@ -9938,29 +9958,82 @@ button.close {
   color: #000000;
   -webkit-box-shadow: none;
   box-shadow: none;
+  height: 34px;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  -webkit-transition: 250ms border-color ease;
+  -moz-transition: 250ms border-color ease;
+  -o-transition: 250ms border-color ease;
+  transition: 250ms border-color ease;
 }
 .form-control:focus,
 .form-control:active {
   outline: none;
   box-shadow: none;
+  border-color: #d7892a;
 }
 /**************************/
 /** Override SLDS styles **/
 /**************************/
 .uiInput--input .input.form-control,
 .uiInput--input.input.form-control {
-  color: #000000;
+  border-color: #000000;
   border-radius: 0px;
-  border: 1px solid #000000;
-  display: block;
-  min-height: 0;
+  color: #000000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  height: 34px;
   padding: 6px 12px;
   line-height: 1.42857143;
+  -webkit-transition: 250ms border-color ease;
+  -moz-transition: 250ms border-color ease;
+  -o-transition: 250ms border-color ease;
+  transition: 250ms border-color ease;
+  display: block;
+  min-height: 0;
 }
 .uiInput--input .input.form-control:focus,
-.uiInput--input.input.form-control:focus {
-  border-color: black;
+.uiInput--input.input.form-control:focus,
+.uiInput--input .input.form-control:active,
+.uiInput--input.input.form-control:active {
+  outline: none;
   box-shadow: none;
+  border-color: #d7892a;
+}
+.uiInput--select .select.form-control,
+.uiInput--select.select.form-control,
+.uiInput--select.select:not([multiple]).form-control,
+.uiInput--select .select:not([multiple]).form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-color: #000000;
+  border-radius: 0px;
+  color: #000000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  -webkit-transition: 250ms border-color ease;
+  -moz-transition: 250ms border-color ease;
+  -o-transition: 250ms border-color ease;
+  transition: 250ms border-color ease;
+  padding: 6px 20px 12px 6px;
+  background: none;
+  height: 34px;
+  font-size: 14px;
+}
+.uiInput--select .select.form-control:focus,
+.uiInput--select.select.form-control:focus,
+.uiInput--select.select:not([multiple]).form-control:focus,
+.uiInput--select .select:not([multiple]).form-control:focus,
+.uiInput--select .select.form-control:active,
+.uiInput--select.select.form-control:active,
+.uiInput--select.select:not([multiple]).form-control:active,
+.uiInput--select .select:not([multiple]).form-control:active {
+  outline: none;
+  box-shadow: none;
+  border-color: #d7892a;
 }
 .my-team-header {
   border-bottom: 1px solid #000000;

@@ -15,9 +15,7 @@
 		}
 	}
 	select {
-		-webkit-appearance: none;
-   	-moz-appearance:    none;
-   	appearance:         none;
+		.none-appearance();
 	}
 }
 
@@ -25,20 +23,54 @@
   .placeholder-fix();
 }
 
+.form-group {
+	&-select {
+		position: relative;
+		&:after {
+			content: "\e5cf";
+			font: normal normal normal 14px/1 "Material Design Icons";
+	    font-size: 20px;
+	    display: inline-block;
+	    text-transform: none;
+	    letter-spacing: normal;
+	    line-height: 1;
+	    position: relative;
+	    word-wrap: normal;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	    transform: translate(0, 0);
+			position: absolute;
+			right: 2px;
+			top: calc((@input-height-base / 2) - 10px);
+		}
+	}
+}
+
 /*******************************/
 /** Override Bootstrap styles **/
 /*******************************/
 
-.form-control {
+.form-control-function() {
 	border-color: @black;
 	border-radius: 0px;
 	color: @black;
 	-webkit-box-shadow: none;
 					box-shadow: none;
+	// Copied from Bootstrap forms.less
+	height: @input-height-base;
+	padding: @padding-base-vertical @padding-base-horizontal;
+	line-height: @line-height-base;
+	// **** //
+	.transition(~"250ms border-color ease");
 	&:focus, &:active {
 		outline: none;
 		box-shadow: none;
+		border-color: @brandy-punch;
 	}
+}
+
+.form-control {
+	.form-control-function();
 }
 
 /**************************/
@@ -48,16 +80,24 @@
 .uiInput--input .input,
 .uiInput--input.input {
 	&.form-control {
-		color: @black;
-		border-radius: 0px;
-		border: 1px solid @black;
+		.form-control-function();
 		display: block;
 		min-height: 0;
-		padding: 6px 12px;
-		line-height: 1.42857143;
-		&:focus {
-			border-color: black;
-			box-shadow: none;
-		}
+	}
+}
+
+.uiInput--select .select,
+.uiInput--select.select,
+.uiInput--select.select:not([multiple]),
+.uiInput--select .select:not([multiple]) {
+	&.form-control {
+		.none-appearance();
+		// Include previous class
+		.form-control-function();
+		padding: @padding-base-vertical 20px @padding-base-horizontal @padding-base-vertical;
+		background: none;
+
+		height: @input-height-base;
+	  font-size: @font-size-base;
 	}
 }
