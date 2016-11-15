@@ -9948,18 +9948,20 @@ button.close {
 /** Override SLDS styles **/
 /**************************/
 .uiInput--input .input.form-control,
-.uiInput--input.input.form-control {
+.uiInput--input.input.form-control,
+.uiInput--select.select.form-control {
   color: #000000;
   border-radius: 0px;
   /*border: 1px solid @black;*/
   border: none;
   display: block;
   min-height: 0;
-  padding: 6px 12px;
+  padding: 6px 0;
   line-height: 1.42857143;
 }
 .uiInput--input .input.form-control:focus,
-.uiInput--input.input.form-control:focus {
+.uiInput--input.input.form-control:focus,
+.uiInput--select.select.form-control:focus {
   border-color: black;
   box-shadow: none;
 }
