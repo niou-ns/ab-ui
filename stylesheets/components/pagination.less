@@ -1,0 +1,26 @@
+.pagination {
+  .mdi {
+    font-size: 14px;
+  }
+  & > li {
+    & > a {
+      border: none;
+      border-radius: 0px;
+      color: @black;
+      &:hover {
+        background-color: @white;
+        color: @orange-roughly;
+      }
+    }
+  }
+  & > .active {
+    & > a {
+      background-color: @white;
+      color: @brandy-punch;
+      &:hover {
+        background-color: @white;
+        color: @brandy-punch;
+      }
+    }
+  }
+}

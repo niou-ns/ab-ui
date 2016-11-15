@@ -10641,4 +10641,24 @@ button.close {
   font-weight: lighter;
   font-size: 12px;
 }
+.pagination .mdi {
+  font-size: 14px;
+}
+.pagination > li > a {
+  border: none;
+  border-radius: 0px;
+  color: #000000;
+}
+.pagination > li > a:hover {
+  background-color: #ffffff;
+  color: #b4431a;
+}
+.pagination > .active > a {
+  background-color: #ffffff;
+  color: #d7892a;
+}
+.pagination > .active > a:hover {
+  background-color: #ffffff;
+  color: #d7892a;
+}
 /*# sourceMappingURL=ab-ui.css.map */
