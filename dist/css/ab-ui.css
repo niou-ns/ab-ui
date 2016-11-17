@@ -9858,6 +9858,15 @@ button.close {
 a.red-link {
   color: #8b0006;
 }
+.text-truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.white-space-normal {
+  white-space: normal;
+}
 .flex-center {
   display: flex;
   align-items: center;
@@ -11015,5 +11024,113 @@ input[type="search"].form-control {
 .pagination > .active > a:focus {
   background-color: #ffffff;
   color: #d7892a;
+}
+.table-fixed {
+  table-layout: fixed;
+  width: 100%;
+}
+.table-fixed td {
+  white-space: nowrap;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .table-stacked-xs thead {
+    display: none;
+  }
+  .table-stacked-xs tbody tr {
+    display: block;
+  }
+  .table-stacked-xs tbody td {
+    display: block;
+    text-align: right;
+  }
+  .table-stacked-xs tbody td:before {
+    color: #000000;
+    text-transform: uppercase;
+    display: block;
+    content: attr(data-label);
+    float: left;
+  }
+  .table-stacked-xs tbody td:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+@media (max-width: 991px) {
+  .table-stacked-sm thead {
+    display: none;
+  }
+  .table-stacked-sm tbody tr {
+    display: block;
+  }
+  .table-stacked-sm tbody td {
+    display: block;
+    text-align: right;
+  }
+  .table-stacked-sm tbody td:before {
+    color: #000000;
+    text-transform: uppercase;
+    display: block;
+    content: attr(data-label);
+    float: left;
+  }
+  .table-stacked-sm tbody td:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+@media (max-width: 1199px) {
+  .table-stacked-md thead {
+    display: none;
+  }
+  .table-stacked-md tbody tr {
+    display: block;
+  }
+  .table-stacked-md tbody td {
+    display: block;
+    text-align: right;
+  }
+  .table-stacked-md tbody td:before {
+    color: #000000;
+    text-transform: uppercase;
+    display: block;
+    content: attr(data-label);
+    float: left;
+  }
+  .table-stacked-md tbody td:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+.table-stacked-lg thead {
+  display: none;
+}
+.table-stacked-lg tbody tr {
+  display: block;
+}
+.table-stacked-lg tbody td {
+  display: block;
+  text-align: right;
+}
+.table-stacked-lg tbody td:before {
+  color: #000000;
+  text-transform: uppercase;
+  display: block;
+  content: attr(data-label);
+  float: left;
+}
+.table-stacked-lg tbody td:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.table-font-small {
+  font-size: 12px;
+}
+.table .cell-shrink {
+  width: 1%;
 }
 /*# sourceMappingURL=ab-ui.css.map */
