@@ -24,10 +24,9 @@
 }
 
 .form-group {
-	&-select {
+	&-select, &-search {
 		position: relative;
 		&:after {
-			content: "\e5cf";
 			font: normal normal normal 14px/1 "Material Design Icons";
 	    font-size: 20px;
 	    display: inline-block;
@@ -43,6 +42,35 @@
 			right: 2px;
 			top: calc((@input-height-base / 2) - 10px);
 		}
+	}
+	&-select {
+		&:after {
+			content: "\e5cf";
+		}
+	}
+	&-search {
+		&:after {
+			content: "\e8b6";
+		}
+		input[type="text"] {
+			&.form-control {
+				padding-right: 22px;
+			}
+		}
+	}
+}
+
+.form-control {
+	.form-control-function();
+}
+
+select {
+	.select-form-control();
+}
+
+input[type="search"] {
+	&.form-control {
+		padding-right: 22px;
 	}
 }
 
@@ -73,8 +101,17 @@
 	}
 }
 
-.form-control {
-	.form-control-function();
+.select-form-control {
+	&.form-control {
+		.none-appearance();
+		// Include previous class
+		.form-control-function();
+		padding: @padding-base-vertical 20px @padding-base-vertical @padding-inputs-horizontal;
+		background: none;
+
+		height: @input-height-base;
+	  font-size: @font-size-base;
+	}
 }
 
 /**************************/
@@ -94,14 +131,5 @@
 .uiInput--select.select,
 .uiInput--select.select:not([multiple]),
 .uiInput--select .select:not([multiple]) {
-	&.form-control {
-		.none-appearance();
-		// Include previous class
-		.form-control-function();
-		padding: @padding-base-vertical 20px @padding-base-vertical @padding-inputs-horizontal;
-		background: none;
-
-		height: @input-height-base;
-	  font-size: @font-size-base;
-	}
+	.select-form-control();
 }

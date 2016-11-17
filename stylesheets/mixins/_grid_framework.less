@@ -1,0 +1,70 @@
+// Framework grid generation
+//
+// Used only by Bootstrap to generate the correct number of grid classes given
+// any value of `@grid-extra-columns`.
+
+// Extended Bootstrap Framework for grid generation
+
+
+.float-grid-columns-extra(@class, @grid-extra-columns) {
+  .col(@index) { // initial
+    @item: ~".col-@{class}-@{index}";
+    .col((@index + 1), @item);
+  }
+  .col(@index, @list) when (@index =< @grid-extra-columns) { // general
+    @item: ~".col-@{class}-@{index}";
+    .col((@index + 1), ~"@{list}, @{item}");
+  }
+  .col(@index, @list) when (@index > @grid-extra-columns) { // terminal
+    @{list} {
+      float: left;
+    }
+  }
+  .col(1); // kickstart it
+}
+
+.calc-grid-column-extra(@index, @class, @type, @grid-extra-columns) when (@type = width) and (@index > 0) {
+  .col-@{class}-@{index} {
+    width: percentage((@index / @grid-extra-columns));
+  }
+}
+.calc-grid-column-extra(@index, @class, @type, @grid-extra-columns) when (@type = push) and (@index > 0) {
+  .col-@{class}-push-@{index} {
+    left: percentage((@index / @grid-extra-columns));
+  }
+}
+.calc-grid-column-extra(@index, @class, @type, @grid-extra-columns) when (@type = push) and (@index = 0) {
+  .col-@{class}-push-0 {
+    left: auto;
+  }
+}
+.calc-grid-column-extra(@index, @class, @type, @grid-extra-columns) when (@type = pull) and (@index > 0) {
+  .col-@{class}-pull-@{index} {
+    right: percentage((@index / @grid-extra-columns));
+  }
+}
+.calc-grid-column-extra(@index, @class, @type, @grid-extra-columns) when (@type = pull) and (@index = 0) {
+  .col-@{class}-pull-0 {
+    right: auto;
+  }
+}
+.calc-grid-column-extra(@index, @class, @type, @grid-extra-columns) when (@type = offset) {
+  .col-@{class}-offset-@{index} {
+    margin-left: percentage((@index / @grid-extra-columns));
+  }
+}
+
+// Basic looping in LESS
+.loop-grid-columns-extra(@index, @class, @type, @grid-extra-columns) when (@index >= 0) {
+  .calc-grid-column-extra(@index, @class, @type, @grid-extra-columns);
+  // next iteration
+  .loop-grid-columns-extra((@index - 1), @class, @type, @grid-extra-columns);
+}
+
+.make-extra-grid(@class, @grid-extra-columns) {
+  .float-grid-columns-extra(@class, @grid-extra-columns);
+  .loop-grid-columns-extra(@grid-extra-columns, @class, width, @grid-extra-columns);
+  .loop-grid-columns-extra(@grid-extra-columns, @class, pull, @grid-extra-columns);
+  .loop-grid-columns-extra(@grid-extra-columns, @class, push, @grid-extra-columns);
+  .loop-grid-columns-extra(@grid-extra-columns, @class, offset, @grid-extra-columns);
+}
