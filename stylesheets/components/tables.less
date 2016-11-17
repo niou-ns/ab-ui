@@ -30,6 +30,23 @@
       }
     }
   }
+
+  .is-sortable {
+    cursor: pointer;
+    position: relative;
+    padding-right: 25px;
+    &:hover {
+      color: @brandy-punch;
+    }
+    .sort-icons {
+      position: absolute;
+      right: 3px;
+      .mdi {
+        font-size: 14px;
+      }
+    }
+  }
+
   &-fixed {
     table-layout: fixed;
     width: 100%;
@@ -42,12 +59,6 @@
     &-xs {
       @media (max-width: @screen-xs-max) {
         .table-stacked();
-        & > tbody {
-          & > tr {
-            border-top: 1px solid @black;
-            border-bottom: 1px solid @black;
-          }
-        }
       }
     }
     &-sm {
@@ -70,9 +81,11 @@
       .dropdown-menu {
         font-size: 12px;
       }
-      .sort-icons {
-        .mdi {
-          font-size: 11px;
+      .is-sortable {
+        .sort-icons {
+          .mdi {
+            font-size: 11px;
+          }
         }
       }
     }
@@ -84,46 +97,34 @@
       }
     }
   }
-  .is-sortable {
-    cursor: pointer;
-    position: relative;
-    padding-right: 25px;
-    &:hover {
-      color: @brandy-punch;
-    }
-    .sort-icons {
-      position: absolute;
-      right: 3px;
-      .mdi {
-        font-size: 14px;
-      }
-    }
-  }
-
 }
 
 .table-stacked() {
-  thead {
+  & > thead {
     display: none;
   }
-  tbody {
-    tr {
+  & > tbody {
+    & > tr {
       display: block;
-    }
-    td {
-      display: block;
-      text-align: right;
-      &:before {
-        color: @black;
-        text-transform: uppercase;
-        display: block;
-        content: attr(data-label);
-        float: left;
+      border-bottom: 1px solid @black;
+      &:first-child {
+        border-top: 1px solid @black;
       }
-      &:after {
-        clear: both;
-        content: "";
+      & > td {
         display: block;
+        text-align: right;
+        &:before {
+          color: @black;
+          font-weight: bold;
+          display: block;
+          content: attr(data-label);
+          float: left;
+        }
+        &:after {
+          clear: both;
+          content: "";
+          display: block;
+        }
       }
     }
   }
@@ -135,8 +136,10 @@
 .filters-row {
   margin-top: 20px;
   margin-bottom: 20px;
-  .form-group {
-    margin-bottom: 0px;
+  @media (min-width: @screen-sm-min) {
+    .form-group {
+      margin-bottom: 0px;
+    }
   }
 }
 
