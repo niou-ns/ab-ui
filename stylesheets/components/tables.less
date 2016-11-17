@@ -21,6 +21,12 @@
             color: @red-berry;
           }
         }
+        &:last-child {
+          .dropdown-menu {
+            right: 0px;
+            left: auto;
+          }
+        }
       }
     }
   }
@@ -61,6 +67,9 @@
   &-font {
     &-small {
       font-size: 12px;
+      .dropdown-menu {
+        font-size: 12px;
+      }
       .sort-icons {
         .mdi {
           font-size: 11px;

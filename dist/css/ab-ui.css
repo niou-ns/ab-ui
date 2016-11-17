@@ -11121,6 +11121,10 @@ input[type="search"].form-control {
 .table > tbody > tr > td a:hover {
   color: #8b0006;
 }
+.table > tbody > tr > td:last-child .dropdown-menu {
+  right: 0px;
+  left: auto;
+}
 .table-fixed {
   table-layout: fixed;
   width: 100%;
@@ -11240,6 +11244,9 @@ input[type="search"].form-control {
   width: 100%;
 }
 .table-font-small {
+  font-size: 12px;
+}
+.table-font-small .dropdown-menu {
   font-size: 12px;
 }
 .table-font-small .sort-icons .mdi {
