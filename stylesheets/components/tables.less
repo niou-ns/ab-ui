@@ -1,3 +1,7 @@
+.cell-shrink {
+  width: 1%;
+}
+
 .table {
   &-fixed {
     table-layout: fixed;
@@ -30,11 +34,30 @@
   &-font {
     &-small {
       font-size: 12px;
+      .sort-icons {
+        .mdi {
+          font-size: 11px;
+        }
+      }
     }
   }
-  .cell-shrink {
-    width: 1%;
+
+  .is-sortable {
+    cursor: pointer;
+    position: relative;
+    padding-right: 25px;
+    &:hover {
+      color: @brandy-punch;
+    }
+    .sort-icons {
+      position: absolute;
+      right: 3px;
+      .mdi {
+        font-size: 14px;
+      }
+    }
   }
+
 }
 
 .table-stacked() {
@@ -61,5 +84,8 @@
         display: block;
       }
     }
+  }
+  .cell-shrink {
+    width: 100%;
   }
 }

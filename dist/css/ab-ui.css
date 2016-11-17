@@ -11025,6 +11025,9 @@ input[type="search"].form-control {
   background-color: #ffffff;
   color: #d7892a;
 }
+.cell-shrink {
+  width: 1%;
+}
 .table-fixed {
   table-layout: fixed;
   width: 100%;
@@ -11056,6 +11059,9 @@ input[type="search"].form-control {
     content: "";
     display: block;
   }
+  .table-stacked-xs .cell-shrink {
+    width: 100%;
+  }
 }
 @media (max-width: 991px) {
   .table-stacked-sm thead {
@@ -11079,6 +11085,9 @@ input[type="search"].form-control {
     clear: both;
     content: "";
     display: block;
+  }
+  .table-stacked-sm .cell-shrink {
+    width: 100%;
   }
 }
 @media (max-width: 1199px) {
@@ -11104,6 +11113,9 @@ input[type="search"].form-control {
     content: "";
     display: block;
   }
+  .table-stacked-md .cell-shrink {
+    width: 100%;
+  }
 }
 .table-stacked-lg thead {
   display: none;
@@ -11127,10 +11139,28 @@ input[type="search"].form-control {
   content: "";
   display: block;
 }
+.table-stacked-lg .cell-shrink {
+  width: 100%;
+}
 .table-font-small {
   font-size: 12px;
 }
-.table .cell-shrink {
-  width: 1%;
+.table-font-small .sort-icons .mdi {
+  font-size: 11px;
+}
+.table .is-sortable {
+  cursor: pointer;
+  position: relative;
+  padding-right: 25px;
+}
+.table .is-sortable:hover {
+  color: #d7892a;
+}
+.table .is-sortable .sort-icons {
+  position: absolute;
+  right: 3px;
+}
+.table .is-sortable .sort-icons .mdi {
+  font-size: 14px;
 }
 /*# sourceMappingURL=ab-ui.css.map */
