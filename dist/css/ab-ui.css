@@ -10963,6 +10963,10 @@ input[type="search"].form-control {
   font-weight: bold;
   margin: 0;
 }
+.search-result-item-title a,
+.search-result-item-title a:hover {
+  color: #000000;
+}
 .search-result-item-description {
   font-size: 13px;
   font-size: 1.3rem;
