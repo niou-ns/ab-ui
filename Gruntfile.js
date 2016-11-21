@@ -74,9 +74,9 @@ module.exports = function(grunt) {
     copy: {
       fonts: {
         expand: true,
-        flatten: true,
+        flatten: false,
         cwd: 'fonts/',
-        src: '**',
+        src: ['**', '*/*'],
         dest: 'dist/fonts/'
       },
       bootstrapFonts : {
@@ -103,7 +103,7 @@ module.exports = function(grunt) {
       resourceBundle: {
         expand: true,
         cwd: 'dist',
-        src: '*/*',
+        src: ['*/*', '*/*/*'],
         dest: '../sfdc/ab-des/resource-bundles/AB_ui.resource/'
       }
     },
