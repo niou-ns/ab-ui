@@ -10479,6 +10479,8 @@ input[type="search"].form-control {
 .slds-form-element__control .slds-checkbox--toggle [type=checkbox][disabled] + .slds-checkbox--faux_container .slds-checkbox--faux,
 .slds-form-element__control .slds-checkbox--toggle [type=checkbox]:focus + .slds-checkbox--faux_container .slds-checkbox--faux {
   background-color: #c8b6b6;
+  border-color: #000000;
+  box-shadow: none;
 }
 .slds-form-element__control .slds-checkbox--toggle [type=checkbox][disabled] + .slds-checkbox--faux_container .slds-checkbox--faux:after,
 .slds-form-element__control .slds-checkbox--toggle [type=checkbox]:focus + .slds-checkbox--faux_container .slds-checkbox--faux:after {
@@ -10560,7 +10562,7 @@ input[type="search"].form-control {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   position: absolute;
-  right: 2px;
+  right: 5px;
   top: calc((34px / 2) - 10px);
   z-index: 0;
 }
