@@ -133,3 +133,56 @@ input[type="search"] {
 .uiInput--select .select:not([multiple]) {
 	.select-form-control();
 }
+
+.slds-form-element {
+	&__control {
+		.slds-checkbox {
+			&--toggle {
+				[type=checkbox] {
+					& + .slds-checkbox--faux_container {
+						color: @black;
+						font-size: 14px;
+					}
+					&:checked {
+						& + .slds-checkbox--faux_container {
+							.slds-checkbox--faux {
+								border-color: @black;
+								background-color: @brandy-punch;
+								&:after {
+									content: '';
+									display: none;
+								}
+								&:before {
+									border-right: none;
+									border-left: 1px solid @black;
+									height: 100%;
+									top: 0px;
+									bottom: 0px;
+									width: 50%;
+									left: auto;
+									right: 0px;
+								}
+							}
+						}
+					}
+				}
+				.slds-checkbox--faux {
+					width: 40px;
+					height: 20px;
+					border-radius: 0px;
+					border: 1px solid @black;
+					background: transparent;
+					&:after, &:before {
+						border-radius: 0px;
+						border-right: 1px solid @black;
+						height: 100%;
+						top: 0px;
+						bottom: 0px;
+						width: 50%;
+						left: 0px;
+					}
+				}
+			}
+		}
+	}
+}

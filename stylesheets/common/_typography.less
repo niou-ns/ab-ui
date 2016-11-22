@@ -74,6 +74,13 @@
     font-style: normal;
 }
 
+body {
+  font-family: 'Basis Grotesque';
+}
+
+@headings-font-family: 'Basis Grotesque';
+@headings-font-weight: bold;
+
 // Override Community Styles
 .siteforceNapiliStyle {
   // Copied from bootstrap styles
@@ -145,5 +152,11 @@ a {
   }
   &-nowrap {
     white-space: nowrap;
+  }
+}
+
+.word-break {
+  &-all {
+      word-break: break-all;
   }
 }

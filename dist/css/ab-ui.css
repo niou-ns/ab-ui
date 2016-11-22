@@ -1173,8 +1173,8 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: inherit;
-  font-weight: 500;
+  font-family: 'Basis Grotesque';
+  font-weight: bold;
   line-height: 1.1;
   color: inherit;
 }
@@ -9782,6 +9782,9 @@ button.close {
   font-weight: normal;
   font-style: normal;
 }
+body {
+  font-family: 'Basis Grotesque';
+}
 .siteforceNapiliStyle h1,
 .siteforceNapiliStyle h2,
 .siteforceNapiliStyle h3,
@@ -9794,8 +9797,8 @@ button.close {
 .siteforceNapiliStyle .h4,
 .siteforceNapiliStyle .h5,
 .siteforceNapiliStyle .h6 {
-  font-family: inherit;
-  font-weight: 500;
+  font-family: 'Basis Grotesque';
+  font-weight: bold;
   line-height: 1.1;
   color: inherit;
 }
@@ -9901,7 +9904,7 @@ a.red-link {
   color: #8b0006;
 }
 a.red-link:hover {
-  color: #9c2508;
+  color: #ba1b13;
 }
 .text-truncate {
   max-width: 100%;
@@ -9914,6 +9917,9 @@ a.red-link:hover {
 }
 .white-space-nowrap {
   white-space: nowrap;
+}
+.word-break-all {
+  word-break: break-all;
 }
 .flex-center {
   display: flex;
@@ -10302,7 +10308,7 @@ a.red-link:hover {
 .form-control:active {
   outline: none;
   box-shadow: none;
-  border-color: #d7892a;
+  border-color: #f28836;
 }
 select.form-control {
   -webkit-appearance: none;
@@ -10329,7 +10335,7 @@ select.form-control:focus,
 select.form-control:active {
   outline: none;
   box-shadow: none;
-  border-color: #d7892a;
+  border-color: #f28836;
 }
 input[type="search"].form-control {
   padding-right: 22px;
@@ -10362,7 +10368,7 @@ input[type="search"].form-control {
 .select-form-control.form-control:active {
   outline: none;
   box-shadow: none;
-  border-color: #d7892a;
+  border-color: #f28836;
 }
 /**************************/
 /** Override SLDS styles **/
@@ -10391,7 +10397,7 @@ input[type="search"].form-control {
 .uiInput--input.input.form-control:active {
   outline: none;
   box-shadow: none;
-  border-color: #d7892a;
+  border-color: #f28836;
 }
 .uiInput--select .select.form-control,
 .uiInput--select.select.form-control,
@@ -10427,7 +10433,46 @@ input[type="search"].form-control {
 .uiInput--select .select:not([multiple]).form-control:active {
   outline: none;
   box-shadow: none;
-  border-color: #d7892a;
+  border-color: #f28836;
+}
+.slds-form-element__control .slds-checkbox--toggle [type=checkbox] + .slds-checkbox--faux_container {
+  color: #000000;
+  font-size: 14px;
+}
+.slds-form-element__control .slds-checkbox--toggle [type=checkbox]:checked + .slds-checkbox--faux_container .slds-checkbox--faux {
+  border-color: #000000;
+  background-color: #f28836;
+}
+.slds-form-element__control .slds-checkbox--toggle [type=checkbox]:checked + .slds-checkbox--faux_container .slds-checkbox--faux:after {
+  content: '';
+  display: none;
+}
+.slds-form-element__control .slds-checkbox--toggle [type=checkbox]:checked + .slds-checkbox--faux_container .slds-checkbox--faux:before {
+  border-right: none;
+  border-left: 1px solid #000000;
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+  width: 50%;
+  left: auto;
+  right: 0px;
+}
+.slds-form-element__control .slds-checkbox--toggle .slds-checkbox--faux {
+  width: 40px;
+  height: 20px;
+  border-radius: 0px;
+  border: 1px solid #000000;
+  background: transparent;
+}
+.slds-form-element__control .slds-checkbox--toggle .slds-checkbox--faux:after,
+.slds-form-element__control .slds-checkbox--toggle .slds-checkbox--faux:before {
+  border-radius: 0px;
+  border-right: 1px solid #000000;
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+  width: 50%;
+  left: 0px;
 }
 .my-team-header {
   border-bottom: 1px solid #000000;
@@ -10457,7 +10502,7 @@ input[type="search"].form-control {
   border-right: none;
 }
 .my-team-header .form-group .search-input:focus {
-  border-left-color: #d7892a;
+  border-left-color: #f28836;
 }
 .my-team-client-tile {
   padding-top: 10px;
@@ -10496,7 +10541,7 @@ input[type="search"].form-control {
   transition: 250ms ease color;
 }
 .my-team-client-tile .tile-controls i.mdi:hover {
-  color: #d7892a;
+  color: #f28836;
 }
 .my-team-client-tile .tile-data {
   padding-top: 15px;
@@ -10520,7 +10565,7 @@ input[type="search"].form-control {
   overflow-x: hidden;
 }
 .my-team-client-tile .tile-data .client-links a:hover {
-  color: #d7892a;
+  color: #f28836;
 }
 .my-team .mdi-close {
   cursor: pointer;
@@ -10533,7 +10578,7 @@ input[type="search"].form-control {
   transition: 250ms ease color;
 }
 .my-team .mdi-close:hover {
-  color: #d7892a;
+  color: #f28836;
 }
 .my-team .subteam-active,
 .my-team .subteam {
@@ -10726,12 +10771,12 @@ input[type="search"].form-control {
   text-align: center;
 }
 .navbar-ab .nav > li.open.icon-menu-item > a {
-  color: #d7892a;
+  color: #f28836;
   background-color: #ffffff;
 }
 .navbar-ab .nav > li.open.menu-item > a {
   background-color: #ffffff;
-  border-color: #d7892a;
+  border-color: #f28836;
 }
 @media (min-width: 768px) {
   .navbar-ab .container {
@@ -10813,7 +10858,7 @@ input[type="search"].form-control {
   top: -8px;
   right: -8px;
   font-size: 10px;
-  background: #d7892a;
+  background: #f28836;
   color: #ffffff;
   width: 18px;
   height: 18px;
@@ -10849,7 +10894,7 @@ input[type="search"].form-control {
   }
 }
 .header .menu-item.dropdown .mdi-arrow-drop-down:hover {
-  color: #d7892a;
+  color: #f28836;
 }
 .header .menu-item-link {
   color: #000000;
@@ -10863,7 +10908,7 @@ input[type="search"].form-control {
 .header .menu-item-link:hover,
 .header .menu-item-link:focus {
   background: none;
-  border-bottom: 3px solid #d7892a;
+  border-bottom: 3px solid #f28836;
 }
 .header .menu-item.active a,
 .header .menu-item.active a:hover,
@@ -10871,13 +10916,13 @@ input[type="search"].form-control {
   color: #000000;
   font-weight: bold;
   background: none;
-  border-bottom: 3px solid #d7892a;
+  border-bottom: 3px solid #f28836;
 }
 .header .icon-menu-item-notifications {
   position: static;
 }
 .header .icon-menu-item.active .icon-menu-item-link {
-  color: #d7892a;
+  color: #f28836;
 }
 .header .icon-menu-item-link {
   color: #000000;
@@ -11136,16 +11181,16 @@ input[type="search"].form-control {
 .pagination > li > a:hover,
 .pagination > li > a:focus {
   background-color: #ffffff;
-  color: #b4431a;
+  color: #d33e1f;
 }
 .pagination > .active > a {
   background-color: #ffffff;
-  color: #d7892a;
+  color: #f28836;
 }
 .pagination > .active > a:hover,
 .pagination > .active > a:focus {
   background-color: #ffffff;
-  color: #d7892a;
+  color: #f28836;
 }
 .cell-shrink {
   width: 1%;
@@ -11176,7 +11221,7 @@ input[type="search"].form-control {
   padding-right: 25px;
 }
 .table .is-sortable:hover {
-  color: #d7892a;
+  color: #f28836;
 }
 .table .is-sortable .sort-icons {
   position: absolute;
