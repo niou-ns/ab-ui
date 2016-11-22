@@ -10473,6 +10473,9 @@ input[type="search"].form-control {
 .slds-form-element__control .slds-checkbox--toggle [type=checkbox]:focus + .slds-checkbox--faux_container .slds-checkbox--faux:after {
   background-color: #ffffff;
 }
+.slds-form-element__control .slds-checkbox--toggle [type=checkbox][disabled] + .slds-checkbox--faux_container .slds-checkbox--faux {
+  background: #c8b6b6;
+}
 .slds-form-element__control .slds-checkbox--toggle .slds-checkbox--faux {
   width: 40px;
   height: 20px;
@@ -11007,6 +11010,7 @@ input[type="search"].form-control {
   font-size: 2rem;
 }
 .links .nav-section {
+  border-right: 1px solid #000000;
   padding-right: 0px;
 }
 .links .nav-section .links-nav {
@@ -11034,7 +11038,6 @@ input[type="search"].form-control {
   background: none;
 }
 .links-section {
-  border-left: 1px solid #000000;
   margin: 0;
   padding: 10px 0 0 40px;
 }
