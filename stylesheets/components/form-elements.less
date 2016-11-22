@@ -138,6 +138,7 @@ input[type="search"] {
 	&__control {
 		.slds-checkbox {
 			&--toggle {
+				width: auto;
 				[type=checkbox] {
 					& + .slds-checkbox--faux_container {
 						color: @black;
@@ -165,13 +166,20 @@ input[type="search"] {
 							}
 						}
 					}
+					&[disabled] {
+						& + .slds-checkbox--faux_container {
+							.slds-checkbox--faux {
+								background: @pink-swan;
+							}
+						}
+					}
 				}
 				.slds-checkbox--faux {
 					width: 40px;
 					height: 20px;
 					border-radius: 0px;
 					border: 1px solid @black;
-					background: transparent;
+					background: @pink-swan;
 					&:after, &:before {
 						border-radius: 0px;
 						border-right: 1px solid @black;
