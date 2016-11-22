@@ -1067,7 +1067,7 @@ th {
   box-sizing: border-box;
 }
 html {
-  font-size: 10px;
+  font-size: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
@@ -10271,7 +10271,6 @@ a.red-link:hover {
   text-transform: none;
   letter-spacing: normal;
   line-height: 1;
-  position: relative;
   word-wrap: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10288,6 +10287,14 @@ a.red-link:hover {
 }
 .form-group-search input[type="text"].form-control {
   padding-right: 22px;
+}
+.form-group .field-required {
+  color: #ba1b13;
+  margin: 0 0 0 3px;
+  font-weight: normal;
+}
+.form-group .field-required abbr[title] {
+  border-bottom: none;
 }
 .form-control {
   border: none;
@@ -10465,6 +10472,10 @@ input[type="search"].form-control {
 .slds-form-element__control .slds-checkbox--toggle [type=checkbox]:checked + .slds-checkbox--faux_container .slds-checkbox--faux:before {
   display: none;
 }
+.slds-form-element__control .slds-checkbox--toggle [type=checkbox][disabled]:checked + .slds-checkbox--faux_container .slds-checkbox--faux,
+.slds-form-element__control .slds-checkbox--toggle [type=checkbox]:focus:checked + .slds-checkbox--faux_container .slds-checkbox--faux {
+  background-color: #f28836;
+}
 .slds-form-element__control .slds-checkbox--toggle [type=checkbox][disabled] + .slds-checkbox--faux_container .slds-checkbox--faux,
 .slds-form-element__control .slds-checkbox--toggle [type=checkbox]:focus + .slds-checkbox--faux_container .slds-checkbox--faux {
   background-color: #c8b6b6;
@@ -10492,6 +10503,105 @@ input[type="search"].form-control {
   -moz-transition: 250ms left ease;
   -o-transition: 250ms left ease;
   transition: 250ms left ease;
+}
+.uiInput--default .form-element {
+  position: relative;
+}
+.uiInput--datetime .datePicker-openIcon {
+  background-image: none;
+  position: absolute;
+  left: auto;
+  width: auto;
+  height: auto;
+  right: 2px;
+  top: calc(50% - 11px);
+}
+.uiInput--datetime .datePicker-openIcon:before {
+  font-family: "Material Design Icons";
+  font-style: normal;
+  font-weight: 400;
+  content: "\e916";
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  color: #000000;
+}
+.uiInput--datetime .datePicker-openIcon:before:hover,
+.uiInput--datetime .datePicker-openIcon:before:focus {
+  color: #f28836;
+}
+.uiInput--datetime .datePicker-openIcon:hover:before {
+  color: #f28836;
+}
+.uiDatePicker--default.uiDatePicker h2 {
+  margin: 0;
+}
+.uiDatePicker--default.uiDatePicker .dateBar a:after,
+.uiDatePicker--default.uiDatePicker .dateBar a:before {
+  color: #f28836;
+}
+.uiDatePicker--default.uiDatePicker .datepicker__filter--year {
+  position: relative;
+}
+.uiDatePicker--default.uiDatePicker .datepicker__filter--year label {
+  display: block;
+}
+.uiDatePicker--default.uiDatePicker .datepicker__filter--year label:after {
+  content: "\e5cf";
+  font: normal normal normal 20px/1 "Material Design Icons";
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 1;
+  word-wrap: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  position: absolute;
+  right: 2px;
+  top: calc((34px / 2) - 10px);
+  z-index: 0;
+}
+.uiDatePicker--default.uiDatePicker .select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  /* border-color: @black; */
+  border-radius: 0px;
+  color: #000000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 6px 0px;
+  line-height: 1.42857143;
+  -webkit-transition: 250ms border-color ease;
+  -moz-transition: 250ms border-color ease;
+  -o-transition: 250ms border-color ease;
+  transition: 250ms border-color ease;
+  padding: 6px 20px 6px 0px;
+  background: none;
+  height: 34px;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+}
+.uiDatePicker--default.uiDatePicker .select:focus,
+.uiDatePicker--default.uiDatePicker .select:active {
+  outline: none;
+  box-shadow: none;
+  border-color: #f28836;
+}
+.uiDatePicker--default.uiDatePicker .uiDatePickerGrid--default td:not(.is-selected) > a:hover:not(.prevMonth):not(.nextMonth) {
+  background: rgba(242, 136, 54, 0.5);
+}
+.uiDatePicker--default.uiDatePicker .uiDatePickerGrid--default td.is-selected > a {
+  background: #f28836;
+}
+.uiDatePicker--default.uiDatePicker .uiDatePickerGrid--default td.is-selected > a:focus {
+  background: #f28836;
+  box-shadow: 0 0 3px rgba(242, 136, 54, 0.5);
 }
 .my-team-header {
   border-bottom: 1px solid #000000;
@@ -10685,8 +10795,8 @@ input[type="search"].form-control {
 .news-item-title {
   color: #000000;
   font-weight: bold;
-  font-size: 20px;
   font-size: 2rem;
+  font-size: 20px;
 }
 .news-item img {
   margin: 0 0 10px 0;
@@ -11003,8 +11113,8 @@ input[type="search"].form-control {
 .links .title-container .title {
   color: #000000;
   font-weight: bold;
-  font-size: 20px;
   font-size: 2rem;
+  font-size: 20px;
 }
 .links .nav-section {
   border-right: 1px solid #000000;
@@ -11018,8 +11128,8 @@ input[type="search"].form-control {
 .links .nav-section .links-nav-item-link:focus {
   color: #000000;
   font-weight: bold;
-  font-size: 20px;
   font-size: 2rem;
+  font-size: 20px;
   background: none;
 }
 .links .nav-section .links-nav-item.active {
@@ -11030,8 +11140,8 @@ input[type="search"].form-control {
 .links .nav-section .links-nav-item.active a:focus {
   color: #000000;
   font-weight: bold;
-  font-size: 20px;
   font-size: 2rem;
+  font-size: 20px;
   background: none;
 }
 .links-section {
@@ -11039,8 +11149,8 @@ input[type="search"].form-control {
   padding: 10px 0 0 40px;
 }
 .links-section .icon-container .icon {
-  font-size: 30px;
   font-size: 3rem;
+  font-size: 30px;
 }
 .links-section .sublink {
   list-style: none;
@@ -11070,8 +11180,8 @@ input[type="search"].form-control {
 .my-info .nav-section .my-info-nav-item-link:hover,
 .my-info .nav-section .my-info-nav-item-link:focus {
   color: #000000;
-  font-size: 15px;
   font-size: 1.5rem;
+  font-size: 15px;
   background: none;
 }
 .my-info .nav-section .my-info-nav-item.active a,
@@ -11079,8 +11189,8 @@ input[type="search"].form-control {
 .my-info .nav-section .my-info-nav-item.active a:focus {
   color: #000000;
   font-weight: bold;
-  font-size: 15px;
   font-size: 1.5rem;
+  font-size: 15px;
   background: none;
 }
 .my-info .nav-section-print-btn,
@@ -11089,8 +11199,8 @@ input[type="search"].form-control {
   background: none;
   outline: none;
   color: #000000;
-  font-size: 13px;
   font-size: 1.3rem;
+  font-size: 13px;
 }
 .my-info .title-container {
   border-bottom: 1px solid #000000;
@@ -11099,8 +11209,8 @@ input[type="search"].form-control {
 .my-info .title-container .title {
   color: #000000;
   font-weight: bold;
-  font-size: 20px;
   font-size: 2rem;
+  font-size: 20px;
 }
 .my-info .title-container .actions-container {
   margin-top: 5px;
@@ -11116,8 +11226,8 @@ input[type="search"].form-control {
 }
 .my-info-data-label {
   color: #000000;
-  font-size: 15px;
   font-size: 1.5rem;
+  font-size: 15px;
   font-weight: bold;
   margin: 0 0 5px;
 }
@@ -11135,8 +11245,8 @@ input[type="search"].form-control {
 .search-result .title-container .title {
   color: #000000;
   font-weight: bold;
-  font-size: 20px;
   font-size: 2rem;
+  font-size: 20px;
 }
 .search-result-item {
   margin-bottom: 10px;
@@ -11145,16 +11255,16 @@ input[type="search"].form-control {
   margin-top: 3px;
 }
 .search-result-item-section-name {
-  font-size: 10px;
   font-size: 1rem;
+  font-size: 10px;
 }
 .search-result-item-section-icon {
-  font-size: 20px;
   font-size: 2rem;
+  font-size: 20px;
 }
 .search-result-item-title {
-  font-size: 20px;
   font-size: 2rem;
+  font-size: 20px;
   font-weight: bold;
   margin: 0;
 }
@@ -11163,8 +11273,8 @@ input[type="search"].form-control {
   color: #000000;
 }
 .search-result-item-description {
-  font-size: 13px;
   font-size: 1.3rem;
+  font-size: 13px;
 }
 .notifications-list .notification-record {
   margin-bottom: 10px;

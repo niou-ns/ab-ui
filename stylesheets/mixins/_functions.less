@@ -1,8 +1,8 @@
 .font-size(@sizeValue) {
   @remValue: @sizeValue;
   @pxValue: (@sizeValue * 10);
-  font-size: ~"@{pxValue}px";
   font-size: ~"@{remValue}rem";
+  font-size: ~"@{pxValue}px";
 };
 
 .transition(@transition) {

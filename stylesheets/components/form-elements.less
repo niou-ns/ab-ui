@@ -33,7 +33,6 @@
 	    text-transform: none;
 	    letter-spacing: normal;
 	    line-height: 1;
-	    position: relative;
 	    word-wrap: normal;
 	    -webkit-font-smoothing: antialiased;
 	    -moz-osx-font-smoothing: grayscale;
@@ -56,6 +55,14 @@
 			&.form-control {
 				padding-right: 22px;
 			}
+		}
+	}
+	.field-required {
+		color: @totem-pole;
+		margin: 0 0 0 3px;
+		font-weight: normal;
+		abbr[title] {
+			border-bottom: none;
 		}
 	}
 }
@@ -169,6 +176,13 @@ input[type="search"] {
 						}
 					}
 					&[disabled], &:focus {
+						&:checked {
+							& + .slds-checkbox--faux_container {
+								.slds-checkbox--faux {
+									background-color: @brandy-punch;
+								}
+							}
+						}
 						& + .slds-checkbox--faux_container {
 							.slds-checkbox--faux {
 								background-color: @pink-swan;
@@ -194,6 +208,119 @@ input[type="search"] {
 						width: 50%;
 						left: 0px;
 						.transition(~"250ms left ease");
+					}
+				}
+			}
+		}
+	}
+}
+
+.uiInput--default {
+	.form-element	{
+		position: relative;
+	}
+}
+
+.uiInput {
+	&--datetime {
+		.datePicker-openIcon {
+			background-image: none;
+	    position: absolute;
+	    left: auto;
+	    width: auto;
+	    height: auto;
+	    right: 2px;
+	    top: calc(50% - 11px);
+			&:before {
+				font-family: "Material Design Icons";
+			  font-style: normal;
+			  font-weight: 400;
+				content: "\e916";
+				/* Support for all WebKit browsers. */
+			  -webkit-font-smoothing: antialiased;
+			  /* Support for Firefox. */
+			  -moz-osx-font-smoothing: grayscale;
+			  transform: translate(0, 0);
+				color: @black;
+				&:hover, &:focus {
+					color: @brandy-punch;
+				}
+			}
+			&:hover {
+				&:before {
+					color: @brandy-punch;
+				}
+			}
+		}
+	}
+}
+
+.uiDatePicker {
+	&--default& {
+		h2 {
+			margin: 0;
+		}
+		.dateBar {
+			a {
+				&:after, &:before {
+					color: @brandy-punch;
+				}
+			}
+		}
+		.datepicker__filter {
+			&--year {
+				position: relative;
+				label {
+					display: block;
+					&:after {
+						content: "\e5cf";
+						font: normal normal normal 20px/1 "Material Design Icons";
+				    display: inline-block;
+				    text-transform: none;
+				    letter-spacing: normal;
+				    line-height: 1;
+				    word-wrap: normal;
+				    -webkit-font-smoothing: antialiased;
+				    -moz-osx-font-smoothing: grayscale;
+				    transform: translate(0, 0);
+						position: absolute;
+						right: 2px;
+						top: calc((@input-height-base / 2) - 10px);
+						z-index: 0;
+					}
+				}
+			}
+		}
+		.select {
+			.none-appearance();
+			// Include previous class
+			.form-control-function();
+			padding: @padding-base-vertical 20px @padding-base-vertical @padding-inputs-horizontal;
+			background: none;
+
+			height: @input-height-base;
+		  font-size: @font-size-base;
+			position: relative;
+			z-index: 1;
+		}
+		.uiDatePickerGrid--default {
+			td {
+				&:not(.is-selected) {
+					& > a {
+						&:hover {
+							&:not(.prevMonth):not(.nextMonth) {
+								background: fade(@brandy-punch, 50%);
+							}
+						}
+					}
+				}
+				&.is-selected {
+					& > a {
+						background: @brandy-punch;
+						&:focus {
+							background: @brandy-punch;
+							box-shadow: 0 0 3px fade(@brandy-punch, 50%);
+						}
 					}
 				}
 			}
