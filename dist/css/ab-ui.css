@@ -10473,9 +10473,6 @@ input[type="search"].form-control {
 .slds-form-element__control .slds-checkbox--toggle [type=checkbox]:focus + .slds-checkbox--faux_container .slds-checkbox--faux:after {
   background-color: #ffffff;
 }
-.slds-form-element__control .slds-checkbox--toggle [type=checkbox][disabled] + .slds-checkbox--faux_container .slds-checkbox--faux {
-  background: #c8b6b6;
-}
 .slds-form-element__control .slds-checkbox--toggle .slds-checkbox--faux {
   width: 40px;
   height: 20px;
