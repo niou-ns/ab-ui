@@ -9906,6 +9906,12 @@ a.red-link {
 a.red-link:hover {
   color: #ba1b13;
 }
+a.black-link {
+  color: #000000;
+}
+a.black-link:hover {
+  color: #000000;
+}
 .text-truncate {
   max-width: 100%;
   overflow: hidden;
