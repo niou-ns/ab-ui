@@ -10611,6 +10611,30 @@ input[type="search"].form-control {
   background: #f28836;
   box-shadow: 0 0 3px rgba(242, 136, 54, 0.5);
 }
+.uiInput--textarea .textarea.form-control,
+.uiInput--textarea.textarea.form-control {
+  border: none;
+  /* border-color: @black; */
+  border-radius: 0px;
+  color: #000000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  height: 34px;
+  padding: 6px 0px;
+  line-height: 1.42857143;
+  -webkit-transition: 250ms border-color ease;
+  -moz-transition: 250ms border-color ease;
+  -o-transition: 250ms border-color ease;
+  transition: 250ms border-color ease;
+}
+.uiInput--textarea .textarea.form-control:focus,
+.uiInput--textarea.textarea.form-control:focus,
+.uiInput--textarea .textarea.form-control:active,
+.uiInput--textarea.textarea.form-control:active {
+  outline: none;
+  box-shadow: none;
+  border-color: #f28836;
+}
 .my-team-header {
   border-bottom: 1px solid #000000;
   margin-bottom: 15px;
@@ -11525,5 +11549,29 @@ input[type="search"].form-control {
   font-size: 16px;
   font-weight: bold;
   padding-bottom: 6px;
+}
+.breadcrumb {
+  background-color: transparent;
+  border-radius: 0px;
+}
+.breadcrumb a {
+  color: #000000;
+}
+.breadcrumb a:hover {
+  color: #f28836;
+}
+.slds-modal__header {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom: 1px solid #ccc;
+}
+.slds-modal__footer {
+  border-top: 1px solid #ccc;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  box-shadow: none;
+}
+.slds-backdrop {
+  background: rgba(0, 0, 0, 0.3);
 }
 /*# sourceMappingURL=ab-ui.css.map */
