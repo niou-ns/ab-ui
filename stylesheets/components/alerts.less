@@ -10,19 +10,24 @@
   &-error {
     border: 1px solid @totem-pole;
     color: @totem-pole;
-    .close {
-      &:hover {
-        color: @totem-pole;
-      }
-    }
+    .close-function(@totem-pole);
   }
   &-success {
     border: 1px solid @brandy-punch;
     color: @brandy-punch;
-    .close {
-      &:hover {
-        color: @brandy-punch;
-      }
+    .close-function(@brandy-punch);
+  }
+  &-info {
+    border: 1px solid @orange-roughly;
+    color: @orange-roughly;
+    .close-function(@orange-roughly);
+  }
+}
+
+.close-function(@color) {
+  .close {
+    &:hover {
+      color: @color;
     }
   }
 }

@@ -11723,4 +11723,11 @@ input[type="search"].form-control {
 .alert-success .close:hover {
   color: #f28836;
 }
+.alert-info {
+  border: 1px solid #d33e1f;
+  color: #d33e1f;
+}
+.alert-info .close:hover {
+  color: #d33e1f;
+}
 /*# sourceMappingURL=ab-ui.css.map */
