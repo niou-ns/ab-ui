@@ -1,0 +1,28 @@
+.alert {
+  border-radius: 0px;
+  i {
+    vertical-align: middle;
+  }
+  span {
+    padding-left: 5px;
+    vertical-align: sub;
+  }
+  &-error {
+    border: 1px solid @totem-pole;
+    color: @totem-pole;
+    .close {
+      &:hover {
+        color: @totem-pole;
+      }
+    }
+  }
+  &-success {
+    border: 1px solid @brandy-punch;
+    color: @brandy-punch;
+    .close {
+      &:hover {
+        color: @brandy-punch;
+      }
+    }
+  }
+}

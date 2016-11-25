@@ -333,6 +333,34 @@ input[type="search"] {
 .uiInput--textarea .textarea,
 .uiInput--textarea.textarea {
 	&.form-control {
-		.form-control-function();
+		border: 1px solid @black;
+		border-radius: 0px;
+		color: @black;
+		-webkit-box-shadow: none;
+						box-shadow: none;
+		padding: @padding-base-vertical @padding-base-horizontal;
+		line-height: @line-height-base;
+		// **** //
+		.transition(~"250ms border-color ease");
+		&:focus, &:active {
+			outline: none;
+			box-shadow: none;
+			border-color: @brandy-punch;
+		}
+		&.has-error {
+			border-color: @totem-pole;	
+		}
+	}
+}
+
+.has-error {
+	.uiInput--input .input,
+	.uiInput--input.input,
+	.uiInput--textarea .textarea,
+	.uiInput--textarea.textarea,
+	{
+		&.form-control {
+			border-color: @totem-pole;
+		}
 	}
 }
