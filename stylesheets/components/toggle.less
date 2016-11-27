@@ -1,0 +1,141 @@
+/**
+ * Toggle - imported from ionic library
+ * translated to less from scss
+ * --------------------------------------------------
+ */
+ @light:                           @white;
+ @toggle-width:                    51px;
+ @toggle-height:                   31px;
+ @toggle-border-width:             2px;
+ @toggle-border-radius:            20px;
+
+ @toggle-handle-width:             @toggle-height - (@toggle-border-width * 2);
+ @toggle-handle-height:            @toggle-handle-width;
+ @toggle-handle-radius:            @toggle-handle-width;
+ @toggle-handle-dragging-bg-color: darken(@white, 5%);
+
+ @toggle-off-bg-color:             #fff;
+ @toggle-off-border-color:         #e6e6e6;
+
+ //@toggle-on-default-bg:            #4cd964;
+ @toggle-on-default-bg:            @brandy-punch;
+ @toggle-on-default-border:        @toggle-on-default-bg;
+
+ @toggle-handle-off-bg-color:      @light;
+ @toggle-handle-on-bg-color:       @toggle-handle-off-bg-color;
+
+ @toggle-transition-duration:      .3s;
+
+ @toggle-hit-area-expansion:       5px;
+ @item-padding:                    16px;
+ @z-index-item-toggle:             3;
+
+.item-toggle {
+  pointer-events: none;
+}
+
+.toggle {
+  // set the color defaults
+  .toggle-style(@toggle-on-default-border, @toggle-on-default-bg);
+
+  position: relative;
+  display: inline-block;
+  pointer-events: auto;
+  margin: -@toggle-hit-area-expansion;
+  padding: @toggle-hit-area-expansion;
+
+  &.dragging {
+    .handle {
+      background-color: @toggle-handle-dragging-bg-color !important;
+    }
+  }
+
+  & input + .track + .labels {
+    .label {
+      &-on {
+        display: none;
+      }
+      &-off {
+        display: block;
+      }
+    }
+  }
+  & input:checked + .track + .labels {
+    .label {
+      &-on {
+        display: block;
+      }
+      &-off {
+        display: none;
+      }
+    }
+  }  
+
+}
+
+.toggle input {
+  // hide the actual input checkbox
+  display: none;
+}
+
+/* the track appearance when the toggle is "off" */
+.toggle .track {
+  .transition-timing-function(ease-in-out);
+  .transition-duration(@toggle-transition-duration);
+  .transition-property(~"background-color, border");
+
+  display: inline-block;
+  box-sizing: border-box;
+  width: @toggle-width;
+  height: @toggle-height;
+  border: solid @toggle-border-width @toggle-off-border-color;
+  border-radius: @toggle-border-radius;
+  background-color: @toggle-off-bg-color;
+  content: ' ';
+  cursor: pointer;
+  pointer-events: none;
+}
+
+
+/* the handle (circle) thats inside the toggle's track area */
+/* also the handle's appearance when it is "off" */
+.toggle .handle {
+  .transition(~"@{toggle-transition-duration} cubic-bezier(0, 1.1, 1, 1.1)");
+  .transition-property(~"background-color, transform");
+  position: absolute;
+  display: block;
+  width: (@toggle-handle-width);
+  height: (@toggle-handle-height);
+  border-radius: (@toggle-handle-radius);
+  background-color: @toggle-handle-off-bg-color;
+  top: (@toggle-border-width + @toggle-hit-area-expansion);
+  left: (@toggle-border-width + @toggle-hit-area-expansion);
+  box-shadow: 0 2px 7px rgba(0,0,0,.35), 0 1px 1px rgba(0,0,0,.15);
+
+  &:before {
+    // used to create a larger (but hidden) hit area to slide the handle
+    position: absolute;
+    top: -4px;
+    left: ((((@toggle-handle-width / 2) * -1) - 8));
+    padding: ((@toggle-handle-height / 2) + 5) (@toggle-handle-width + 7);
+    content: " ";
+  }
+}
+
+.toggle input:checked + .track .handle {
+  // the handle when the toggle is "on"
+  .translate3d((@toggle-width - @toggle-handle-width - (@toggle-border-width * 2)), 0, 0);
+  background-color: @toggle-handle-on-bg-color;
+}
+
+.toggle input:disabled + .track {
+  opacity: .6;
+}
+
+.toggle-style(@on-border-color, @on-bg-color) {
+  // the track when the toggle is "on"
+  & input:checked + .track {
+    border-color: @on-border-color;
+    background-color: @on-bg-color;
+  }
+}
