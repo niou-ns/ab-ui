@@ -8,26 +8,32 @@
     vertical-align: sub;
   }
   &-error {
+    background-color: @white;
     border: 1px solid @totem-pole;
     color: @totem-pole;
-    .close-function(@totem-pole);
+    .alert-links(@totem-pole);
   }
   &-success {
+    background-color: @white;
     border: 1px solid @brandy-punch;
     color: @brandy-punch;
-    .close-function(@brandy-punch);
+    .alert-links(@brandy-punch);
   }
   &-info {
+    background-color: @white;
     border: 1px solid @orange-roughly;
     color: @orange-roughly;
-    .close-function(@orange-roughly);
+    .alert-links(@orange-roughly);
   }
 }
 
-.close-function(@color) {
+.alert-links(@color) {
   .close {
     &:hover {
       color: @color;
     }
+  }
+  .actions-link {
+    color: @color;
   }
 }

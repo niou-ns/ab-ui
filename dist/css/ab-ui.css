@@ -6244,12 +6244,16 @@ button.close {
   .carousel-inner > .item.next,
   .carousel-inner > .item.active.right {
     -webkit-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    -o-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
     left: 0;
   }
   .carousel-inner > .item.prev,
   .carousel-inner > .item.active.left {
     -webkit-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    -o-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
     left: 0;
   }
@@ -6257,6 +6261,8 @@ button.close {
   .carousel-inner > .item.prev.right,
   .carousel-inner > .item.active {
     -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     left: 0;
   }
@@ -11135,6 +11141,26 @@ input[type="search"].form-control {
     max-width: 50px;
   }
 }
+.navbar-ab .navbar-icons > li > a.avatar .avatar-image {
+  height: 110px;
+  width: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 0 0 50% 50%;
+}
+@media (max-width: 991px) {
+  .navbar-ab .navbar-icons > li > a.avatar .avatar-image {
+    width: 60px;
+    height: 67px;
+  }
+}
+@media (max-width: 767px) {
+  .navbar-ab .navbar-icons > li > a.avatar .avatar-image {
+    width: 50px;
+    height: 55px;
+  }
+}
 .navbar-ab .navbar-icons .icon-badge-counter:after {
   content: attr(data-badge);
   position: absolute;
@@ -11321,6 +11347,15 @@ input[type="search"].form-control {
   border-radius: 70px;
   width: 150px;
 }
+.my-info-avatar .profile-picture {
+  margin: 0 auto 30px;
+  border-radius: 80px;
+  width: 160px;
+  height: 265px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
 .my-info .nav-section {
   padding-right: 0px;
 }
@@ -11437,9 +11472,14 @@ input[type="search"].form-control {
   display: block;
   color: #000000;
   text-decoration: none;
-  font-weight: bold;
   font-size: 14px;
   margin-bottom: 2px;
+}
+.notifications-list .notification-record a.unread {
+  font-weight: bold;
+}
+.notifications-list .notification-record a.read {
+  font-weight: normal;
 }
 .notifications-list .notification-record a:hover {
   text-decoration: underline;
@@ -11710,24 +11750,128 @@ input[type="search"].form-control {
   vertical-align: sub;
 }
 .alert-error {
+  background-color: #ffffff;
   border: 1px solid #ba1b13;
   color: #ba1b13;
 }
 .alert-error .close:hover {
   color: #ba1b13;
 }
+.alert-error .actions-link {
+  color: #ba1b13;
+}
 .alert-success {
+  background-color: #ffffff;
   border: 1px solid #f28836;
   color: #f28836;
 }
 .alert-success .close:hover {
   color: #f28836;
 }
+.alert-success .actions-link {
+  color: #f28836;
+}
 .alert-info {
+  background-color: #ffffff;
   border: 1px solid #d33e1f;
   color: #d33e1f;
 }
 .alert-info .close:hover {
   color: #d33e1f;
+}
+.alert-info .actions-link {
+  color: #d33e1f;
+}
+/**
+ * Toggle - imported from ionic library
+ * translated to less from scss
+ * --------------------------------------------------
+ */
+.item-toggle {
+  pointer-events: none;
+}
+.toggle {
+  position: relative;
+  display: inline-block;
+  pointer-events: auto;
+  margin: -5px;
+  padding: 5px;
+}
+.toggle input:checked + .track {
+  border-color: #f28836;
+  background-color: #f28836;
+}
+.toggle.dragging .handle {
+  background-color: #f2f2f2 !important;
+}
+.toggle input + .track + .labels .label-on {
+  display: none;
+}
+.toggle input + .track + .labels .label-off {
+  display: block;
+}
+.toggle input:checked + .track + .labels .label-on {
+  display: block;
+}
+.toggle input:checked + .track + .labels .label-off {
+  display: none;
+}
+.toggle input {
+  display: none;
+}
+/* the track appearance when the toggle is "off" */
+.toggle .track {
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: background-color, border;
+  transition-property: background-color, border;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 51px;
+  height: 31px;
+  border: solid 2px #e6e6e6;
+  border-radius: 20px;
+  background-color: #fff;
+  content: ' ';
+  cursor: pointer;
+  pointer-events: none;
+}
+/* the handle (circle) thats inside the toggle's track area */
+/* also the handle's appearance when it is "off" */
+.toggle .handle {
+  -webkit-transition: 0.3s cubic-bezier(0, 1.1, 1, 1.1);
+  -moz-transition: 0.3s cubic-bezier(0, 1.1, 1, 1.1);
+  -o-transition: 0.3s cubic-bezier(0, 1.1, 1, 1.1);
+  transition: 0.3s cubic-bezier(0, 1.1, 1, 1.1);
+  -webkit-transition-property: background-color, transform;
+  transition-property: background-color, transform;
+  position: absolute;
+  display: block;
+  width: 27px;
+  height: 27px;
+  border-radius: 27px;
+  background-color: #ffffff;
+  top: 7px;
+  left: 7px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.35), 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+.toggle .handle:before {
+  position: absolute;
+  top: -4px;
+  left: -21.5px;
+  padding: 18.5px 34px;
+  content: " ";
+}
+.toggle input:checked + .track .handle {
+  -webkit-transform: translate3d(20px, 0, 0);
+  -ms-transform: translate3d(20px, 0, 0);
+  -o-transform: translate3d(20px, 0, 0);
+  transform: translate3d(20px, 0, 0);
+  background-color: #ffffff;
+}
+.toggle input:disabled + .track {
+  opacity: .6;
 }
 /*# sourceMappingURL=ab-ui.css.map */
