@@ -7,9 +7,14 @@
           display: block;
           color: @black;
           text-decoration: none;
-          font-weight: bold;
           font-size: 14px;
           margin-bottom: 2px;
+          &.unread {
+            font-weight: bold;
+          }
+          &.read {
+            font-weight: normal;
+          }
           &:hover {
             text-decoration: underline;
           }
