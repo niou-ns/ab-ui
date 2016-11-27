@@ -16,6 +16,9 @@
 	}
 	select {
 		.none-appearance();
+		&::-ms-expand {
+		    display: none;
+		}
 	}
 }
 
@@ -111,6 +114,9 @@ input[type="search"] {
 .select-form-control {
 	&.form-control {
 		.none-appearance();
+		&::-ms-expand {
+		    display: none;
+		}		
 		// Include previous class
 		.form-control-function();
 		padding: @padding-base-vertical 20px @padding-base-vertical @padding-inputs-horizontal;
