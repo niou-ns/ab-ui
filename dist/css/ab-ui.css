@@ -10493,6 +10493,29 @@ select.form-control:active {
 input[type="search"].form-control {
   padding-right: 22px;
 }
+textarea.form-control {
+  resize: vertical;
+  border: 1px solid #000000;
+  border-radius: 0px;
+  color: #000000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  -webkit-transition: 250ms border-color ease;
+  -moz-transition: 250ms border-color ease;
+  -o-transition: 250ms border-color ease;
+  transition: 250ms border-color ease;
+}
+textarea.form-control:focus,
+textarea.form-control:active {
+  outline: none;
+  box-shadow: none;
+  border-color: #f28836;
+}
+textarea.form-control.has-error {
+  border-color: #ba1b13;
+}
 /*******************************/
 /** Override Bootstrap styles **/
 /*******************************/
@@ -10762,6 +10785,7 @@ input[type="search"].form-control {
 }
 .uiInput--textarea .textarea.form-control,
 .uiInput--textarea.textarea.form-control {
+  resize: vertical;
   border: 1px solid #000000;
   border-radius: 0px;
   color: #000000;
@@ -10902,7 +10926,13 @@ input[type="search"].form-control {
 .my-team .subteam {
   background-color: #f2f2f2;
 }
-.my-team-person-image {
+.my-team-person-image .mdi {
+  font-size: 90px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.my-team-person-image img {
   margin: 0 auto;
   display: block;
   max-width: 100%;
