@@ -11,12 +11,21 @@
       }
     }
   }
+
   .navbar-ab {
-    margin-bottom: -33px;
+    @media (max-width: @screen-xs-max) {
+      margin-bottom: -11px;
+    }
+    @media (min-width: @screen-sm-min) {
+      margin-bottom: -12px;
+    }
+    @media (min-width: @screen-md-min) {
+      margin-bottom: -33px;
+    }
   }
 }
 
-@section-margin-xs: 50px;
+@section-margin-xs: 70px;
 @section-margin-sm: 70px;
 @section-margin-md: 130px;
 
@@ -30,7 +39,7 @@
   @media (max-width: @screen-xs-max) {
     padding-top: @section-margin-xs;
   }
-  @media (min-width: @screen-md-min) {
+  @media (min-width: @screen-sm-min) {
     padding-top: @section-margin-sm;
   }
   @media (min-width: @screen-md-min) {
@@ -65,20 +74,20 @@
 }
 
 .navigation-widget {
+  .transition-transform(~"250ms ease");
   position: fixed;
-  left: 204px;
   z-index: 2;
   @media (max-width: @screen-xs-max) {
     top: @section-margin-xs;
   }
-  @media (min-width: @screen-md-min) {
+  @media (min-width: @screen-sm-min) {
     top: @section-margin-sm;
   }
   @media (min-width: @screen-md-min) {
     top: @section-margin-md;
   }
   a {
-    color: @white;
+    color: @black;
     &:focus, &:active {
       text-decoration: none;
     }
@@ -87,6 +96,8 @@
     font-size: 32px;
     vertical-align: middle;
     top: -2px;
+    background: @white;
+    border-radius: 50%;
   }
   span {
     vertical-align: middle;
@@ -94,19 +105,101 @@
   }
 }
 
-.company-background {
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center center;
-  padding-top: 100px;
-}
+.ppmycompanychild-page {
+    h1, .h1 {
+      @media (max-width: @screen-xs-max) {
+          font-size: (@font-size-h1 * 1.25);
+      }
+      @media (min-width: @screen-sm-min) {
+        font-size: (@font-size-h1 * 1.75);
+      }
+      @media (min-width: @screen-md-min) {
+        font-size: (@font-size-h1 * 2);
+      }
+      @media (min-width: @screen-lg-min) {
+        font-size: (@font-size-h1 * 2.5);
+      }
+  }
 
-.container {
-  &.white-design {
-    color: @white;
+  .container {
+    color: @black;
     a {
-      color: @white;
+      color: @black;
+    }
+    @media (min-width: @screen-sm-min) {
+      .border-left {
+        &:before {
+          content: "";
+          border-left: 1px solid @black;
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+          left: -1px;
+        }
+      }
+      .border-right {
+        border-right: 1px solid @black;
+      }
     }
   }
+
+  .white-design {
+    .navigation-widget {
+      a {
+        color: @white;
+      }
+      .mdi {
+        background: transparent;
+      }
+    }
+    .container {
+      color: @white;
+      a {
+        color: @white;
+      }
+      h1, .h1 {
+        text-shadow: 3px 1px 1px @black;
+      }
+      .border-left {
+        &:before {
+        border-left-color: @white;
+        }
+      }
+      .border-right {
+        border-right-color: @white;
+      }
+    }
+  }
+
+  .nav-arrows {
+    margin: 10px auto;
+    .mdi {
+      font-size: 14px;
+      top: 2px;
+    }
+    span {
+      margin-left: 2px;
+    }
+  }
+
+  .company {
+    &-background {
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center center;
+      padding-top: 100px;
+    }
+    &-content {
+      .row {
+        display: flex;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .header-image {
+    margin-bottom: 20px;
+  }
+
 }
