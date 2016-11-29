@@ -11978,6 +11978,7 @@ textarea.form-control.has-error {
 .mycompany-page .cCenterPanel > .siteforceSldsOneColLayout > .contentRegion > div > .ui-widget,
 .ppmycompanychild-page .cCenterPanel > .siteforceSldsOneColLayout > .contentRegion > div > .ui-widget {
   margin-top: 0px;
+  margin-bottom: 0px;
 }
 .mycompany-page .navbar-ab,
 .ppmycompanychild-page .navbar-ab {
@@ -12071,5 +12072,18 @@ textarea.form-control.has-error {
 .navigation-widget span {
   vertical-align: middle;
   margin-left: 5px;
+}
+.company-background {
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 100px;
+}
+.container.white-design {
+  color: #ffffff;
+}
+.container.white-design a {
+  color: #ffffff;
 }
 /*# sourceMappingURL=ab-ui.css.map */
