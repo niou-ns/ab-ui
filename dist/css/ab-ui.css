@@ -10036,6 +10036,10 @@ p.no-margin {
 .top-row .btn {
   margin-top: 20px;
 }
+.bottom-border {
+  border-bottom: 1px solid #c8b6b6;
+  padding-bottom: 20px;
+}
 .btn .mdi {
   font-size: 14px;
   top: 2px;
