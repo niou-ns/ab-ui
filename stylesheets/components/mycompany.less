@@ -1,0 +1,94 @@
+.mycompany-page, .ppmycompanychild-page {
+  .cCenterPanel {
+    & > .siteforceSldsOneColLayout {
+      & > .contentRegion {
+        & > div {
+          & > .ui-widget {
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+  }
+  .navbar-ab {
+    margin-bottom: -33px;
+  }
+}
+
+@section-margin-xs: 50px;
+@section-margin-sm: 70px;
+@section-margin-md: 130px;
+
+.left-section {
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  bottom: 0px;
+  width: 220px;
+  background: @black;
+  @media (max-width: @screen-xs-max) {
+    padding-top: @section-margin-xs;
+  }
+  @media (min-width: @screen-md-min) {
+    padding-top: @section-margin-sm;
+  }
+  @media (min-width: @screen-md-min) {
+    padding-top: @section-margin-md;
+  }
+  padding-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  nav {
+    display: block;
+    max-height: 100%;
+    overflow-y: scroll;
+    & > ul {
+      & > li {
+        margin-bottom: 10px;
+        & > a {
+          color: @white;
+        }
+      }
+    }
+  }
+
+  &.slide-out {
+    .transition-transform(~"250ms ease");
+    .translate3d(-220px, 0px, 0px);
+    &.in {
+      .translate3d(0px, 0px, 0px);
+    }
+  }
+
+}
+
+.navigation-widget {
+  position: fixed;
+  left: 204px;
+  z-index: 2;
+  @media (max-width: @screen-xs-max) {
+    top: @section-margin-xs;
+  }
+  @media (min-width: @screen-md-min) {
+    top: @section-margin-sm;
+  }
+  @media (min-width: @screen-md-min) {
+    top: @section-margin-md;
+  }
+  a {
+    color: @white;
+    &:focus, &:active {
+      text-decoration: none;
+    }
+  }
+  .mdi {
+    font-size: 32px;
+    vertical-align: middle;
+    top: -2px;
+  }
+  span {
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+}

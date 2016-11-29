@@ -11971,4 +11971,101 @@ textarea.form-control.has-error {
 .panel-ab > .panel-heading + .panel-collapse > .panel-body {
   border-top: none;
 }
+.mycompany-page .cCenterPanel > .siteforceSldsOneColLayout > .contentRegion > div > .ui-widget,
+.ppmycompanychild-page .cCenterPanel > .siteforceSldsOneColLayout > .contentRegion > div > .ui-widget {
+  margin-top: 0px;
+}
+.mycompany-page .navbar-ab,
+.ppmycompanychild-page .navbar-ab {
+  margin-bottom: -33px;
+}
+.left-section {
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  bottom: 0px;
+  width: 220px;
+  background: #000000;
+  padding-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+@media (max-width: 767px) {
+  .left-section {
+    padding-top: 50px;
+  }
+}
+@media (min-width: 992px) {
+  .left-section {
+    padding-top: 70px;
+  }
+}
+@media (min-width: 992px) {
+  .left-section {
+    padding-top: 130px;
+  }
+}
+.left-section nav {
+  display: block;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+.left-section nav > ul > li {
+  margin-bottom: 10px;
+}
+.left-section nav > ul > li > a {
+  color: #ffffff;
+}
+.left-section.slide-out {
+  -webkit-transition: -webkit-transform 250ms ease;
+  -moz-transition: -moz-transform 250ms ease;
+  -o-transition: -o-transform 250ms ease;
+  transition: transform 250ms ease;
+  -webkit-transform: translate3d(-220px, 0px, 0px);
+  -ms-transform: translate3d(-220px, 0px, 0px);
+  -o-transform: translate3d(-220px, 0px, 0px);
+  transform: translate3d(-220px, 0px, 0px);
+}
+.left-section.slide-out.in {
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -ms-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+.navigation-widget {
+  position: fixed;
+  left: 204px;
+  z-index: 2;
+}
+@media (max-width: 767px) {
+  .navigation-widget {
+    top: 50px;
+  }
+}
+@media (min-width: 992px) {
+  .navigation-widget {
+    top: 70px;
+  }
+}
+@media (min-width: 992px) {
+  .navigation-widget {
+    top: 130px;
+  }
+}
+.navigation-widget a {
+  color: #ffffff;
+}
+.navigation-widget a:focus,
+.navigation-widget a:active {
+  text-decoration: none;
+}
+.navigation-widget .mdi {
+  font-size: 32px;
+  vertical-align: middle;
+  top: -2px;
+}
+.navigation-widget span {
+  vertical-align: middle;
+  margin-left: 5px;
+}
 /*# sourceMappingURL=ab-ui.css.map */
