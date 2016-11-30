@@ -11371,12 +11371,21 @@ textarea.form-control.has-error {
   font-size: 2rem;
   font-size: 20px;
 }
-.links .nav-section {
-  border-right: 1px solid #000000;
-  padding-right: 0px;
+@media (min-width: 768px) {
+  .links .nav-section {
+    border-right: 1px solid #000000;
+    padding-right: 0px;
+  }
 }
-.links .nav-section .links-nav {
-  padding-top: 30px;
+@media (max-width: 767px) {
+  .links .nav-section .links-nav {
+    padding-top: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .links .nav-section .links-nav {
+    padding-top: 30px;
+  }
 }
 .links .nav-section .links-nav-item-link,
 .links .nav-section .links-nav-item-link:hover,
@@ -11401,7 +11410,16 @@ textarea.form-control.has-error {
 }
 .links-section {
   margin: 0;
-  padding: 10px 0 0 40px;
+}
+@media (min-width: 768px) {
+  .links-section {
+    padding: 10px 0 0 40px;
+  }
+}
+@media (max-width: 767px) {
+  .links-section .icon-container {
+    padding: 5px 15px;
+  }
 }
 .links-section .icon-container .icon {
   font-size: 3rem;
@@ -11416,6 +11434,11 @@ textarea.form-control.has-error {
   padding: 2px 0px;
   display: block;
   text-decoration: underline;
+}
+@media (max-width: 767px) {
+  .links-section .sublink-item-link {
+    padding: 5px 15px;
+  }
 }
 .my-info-avatar img {
   margin-bottom: 30px;
