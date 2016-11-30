@@ -11724,6 +11724,15 @@ textarea.form-control.has-error {
 }
 .search {
   position: relative;
+  display: flex;
+}
+.search > .flex-center {
+  flex: 1;
+}
+@media (max-width: 767px) {
+  .search {
+    height: 60vh;
+  }
 }
 @media (min-width: 768px) {
   .search {

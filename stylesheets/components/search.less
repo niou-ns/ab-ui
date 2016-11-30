@@ -1,6 +1,13 @@
 .search {
   position: relative;
-  @media (min-width: @screen-sm) {
+  display: flex;
+  & > .flex-center {
+    flex: 1;
+  }
+  @media (max-width: @screen-xs-max) {
+    height: 60vh;
+  }
+  @media (min-width: @screen-sm-min) {
     height: 70vh;
   }
   .logo {
