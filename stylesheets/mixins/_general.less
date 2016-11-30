@@ -2,17 +2,47 @@
    General mixins
    ========================================================================== */
 
-.no-gutter > [class*='col-'] {
+.no-gutter {
+  .no-gutter-function();
+  &-xs {
+    @media (max-width: @screen-xs-max) {
+      .no-gutter-function();
+    }
+  }
+  &-sm {
+    @media (min-width: @screen-sm-min) {
+      .no-gutter-function();
+    }
+  }
+  &-md {
+    @media (min-width: @screen-md-min) {
+      .no-gutter-function();
+    }
+  }
+  &-lg {
+    @media (min-width: @screen-lg-min) {
+      .no-gutter-function();
+    }
+  }
+}
+
+.no-gutter-function() {
+  & > [class*='col-'] {
     padding-right: 0;
     padding-left: 0;
+  }
 }
+
+
 .small-gutter > [class*='col-'] {
     padding-right: 1px;
     padding-left: 1px;
 }
+
 .no-margin {
 	margin: 0px;
 }
+
 .mdi {
 	font-size: @icon-size;
 }

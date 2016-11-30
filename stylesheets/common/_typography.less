@@ -175,3 +175,38 @@ p {
     margin-bottom: 0px;
   }
 }
+
+.text {
+  &-left {
+    .text-align-function(~"left");
+  }
+  &-right {
+    .text-align-function(~"right");
+  }
+  &-center {
+    .text-align-function(~"center");
+  }
+}
+
+.text-align-function(@position) {
+  &-xs {
+    @media (max-width: @screen-xs-max) {
+      text-align: @position;
+    }
+  }
+  &-sm {
+    @media (min-width: @screen-sm-min) {
+      text-align: @position;
+    }
+  }
+  &-md {
+    @media (min-width: @screen-md-min) {
+      text-align: @position;
+    }
+  }
+  &-lg {
+    @media (min-width: @screen-lg-min) {
+      text-align: @position;
+    }
+  }
+}
