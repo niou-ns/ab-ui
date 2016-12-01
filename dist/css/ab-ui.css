@@ -12622,6 +12622,8 @@ textarea.form-control.has-error {
 }
 .alert {
   border-radius: 0px;
+  padding: 0px;
+  border: none;
 }
 .alert i {
   vertical-align: middle;
@@ -12632,7 +12634,6 @@ textarea.form-control.has-error {
 }
 .alert-error {
   background-color: #ffffff;
-  border: 1px solid #ba1b13;
   color: #ba1b13;
 }
 .alert-error .close:hover {
@@ -12643,7 +12644,6 @@ textarea.form-control.has-error {
 }
 .alert-success {
   background-color: #ffffff;
-  border: 1px solid #f28836;
   color: #f28836;
 }
 .alert-success .close:hover {
@@ -12654,7 +12654,6 @@ textarea.form-control.has-error {
 }
 .alert-info {
   background-color: #ffffff;
-  border: 1px solid #d33e1f;
   color: #d33e1f;
 }
 .alert-info .close:hover {
