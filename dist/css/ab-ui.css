@@ -12005,7 +12005,7 @@ textarea.form-control.has-error {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  border-radius: 0 0 50% 50%;
+  border-radius: 0 0 40% 40%;
 }
 @media (max-width: 991px) {
   .navbar-ab .navbar-icons > li > a.avatar .avatar-image {
@@ -12230,9 +12230,9 @@ textarea.form-control.has-error {
 }
 .my-info-avatar .profile-picture {
   margin: 0 auto 30px;
-  border-radius: 80px;
-  width: 160px;
-  height: 265px;
+  border-radius: 60px;
+  width: 180px;
+  height: 180px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
