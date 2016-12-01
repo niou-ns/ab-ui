@@ -12005,7 +12005,7 @@ textarea.form-control.has-error {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  border-radius: 0 0 40% 40%;
+  border-radius: 0 0 35% 35%;
 }
 @media (max-width: 991px) {
   .navbar-ab .navbar-icons > li > a.avatar .avatar-image {
