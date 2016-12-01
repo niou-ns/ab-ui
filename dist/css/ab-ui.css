@@ -12662,6 +12662,9 @@ textarea.form-control.has-error {
 .alert-info .actions-link {
   color: #d33e1f;
 }
+.alert-dismissable .close {
+  right: 0px;
+}
 /**
  * Toggle - imported from ionic library
  * translated to less from scss
@@ -12820,7 +12823,7 @@ textarea.form-control.has-error {
   z-index: 1;
   top: 0px;
   bottom: 0px;
-  width: 220px;
+  width: 150px;
   background: #000000;
   padding-bottom: 20px;
   padding-left: 25px;
