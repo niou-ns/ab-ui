@@ -12684,6 +12684,11 @@ textarea.form-control.has-error {
 .toggle.dragging .handle {
   background-color: #f2f2f2 !important;
 }
+.toggle input + .track + .labels {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 8px;
+}
 .toggle input + .track + .labels .label-on {
   display: none;
 }
@@ -12717,6 +12722,7 @@ textarea.form-control.has-error {
   content: ' ';
   cursor: pointer;
   pointer-events: none;
+  vertical-align: middle;
 }
 /* the handle (circle) thats inside the toggle's track area */
 /* also the handle's appearance when it is "off" */

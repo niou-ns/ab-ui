@@ -51,6 +51,9 @@
   }
 
   & input + .track + .labels {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: 8px;
     .label {
       &-on {
         display: none;
@@ -69,7 +72,7 @@
         display: none;
       }
     }
-  }  
+  }
 
 }
 
@@ -94,6 +97,7 @@
   content: ' ';
   cursor: pointer;
   pointer-events: none;
+  vertical-align: middle;
 }
 
 
