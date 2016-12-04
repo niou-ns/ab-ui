@@ -73,7 +73,9 @@
           </li>
           <li>
             <a class="icon-menu-item-link avatar" href="javascript:void(0)">
-              <img src="images/th_profile_avatar.png" />
+              <!-- background-image should be loaded dynamically -->
+              <div class="avatar-image" style="background-image: url(images/th_profile_avatar.png);">
+              </div>
             </a>
           </li>
           <li class="icon-menu-item dropdown">
@@ -107,46 +109,6 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
     </nav>
-
-    <!-- Prev menu design -->
-    <!--
-    <div class="container header">
-      <div class="row">
-        <div class="col-sm-6">
-          <ul class="nav nav-pills menu">
-            <li class="menu-item active"><a class="menu-item-link" href="search.html">Home</a></li>
-            <li class="menu-item"><a class="menu-item-link" href="myinfo.html">My Info</a></li>
-            <li class="menu-item"><a class="menu-item-link" href="myteam.html">My Team</a></li>
-            <li class="menu-item"><a class="menu-item-link" href="javascript:void(0)">Our Company</a></li>
-            <li class="menu-item"><a class="menu-item-link" href="links.html">Links</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-2"></div>
-        <div class="col-sm-4">
-          <ul class="nav nav-pills icon-menu">
-            <li class="icon-menu-item">
-              <a class="icon-menu-item-link" href="javascript:void(0)"><i class="mdi mdi-search"></i></a>
-            </li>
-            <li>
-              <a class="icon-menu-item-link" href="javascript:void(0)"><i class="mdi mdi-playlist-add-check"></i></a>
-            </li>
-            <li>
-              <a class="icon-menu-item-link" href="javascript:void(0)"><i class="mdi mdi-flash-on"></i></a>
-            </li>
-            <li>
-              <a class="icon-menu-item-link" href="javascript:void(0)"><i class="mdi mdi-notifications"></i></a>
-            </li>
-            <li>
-              <a class="icon-menu-item-link avatar" href="myprofile.html"><img src="images/th_profile_avatar.png" /></a>
-            </li>
-            <li>
-              <a class="icon-menu-item-link" href="javascript:void(0)"><i class="mdi mdi-arrow-downward"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    -->
 
     <!-- Scripts are only for testing purposes - don't copy them to Salesforce platform -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

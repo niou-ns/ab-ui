@@ -11600,6 +11600,18 @@ textarea.form-control.has-error {
 .has-error .uiInput--textarea.textarea.form-control {
   border-color: #ba1b13;
 }
+.slds-file-selector__dropzone {
+  padding: 0px;
+  border: none;
+  border-radius: 0px;
+}
+.slds-file-selector__dropzone.slds-has-drag-over {
+  border: none;
+  box-shadow: 0 0 3px #f28836;
+}
+.slds-file-selector__body {
+  margin: 0px;
+}
 .my-team-header {
   border-bottom: 1px solid #000000;
   margin-bottom: 15px;
@@ -11988,6 +12000,7 @@ textarea.form-control.has-error {
 }
 .navbar-ab .navbar-icons > li > a.avatar img {
   max-width: 100px;
+  border-radius: 0 0 35% 35%;
 }
 @media (max-width: 991px) {
   .navbar-ab .navbar-icons > li > a.avatar img {
