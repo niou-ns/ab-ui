@@ -12035,7 +12035,7 @@ textarea.form-control.has-error {
   font-family: Arial;
 }
 .header .menu-item.dropdown > a {
-  padding-right: 20px;
+  padding-right: 30px;
 }
 .header .menu-item.dropdown .mdi-arrow-drop-down {
   position: absolute;
@@ -12057,7 +12057,7 @@ textarea.form-control.has-error {
 }
 @media (min-width: 768px) {
   .header .menu-item.dropdown .mdi-arrow-drop-down {
-    right: -15px;
+    right: 0px;
   }
 }
 .header .menu-item.dropdown .mdi-arrow-drop-down:hover {
@@ -12077,9 +12077,9 @@ textarea.form-control.has-error {
   background: none;
   border-bottom: 3px solid #f28836;
 }
-.header .menu-item.active a,
-.header .menu-item.active a:hover,
-.header .menu-item.active a:focus {
+.header .menu-item.active > a,
+.header .menu-item.active > a:hover,
+.header .menu-item.active > a:focus {
   color: #000000;
   font-weight: bold;
   background: none;
@@ -12124,7 +12124,7 @@ textarea.form-control.has-error {
   transition: 250ms background-color ease;
 }
 .dropdown-menu > li > a:hover {
-  background-color: #c8b6b6;
+  background-color: rgba(200, 182, 182, 0.5);
 }
 .dropdown-menu.search-dropdown .form-group {
   margin-bottom: 0px;
@@ -12239,6 +12239,11 @@ textarea.form-control.has-error {
 }
 .my-info .nav-section {
   padding-right: 0px;
+}
+@media (max-width: 767px) {
+  .my-info .nav-section {
+    margin-bottom: 20px;
+  }
 }
 .my-info .nav-section .my-info-nav {
   padding-top: 30px;
@@ -12860,10 +12865,10 @@ textarea.form-control.has-error {
   -moz-transition: -moz-transform 250ms ease;
   -o-transition: -o-transform 250ms ease;
   transition: transform 250ms ease;
-  -webkit-transform: translate3d(-220px, 0px, 0px);
-  -ms-transform: translate3d(-220px, 0px, 0px);
-  -o-transform: translate3d(-220px, 0px, 0px);
-  transform: translate3d(-220px, 0px, 0px);
+  -webkit-transform: translate3d(-150px, 0px, 0px);
+  -ms-transform: translate3d(-150px, 0px, 0px);
+  -o-transform: translate3d(-150px, 0px, 0px);
+  transform: translate3d(-150px, 0px, 0px);
 }
 .left-section.slide-out.in {
   -webkit-transform: translate3d(0px, 0px, 0px);
