@@ -11851,6 +11851,16 @@ textarea.form-control.has-error {
     top: 48px;
   }
 }
+@media (max-width: 767px) and (max-width: 767px) {
+  .navbar-ab .nav.navbar-right > li.dropdown .dropdown-menu.search-dropdown {
+    border: none;
+    position: absolute;
+    background-color: #ffffff;
+    left: auto;
+    right: auto;
+    top: 48px;
+  }
+}
 .navbar-ab .nav > li .notifications,
 .navbar-ab .nav > li.open .notifications {
   color: #000000;

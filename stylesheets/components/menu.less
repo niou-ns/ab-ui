@@ -13,6 +13,11 @@
             &.dropdown {
               position: static;
               .dropdown-menu {
+                &.search-dropdown {
+                  @media (max-width: @screen-xs-max) {
+                    .dropdown-search-menu-mobile();
+                  }
+                }
                 .dropdown-menu-mobile();
               }
             }
@@ -251,7 +256,7 @@
     }
   }
   &.search-dropdown {
-    .form-group {
+   .form-group {
       margin-bottom: 0px;
       input {
         border-radius: 0px;
@@ -277,6 +282,14 @@
   border: 1px solid @black;
   left: auto;
   right: 0px;
+  top: 48px;
+}
+.dropdown-search-menu-mobile() {
+  border: none;
+  position: absolute;
+  background-color: @white;
+  left: auto;
+  right: auto;
   top: 48px;
 }
 
