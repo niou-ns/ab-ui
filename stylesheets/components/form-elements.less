@@ -88,6 +88,72 @@ textarea {
 	.textarea-function();
 }
 
+/**************/
+/** Checkbox **/
+/**************/
+
+.checkbox-component {
+	position: relative;
+	display: inline-block;
+	pointer-events: auto;
+	margin-bottom: 10px;
+
+	& input {
+	  // hide the actual input checkbox
+	  display: none;
+	}
+
+	& input + .checkbox-container + .labels {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+    .label {
+      &-on {
+        display: none;
+      }
+      &-off {
+        display: block;
+      }
+    }
+  }
+  & input:checked + .checkbox-container + .labels {
+    .label {
+      &-on {
+        display: block;
+      }
+      &-off {
+        display: none;
+      }
+    }
+  }
+
+	& input:checked + .checkbox-container {
+		&:after {
+			content: "\e876";
+			font-family: "Material Design Icons";
+	    text-rendering: optimizeLegibility;
+	    font-feature-settings: "liga" 1;
+	    font-style: normal;
+	    text-transform: none;
+	    line-height: 1;
+	    font-size: 22px;
+	    width: 22px;
+	    height: 22px;
+	    display: inline-block;
+	    overflow: hidden;
+	    -webkit-font-smoothing: antialiased;
+		}
+	}
+
+	.checkbox-container {
+		border: 1px solid @black;
+		width: 24px;
+		height: 24px;
+		vertical-align: middle;
+		display: inline-block;
+	}
+}
+
 /*******************************/
 /** Override Bootstrap styles **/
 /*******************************/

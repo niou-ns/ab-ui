@@ -141,6 +141,9 @@
         border-right: 1px solid @black;
       }
     }
+    .offset-active {
+      padding-left: 30px;
+    }    
   }
 
   .white-design {
@@ -189,12 +192,22 @@
       background-repeat: no-repeat;
       background-position: center center;
       padding-top: 100px;
+      position: relative;
     }
     &-content {
       .row {
-        display: flex;
+        @media (min-width: @screen-sm) {
+          display: flex;
+        }
         margin-bottom: 15px;
       }
+    }
+    &-white-background {
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      right: 0px;
+      background: @white;
     }
   }
 

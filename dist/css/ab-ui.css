@@ -11300,6 +11300,57 @@ textarea.form-control:active {
 textarea.form-control.has-error {
   border-color: #ba1b13;
 }
+/**************/
+/** Checkbox **/
+/**************/
+.checkbox-component {
+  position: relative;
+  display: inline-block;
+  pointer-events: auto;
+  margin-bottom: 10px;
+}
+.checkbox-component input {
+  display: none;
+}
+.checkbox-component input + .checkbox-container + .labels {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+.checkbox-component input + .checkbox-container + .labels .label-on {
+  display: none;
+}
+.checkbox-component input + .checkbox-container + .labels .label-off {
+  display: block;
+}
+.checkbox-component input:checked + .checkbox-container + .labels .label-on {
+  display: block;
+}
+.checkbox-component input:checked + .checkbox-container + .labels .label-off {
+  display: none;
+}
+.checkbox-component input:checked + .checkbox-container:after {
+  content: "\e876";
+  font-family: "Material Design Icons";
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga" 1;
+  font-style: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 22px;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+.checkbox-component .checkbox-container {
+  border: 1px solid #000000;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  display: inline-block;
+}
 /*******************************/
 /** Override Bootstrap styles **/
 /*******************************/
@@ -11834,6 +11885,7 @@ textarea.form-control.has-error {
 .navbar-ab {
   border-radius: 0px;
   border: none;
+  z-index: 1;
 }
 @media (max-width: 767px) {
   .navbar-ab .mdi {
@@ -12981,6 +13033,9 @@ textarea.form-control.has-error {
     border-right: 1px solid #000000;
   }
 }
+.ppmycompanychild-page .container .offset-active {
+  padding-left: 30px;
+}
 .ppmycompanychild-page .white-design .navigation-widget a {
   color: #ffffff;
 }
@@ -13019,10 +13074,22 @@ textarea.form-control.has-error {
   background-repeat: no-repeat;
   background-position: center center;
   padding-top: 100px;
+  position: relative;
 }
 .ppmycompanychild-page .company-content .row {
-  display: flex;
   margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .ppmycompanychild-page .company-content .row {
+    display: flex;
+  }
+}
+.ppmycompanychild-page .company-white-background {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  background: #ffffff;
 }
 .ppmycompanychild-page .header-image {
   margin-bottom: 20px;
