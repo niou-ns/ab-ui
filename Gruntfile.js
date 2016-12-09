@@ -72,6 +72,13 @@ module.exports = function(grunt) {
       },
     },
     copy: {
+      images: {
+        expand: true,
+        flatten: true,
+        cwd: 'extras/img/',
+        src: '**',
+        dest: 'dist/img/'
+      },
       fonts: {
         expand: true,
         flatten: false,
@@ -117,7 +124,7 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('default', ['jshint', 'nodeunit', 'concat', 'uglify', 'less', 'copy']);
-  grunt.registerTask('copyAssets', ['copy:fonts', 'copy:bootstrapFonts', 'copy:jsExtras', 'copy:jsBootstrap'])
+  grunt.registerTask('copyAssets', ['copy:fonts', 'copy:bootstrapFonts', 'copy:jsExtras', 'copy:jsBootstrap', 'copy:images'])
   grunt.registerTask('dist', ['clean:dist', 'less:compileCore', 'copyAssets']);
   grunt.registerTask('deploy', ['dist', 'copy:resourceBundle']);
 

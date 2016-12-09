@@ -79,6 +79,17 @@
     }
 
     .navbar {
+      &-center {
+        @media (max-width: @screen-sm-max) {
+          display: none;
+        }
+        align-self: flex-start;
+        .img-brand {
+          display: block;
+          margin-top: 26px;
+          height: 36px;
+        }
+      }
       &-header {
         @media (max-width: @screen-xs-max) {
           display: block;
@@ -346,5 +357,11 @@
       padding: 10px;
       text-align: center;
     }
+  }
+}
+
+.home-page {
+  .navbar-ab .navbar-center {
+    display: none;
   }
 }

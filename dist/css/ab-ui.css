@@ -11799,7 +11799,7 @@ textarea.form-control.has-error {
 }
 @media (min-width: 768px) {
   .search {
-    height: 70vh;
+    height: 65vh;
   }
 }
 .search .logo {
@@ -12023,6 +12023,19 @@ textarea.form-control.has-error {
     padding-bottom: 10px;
   }
 }
+.navbar-ab .navbar-center {
+  align-self: flex-start;
+}
+@media (max-width: 991px) {
+  .navbar-ab .navbar-center {
+    display: none;
+  }
+}
+.navbar-ab .navbar-center .img-brand {
+  display: block;
+  margin-top: 26px;
+  height: 36px;
+}
 @media (max-width: 767px) {
   .navbar-ab .navbar-header {
     display: block;
@@ -12216,6 +12229,9 @@ textarea.form-control.has-error {
   -webkit-box-shadow: none;
   box-shadow: none;
   outline: none;
+}
+.home-page .navbar-ab .navbar-center {
+  display: none;
 }
 .links .title-container {
   border-bottom: 1px solid #000000;
