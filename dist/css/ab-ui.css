@@ -12233,6 +12233,9 @@ textarea.form-control.has-error {
 .home-page .navbar-ab .navbar-center {
   display: none;
 }
+.pp-footer {
+  margin: 20px auto;
+}
 .links .title-container {
   border-bottom: 1px solid #000000;
   margin-bottom: 20px;
@@ -13109,5 +13112,8 @@ textarea.form-control.has-error {
 }
 .ppmycompanychild-page .header-image {
   margin-bottom: 20px;
+}
+.ppmycompanychild-page .pp-footer {
+  display: none;
 }
 /*# sourceMappingURL=ab-ui.css.map */
