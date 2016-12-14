@@ -13010,36 +13010,47 @@ textarea.form-control.has-error {
   margin-left: 5px;
 }
 @media (max-width: 767px) {
+  .mycompany-page h1,
   .ppmycompanychild-page h1,
+  .mycompany-page .h1,
   .ppmycompanychild-page .h1 {
     font-size: 45px;
   }
 }
 @media (min-width: 768px) {
+  .mycompany-page h1,
   .ppmycompanychild-page h1,
+  .mycompany-page .h1,
   .ppmycompanychild-page .h1 {
     font-size: 63px;
   }
 }
 @media (min-width: 992px) {
+  .mycompany-page h1,
   .ppmycompanychild-page h1,
+  .mycompany-page .h1,
   .ppmycompanychild-page .h1 {
     font-size: 72px;
   }
 }
 @media (min-width: 1200px) {
+  .mycompany-page h1,
   .ppmycompanychild-page h1,
+  .mycompany-page .h1,
   .ppmycompanychild-page .h1 {
     font-size: 90px;
   }
 }
+.mycompany-page .container,
 .ppmycompanychild-page .container {
   color: #000000;
 }
+.mycompany-page .container a,
 .ppmycompanychild-page .container a {
   color: #000000;
 }
 @media (min-width: 768px) {
+  .mycompany-page .container .border-left:before,
   .ppmycompanychild-page .container .border-left:before {
     content: "";
     border-left: 1px solid #000000;
@@ -13048,45 +13059,59 @@ textarea.form-control.has-error {
     bottom: 0px;
     left: -1px;
   }
+  .mycompany-page .container .border-right,
   .ppmycompanychild-page .container .border-right {
     border-right: 1px solid #000000;
   }
 }
+.mycompany-page .container .offset-active,
 .ppmycompanychild-page .container .offset-active {
   padding-left: 30px;
 }
+.mycompany-page .white-design .navigation-widget a,
 .ppmycompanychild-page .white-design .navigation-widget a {
   color: #ffffff;
 }
+.mycompany-page .white-design .navigation-widget .mdi,
 .ppmycompanychild-page .white-design .navigation-widget .mdi {
   background: transparent;
 }
+.mycompany-page .white-design .container,
 .ppmycompanychild-page .white-design .container {
   color: #ffffff;
 }
+.mycompany-page .white-design .container a,
 .ppmycompanychild-page .white-design .container a {
   color: #ffffff;
 }
+.mycompany-page .white-design .container h1,
 .ppmycompanychild-page .white-design .container h1,
+.mycompany-page .white-design .container .h1,
 .ppmycompanychild-page .white-design .container .h1 {
   text-shadow: 3px 1px 1px #000000;
 }
+.mycompany-page .white-design .container .border-left:before,
 .ppmycompanychild-page .white-design .container .border-left:before {
   border-left-color: #ffffff;
 }
+.mycompany-page .white-design .container .border-right,
 .ppmycompanychild-page .white-design .container .border-right {
   border-right-color: #ffffff;
 }
+.mycompany-page .nav-arrows,
 .ppmycompanychild-page .nav-arrows {
   margin: 10px auto;
 }
+.mycompany-page .nav-arrows .mdi,
 .ppmycompanychild-page .nav-arrows .mdi {
   font-size: 14px;
   top: 2px;
 }
+.mycompany-page .nav-arrows span,
 .ppmycompanychild-page .nav-arrows span {
   margin-left: 2px;
 }
+.mycompany-page .company-background,
 .ppmycompanychild-page .company-background {
   background-size: cover;
   background-attachment: fixed;
@@ -13095,14 +13120,17 @@ textarea.form-control.has-error {
   padding-top: 100px;
   position: relative;
 }
+.mycompany-page .company-content .row,
 .ppmycompanychild-page .company-content .row {
   margin-bottom: 15px;
 }
 @media (min-width: 768px) {
+  .mycompany-page .company-content .row,
   .ppmycompanychild-page .company-content .row {
     display: flex;
   }
 }
+.mycompany-page .company-white-background,
 .ppmycompanychild-page .company-white-background {
   position: absolute;
   top: 0px;
@@ -13110,9 +13138,11 @@ textarea.form-control.has-error {
   right: 0px;
   background: #ffffff;
 }
+.mycompany-page .header-image,
 .ppmycompanychild-page .header-image {
   margin-bottom: 20px;
 }
+.mycompany-page .pp-footer,
 .ppmycompanychild-page .pp-footer {
   display: none;
 }
