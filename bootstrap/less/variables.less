@@ -316,6 +316,18 @@
 @screen-sm-max:              (@screen-md-min - 1);
 @screen-md-max:              (@screen-lg-min - 1);
 
+// XLarge screen / wide desktop
+//** Deprecated `@screen-lg` as of v3.0.1
+@screen-xl:                  1400px;
+@screen-xl-min:              @screen-lg;
+//** Deprecated `@screen-lg-desktop` as of v3.0.1
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+@screen-lg-max:              (@screen-xl-min - 1);
+
 
 //== Grid system
 //

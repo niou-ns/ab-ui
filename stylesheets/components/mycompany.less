@@ -193,6 +193,15 @@
       background-position: center center;
       padding-top: 100px;
       position: relative;
+      &.with-white {
+        background-size: contain;
+        background-position: left top;
+      }
+      .container {
+        @media (min-width: @screen-sm) {
+          min-height: calc(100vh - 177px);
+        }
+      }
     }
     &-content {
       .row {
@@ -208,6 +217,16 @@
       bottom: 0px;
       right: 0px;
       background: @white;
+    }
+  }
+
+  .image-with-caption {
+    text-align: right;
+    img {
+      margin-bottom: 10px;
+    }
+    a {
+      font-style: italic;
     }
   }
 
