@@ -49,6 +49,7 @@
 
     @media (min-width: @screen-sm-min) {
       .container {
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -77,6 +78,12 @@
         }
       }
     }
+
+    @media (min-width: 1280px) {
+      .container {
+        width: 1280px;
+      }
+    }    
 
     .navbar {
       &-center {
