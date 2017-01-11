@@ -11950,6 +11950,9 @@ textarea.form-control.has-error {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.my-team-client-tile .dropdown {
+  display: inline-block;
+}
 .my-team-client-tile .tile-image {
   text-align: center;
 }
@@ -13006,6 +13009,16 @@ textarea.form-control.has-error {
   color: #f28836;
 }
 .alert-success .actions-link {
+  color: #f28836;
+}
+.alert-message {
+  background-color: #ffffff;
+  color: #f28836;
+}
+.alert-message .close:hover {
+  color: #f28836;
+}
+.alert-message .actions-link {
   color: #f28836;
 }
 .alert-info {
