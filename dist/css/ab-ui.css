@@ -10408,6 +10408,9 @@ ul.margin-top {
 ul.margin-bottom {
   margin-bottom: 20px;
 }
+.spacer {
+  margin-bottom: 10px;
+}
 .btn {
   border-radius: 0px;
 }
@@ -12293,6 +12296,11 @@ textarea.form-control.has-error {
   display: block;
   margin-top: 26px;
   height: 36px;
+}
+.navbar-ab .navbar-center .img-brand-glass {
+  display: block;
+  margin-top: 26px;
+  height: 70px;
 }
 @media (max-width: 767px) {
   .navbar-ab .navbar-header {
