@@ -10421,6 +10421,33 @@ ul.margin-bottom {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+.btn-mdi {
+  color: #000000;
+}
+.btn-mdi:active,
+.btn-mdi:focus,
+.btn-mdi:hover {
+  color: #f28836;
+}
+.btn-mdi-totem {
+  color: #ba1b13;
+}
+.btn-mdi .mdi {
+  font-size: 20px;
+}
+.btn-mdi .mdi:first-child {
+  margin-right: 0px;
+}
+.btn-black {
+  color: #000000;
+}
+.btn-black:hover {
+  text-decoration: underline;
+}
+.btn-black:active,
+.btn-black:focus {
+  color: #f28836;
+}
 .btn-totem {
   color: #ffffff;
   background-color: #ba1b13;
@@ -12201,12 +12228,15 @@ textarea.form-control.has-error {
 .navbar-ab .nav > li .notifications-header,
 .navbar-ab .nav > li.open .notifications-header {
   padding: 10px;
-  border-bottom: 1px solid #000000;
+}
+.navbar-ab .nav > li .notifications-header span,
+.navbar-ab .nav > li.open .notifications-header span {
+  font-weight: bold;
 }
 .navbar-ab .nav > li .notifications-list,
 .navbar-ab .nav > li.open .notifications-list {
   padding: 15px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 @media (max-width: 767px) {
   .navbar-ab .nav > li .notifications-list,
@@ -12247,6 +12277,11 @@ textarea.form-control.has-error {
 .navbar-ab .nav > li.open .notifications-button {
   padding: 10px;
   text-align: center;
+}
+.navbar-ab .nav > li .notifications-button a,
+.navbar-ab .nav > li.open .notifications-button a {
+  margin: 0 5px;
+  padding: 2px;
 }
 .navbar-ab .nav > li.open.icon-menu-item > a {
   color: #f28836;
@@ -12973,10 +13008,10 @@ textarea.form-control.has-error {
 .slds-modal__header {
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: none;
 }
 .slds-modal__footer {
-  border-top: 1px solid #ccc;
+  border-top: none;
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
   box-shadow: none;

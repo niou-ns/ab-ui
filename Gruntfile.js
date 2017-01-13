@@ -1,6 +1,9 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
+  // Destination for final package
+  var destination  = grunt.option('dest') || '../sfdc/ab-des/resource-bundles/AB_ui.resource/';
+
   // Project configuration.
   grunt.initConfig({
     // Metadata.
@@ -111,7 +114,7 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'dist',
         src: ['*/*', '*/*/*'],
-        dest: '../sfdc/ab-des/resource-bundles/AB_ui.resource/'
+        dest: destination
       },
       resourceBundleUAT: {
         expand: true,

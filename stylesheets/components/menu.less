@@ -332,7 +332,9 @@
     }
     &-header {
       padding: 10px;
-      border-bottom: 1px solid @black;
+      span {
+        font-weight: bold;
+      }
     }
     &-list {
       padding: 15px;
@@ -342,7 +344,7 @@
       @media (min-width: @screen-sm-min) {
         max-height: 300px;
       }
-      overflow-y: scroll;
+      overflow-y: auto;
       .notification {
         &-record {
           margin-bottom: 10px;
@@ -368,6 +370,10 @@
     &-button {
       padding: 10px;
       text-align: center;
+      a {
+        margin: 0 5px;
+        padding: 2px;
+      }
     }
   }
 }

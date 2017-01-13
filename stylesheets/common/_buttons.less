@@ -6,6 +6,31 @@
     -webkit-box-shadow: none;
             box-shadow: none;
   }
+
+  &-mdi {
+    color: @black;
+    &:active, &:focus, &:hover {
+      color: @brandy-punch;
+    }
+    &-totem {
+      color: @totem-pole;
+    }
+    .mdi {
+      font-size: 20px;
+      &:first-child {
+        margin-right: 0px;
+      }
+    }
+  }
+  &-black {
+    color: @black;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:active, &:focus {
+      color: @brandy-punch;
+    }
+  }
 }
 
 .btn-totem {
