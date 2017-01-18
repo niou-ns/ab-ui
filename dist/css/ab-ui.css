@@ -11738,6 +11738,9 @@ textarea.form-control.has-error {
   box-shadow: none;
   border-color: #f28836;
 }
+.slds-form-element__control .form-group-select {
+  z-index: 0;
+}
 .slds-form-element__control .slds-checkbox--toggle {
   width: auto;
 }
