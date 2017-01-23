@@ -11993,12 +11993,18 @@ textarea.form-control.has-error {
   font-size: 80px;
   display: block;
 }
+.my-team-client-tile .tile-image i.mdi.mdi-person:hover {
+  cursor: pointer;
+}
 .my-team-client-tile .tile-image img {
   border-radius: 50%;
   margin: 0 auto;
   display: block;
   max-width: 100%;
   max-height: 80px;
+}
+.my-team-client-tile .tile-image img:hover {
+  cursor: pointer;
 }
 .my-team-client-tile .tile-controls {
   text-align: right;
