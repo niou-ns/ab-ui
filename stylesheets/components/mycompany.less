@@ -197,13 +197,38 @@
       background-position: center center;
       padding-top: 100px;
       position: relative;
+      // testing purposes
+      // @media (max-width: @screen-xs-max) {
+      //   min-height: calc(100vh - 55px);
+      // }
+      // @media (min-width: @screen-sm-min) {
+      //
+      // }
+      //
+      display: flex;
+      padding-bottom: 100px;
+      min-height: 100vh;
+      & > .container {
+        display: flex;
+        flex-direction: column;
+        & > .content-row {
+          flex-basis: 100%;
+          align-items: center;
+          display: flex;
+          .col-100 {
+            width: 100%;
+          }
+        }
+      }
       &.with-white {
         background-size: contain;
         background-position: left top;
       }
       .container {
         @media (min-width: @screen-sm) {
-          min-height: calc(100vh - 177px);
+          // min-height: calc(100vh - 177px);
+          // Testing purposes
+          //min-height: calc(100vh - 98px);
         }
       }
     }
@@ -241,5 +266,18 @@
   .pp-footer {
     display: none;
   }
+}
+// Testing purposes
+// #ourCompanyComponent {
+//   .company {
+//     &-background {
+//       @media (max-width: @screen-xs-max) {
+//         min-height: 100vh;
+//       }
+//     }
+//   }
+// }
 
+.mycompany-page + .DESKTOP + .forceToastManager + .forceHoverPrototype {
+  display: none;
 }
