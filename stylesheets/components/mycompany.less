@@ -223,6 +223,9 @@
       &.with-white {
         background-size: contain;
         background-position: left top;
+        &.content-left {
+          background-position: right top;
+        }
       }
       .container {
         @media (min-width: @screen-sm) {
@@ -246,6 +249,17 @@
       bottom: 0px;
       right: 0px;
       background: @white;
+    }
+  }
+
+  .row {
+    &.border-top {
+      border-top: 1px solid @black;
+      padding-top: 10px;
+    }
+    &.border-bottom {
+      border-bottom: 1px solid @black;
+      padding-bottom: 10px;
     }
   }
 

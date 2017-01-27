@@ -1,8 +1,49 @@
+// Since navbar is fixed, body has to go down
+@xs-height: 48px;
+@sm-height: 58px;
+@md-height: 80px;
+
+.siteforceNapiliBody {
+  .cCenterPanel {
+    @media (max-width: @screen-xs-max) {
+      padding-top: @xs-height;
+    }
+
+    @media (min-width: @screen-sm-min) {
+      padding-top: @sm-height;
+    }
+
+    @media (min-width: @screen-md-min) {
+      padding-top: @md-height;
+    }
+  }
+}
+
 .navbar {
   &-ab {
     border-radius: 0px;
     border: none;
     z-index: 1;
+
+    position: fixed;
+    background: @white;
+    width: 100%;
+
+    @media (max-width: @screen-xs-max) {
+      min-height: @xs-height;
+      height: @xs-height;
+      .navbar-toggle {
+        margin-top: 0px;
+      }
+    }
+
+    @media (min-width: @screen-sm-min) {
+      height: @sm-height;
+    }
+
+    @media (min-width: @screen-md-min) {
+      height: @md-height;
+    }
 
     @media (max-width: @screen-xs-max) {
       .mdi {
@@ -67,12 +108,19 @@
         }
       }
       .navbar-nav {
+        & > li {
+          & > a {
+            padding-top: 11px;
+            padding-bottom: 12px;
+          }
+        }
+
         &.menu {
           & > li {
               padding: 0px 1px;
               & > a {
-                padding-top: 10px;
-                padding-bottom: 10px;
+                padding-top: 14px;
+                padding-bottom: 14px;
               }
           }
         }
@@ -263,6 +311,14 @@
   }
 }
 
+.bottom-borders() {
+  &:after {
+    display: block;
+    content: "";
+    border-bottom: 3px solid @brandy-punch;
+  }
+}
+
 .dropdown-menu {
   border-radius: 0px;
   -webkit-box-shadow: none;
@@ -327,7 +383,8 @@
       }
       @media (min-width: @screen-sm-min) {
         width: 480px;
-        top: 72%;
+        // top: 72%;
+        top: auto;
       }
     }
     &-header {

@@ -27,6 +27,11 @@
 }
 
 .form-group {
+	word-wrap: break-word;
+	.form-label-tooltip {
+		display: flex;
+		justify-content: space-between;
+	}
 	&-select, &-search {
 		position: relative;
 		&:after {
@@ -470,4 +475,23 @@ textarea {
 	&__body {
 		margin: 0px;
 	}
+}
+
+//*** Tooltip ***//
+/*
+.slds-popover {
+	&--tooltip {
+		position: absolute;
+		white-space: pre;
+	}
+}
+*/
+
+.tooltip {
+	white-space: pre-line;
+}
+
+.with-tooltip {
+		display: flex;
+		justify-content: space-between;
 }
