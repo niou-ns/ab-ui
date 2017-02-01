@@ -204,6 +204,9 @@
     &-background {
       background-size: cover;
       background-attachment: fixed;
+      @media (max-width: @screen-sm-max) {
+        background-attachment: scroll;
+      }
       background-repeat: no-repeat;
       background-position: center center;
       padding-top: 100px;
@@ -222,8 +225,9 @@
       & > .container {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         & > .content-row {
-          flex-basis: 100%;
+          flex-basis: auto;
           align-items: center;
           display: flex;
           .col-100 {
@@ -252,6 +256,15 @@
           display: flex;
         }
         margin-bottom: 15px;
+      }
+      & + .row {
+        @media (max-width: @screen-xs-max) {
+          ul > li {
+            max-width: calc(100vw - 30px);
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+        }
       }
     }
     &-white-background {
