@@ -11471,6 +11471,10 @@ fieldset[disabled] .btn-brandy.focus {
 .form-group {
   word-wrap: break-word;
 }
+.form-group .slds-form-element__static {
+  word-wrap: break-word;
+  display: inline;
+}
 .form-group .form-label-tooltip {
   display: flex;
   justify-content: space-between;
@@ -13292,6 +13296,12 @@ textarea.form-control.has-error {
 .panel-ab > .panel-heading + .panel-collapse > .panel-body {
   border-top: none;
 }
+.tooltip.in {
+  opacity: 1;
+}
+.tooltip-inner {
+  background: #696969;
+}
 .mycompany-page .cCenterPanel > .siteforceSldsOneColLayout > .contentRegion > div > .ui-widget,
 .ppmycompanychild-page .cCenterPanel > .siteforceSldsOneColLayout > .contentRegion > div > .ui-widget {
   margin-top: 0px;
@@ -13485,6 +13495,12 @@ textarea.form-control.has-error {
 #ourCompanyComponent .container .offset-active {
   padding-left: 30px;
 }
+.mycompany-page .container .offset-active.content-left,
+.ppmycompanychild-page .container .offset-active.content-left,
+#ourCompanyComponent .container .offset-active.content-left {
+  padding-right: 30px;
+  padding-left: 15px;
+}
 .mycompany-page .white-design .navigation-widget a,
 .ppmycompanychild-page .white-design .navigation-widget a,
 #ourCompanyComponent .white-design .navigation-widget a {
@@ -13522,6 +13538,11 @@ textarea.form-control.has-error {
 .ppmycompanychild-page .white-design .container .border-right,
 #ourCompanyComponent .white-design .container .border-right {
   border-right-color: #ffffff;
+}
+.mycompany-page .white-design .row.border-top,
+.ppmycompanychild-page .white-design .row.border-top,
+#ourCompanyComponent .white-design .row.border-top {
+  border-top: 1px solid #ffffff;
 }
 .mycompany-page .nav-arrows,
 .ppmycompanychild-page .nav-arrows,
