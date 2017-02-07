@@ -237,6 +237,9 @@
 
 .header {
   .menu {
+    @media (max-width: @screen-xs-max) {
+      background: @white;
+    }
     &-item {
       &.dropdown {
         & > a {
@@ -244,7 +247,7 @@
         }
         .mdi-arrow-drop-down {
           position: absolute;
-          top: 0px;
+          top: 5px;
           bottom: 0px;
           line-height: 36px;
           font-size: 28px;

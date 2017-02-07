@@ -12501,12 +12501,17 @@ textarea.form-control.has-error {
   border-radius: 50%;
   font-family: Arial;
 }
+@media (max-width: 767px) {
+  .header .menu {
+    background: #ffffff;
+  }
+}
 .header .menu-item.dropdown > a {
   padding-right: 30px;
 }
 .header .menu-item.dropdown .mdi-arrow-drop-down {
   position: absolute;
-  top: 0px;
+  top: 5px;
   bottom: 0px;
   line-height: 36px;
   font-size: 28px;
@@ -13639,6 +13644,11 @@ textarea.form-control.has-error {
   bottom: 0px;
   right: 0px;
   background: #ffffff;
+}
+.mycompany-page .chrome-browser .company-background > .container > .content-row,
+.ppmycompanychild-page .chrome-browser .company-background > .container > .content-row,
+#ourCompanyComponent .chrome-browser .company-background > .container > .content-row {
+  flex-basis: 100%;
 }
 .mycompany-page .row.border-top,
 .ppmycompanychild-page .row.border-top,
