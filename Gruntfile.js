@@ -116,6 +116,13 @@ module.exports = function(grunt) {
         src: ['*/*', '*/*/*'],
         dest: destination
       },
+      zippedBundle: {
+        cwd: 'dist',
+        src: 'AB_ui.resource',
+        expand: true,
+        flatten: true,
+        dest: destination
+      },
       resourceBundleUAT: {
         expand: true,
         cwd: 'dist',
@@ -124,7 +131,22 @@ module.exports = function(grunt) {
       }
     },
     clean : {
-      dist: 'dist',
+      dist: 'dist'
+    },
+    compress: {
+      main: {
+        options: {
+          mode: 'zip',
+          archive: 'dist/AB_ui.resource'
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'dist/',
+            src: '**/*'
+          }
+        ]
+      }
     }
   });
 
@@ -136,6 +158,7 @@ module.exports = function(grunt) {
   grunt.registerTask('copyAssets', ['copy:fonts', 'copy:bootstrapFonts', 'copy:jsExtras', 'copy:jsBootstrap', 'copy:images'])
   grunt.registerTask('dist', ['clean:dist', 'less:compileCore', 'copyAssets']);
   grunt.registerTask('deploy', ['dist', 'copy:resourceBundle']);
+  grunt.registerTask('deployCompressed', ['dist', 'compress', 'copy:zippedBundle']);
   grunt.registerTask('deployUAT', ['dist', 'copy:resourceBundleUAT']);
 
 };

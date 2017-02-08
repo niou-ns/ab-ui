@@ -11,7 +11,8 @@ This README would normally document whatever steps are necessary to get your app
 ### Usage guidelines ###
 * grunt less:compileCore (just css compile)
 * grunt dist (to create package)
-* grunt deploy --dist="../sfdc/AB/resource-bundles/AB_ui.resource/" (to copy package to selected dir as static resource)
+* grunt deploy --dest="../sfdc/AB/resource-bundles/AB_ui.resource/" (to copy package to selected dir as static resource)
+* grunt deployCompressed --dest="../sfdc/AB/resource-bundles/" (to copy zipped package)
 
 ### Contribution guidelines ###
 
