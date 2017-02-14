@@ -12545,13 +12545,17 @@ textarea.form-control.has-error {
   transition: 250ms border-color ease;
 }
 .header .menu-item-link:hover,
-.header .menu-item-link:focus {
+.header .menu-item-link:active {
   background: none;
   border-bottom: 3px solid #f28836;
 }
+.header .menu-item-link:focus {
+  background: none;
+  outline: none;
+}
 .header .menu-item.active > a,
 .header .menu-item.active > a:hover,
-.header .menu-item.active > a:focus {
+.header .menu-item.active > a:active {
   color: #000000;
   font-weight: bold;
   background: none;
@@ -12571,7 +12575,7 @@ textarea.form-control.has-error {
   transition: 250ms color ease;
 }
 .header .icon-menu-item-link:hover,
-.header .icon-menu-item-link:focus {
+.header .icon-menu-item-link:active {
   background: none;
   color: #c8b6b6;
 }
@@ -13304,6 +13308,12 @@ textarea.form-control.has-error {
 .tooltip-inner {
   min-width: 160px;
   white-space: pre-line;
+}
+.cPP_LeaveRequestWrap .header-buttons-list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .mycompany-page .cCenterPanel > .siteforceSldsOneColLayout > .contentRegion > div > .ui-widget,
 .ppmycompanychild-page .cCenterPanel > .siteforceSldsOneColLayout > .contentRegion > div > .ui-widget {

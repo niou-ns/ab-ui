@@ -270,13 +270,17 @@
         border-radius: 0;
         border-bottom: 3px solid transparent;
         .transition(~"250ms border-color ease");
-        &:hover, &:focus {
+        &:hover, &:active {
           background: none;
           border-bottom: 3px solid @brandy-punch;
         }
+        &:focus {
+          background: none;
+          outline: none;
+        }
       }
       &.active {
-        & > a, & > a:hover, & > a:focus{
+        & > a, & > a:hover, & > a:active{
           color: @black;
           font-weight: bold;
           background: none;
@@ -298,7 +302,7 @@
       &-link {
         color: @black;
         .transition(~"250ms color ease");
-        &:hover, &:focus {
+        &:hover, &:active {
           background: none;
           color: @pink-swan;
         }
