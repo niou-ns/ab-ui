@@ -73,6 +73,17 @@ module.exports = function(grunt) {
         src: 'stylesheets/ab.less',
         dest: 'dist/css/<%= pkg.name %>.css'
       },
+      compleGlass: {
+        options: {
+          strictMath: true,
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapURL: 'glass.css.map',
+          sourceMapFilename: 'glass/css/glass.css.map'
+        },
+        src: 'stylesheets/glass.less',
+        dest: 'glass/css/glass.css'
+      }
     },
     copy: {
       images: {
@@ -128,10 +139,17 @@ module.exports = function(grunt) {
         cwd: 'dist',
         src: ['*/*', '*/*/*'],
         dest: '../sfdc/AB_UAT/resource-bundles/AB_ui.resource/'
+      },
+      glass: {
+        expand: true,
+        cwd: 'glass',
+        src: ['*/*', '*/*/*'],
+        dest: '../sfdc/AB_Glass/resource-bundles/Glass_UI.resource/'
       }
     },
     clean : {
-      dist: 'dist'
+      dist: 'dist',
+      glass: 'glass'
     },
     compress: {
       main: {
@@ -160,5 +178,6 @@ module.exports = function(grunt) {
   grunt.registerTask('deploy', ['dist', 'copy:resourceBundle']);
   grunt.registerTask('deployCompressed', ['dist', 'compress', 'copy:zippedBundle']);
   grunt.registerTask('deployUAT', ['dist', 'copy:resourceBundleUAT']);
+  grunt.registerTask('deployGlass', ['clean:glass', 'less:compleGlass', 'copy:glass']);
 
 };

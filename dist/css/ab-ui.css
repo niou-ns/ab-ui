@@ -11820,6 +11820,7 @@ textarea.form-control.has-error {
   position: relative;
 }
 .uiInput--datetime .datePicker-openIcon {
+  display: none;
   background-image: none;
   position: absolute;
   left: auto;
@@ -12223,6 +12224,7 @@ textarea.form-control.has-error {
   border: none;
   z-index: 1;
   position: fixed;
+  top: 0px;
   background: #ffffff;
   width: 100%;
 }
@@ -12913,6 +12915,7 @@ textarea.form-control.has-error {
 }
 .table .is-sortable:hover {
   color: #f28836;
+  text-decoration: none;
 }
 .table .is-sortable .sort-icons {
   position: absolute;

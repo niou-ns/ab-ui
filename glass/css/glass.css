@@ -1,0 +1,369 @@
+html.main-page,
+body.main-page {
+  height: 100%;
+}
+body {
+  padding-top: 110px !important;
+  padding-bottom: 70px !important;
+}
+body.main-page {
+  background-image: url("../bg.jpg");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body .btn {
+  font-family: 'Basis Grotesque';
+}
+.content-container {
+  margin-top: 30px;
+}
+.content-container.search-container {
+  margin-top: 0px;
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content-container.search-container .row {
+  flex: 1 0 auto;
+}
+input[type="submit"].btn.btn-black {
+  background: transparent;
+}
+hr {
+  border-top: 1px solid #000000;
+}
+hr.section-break {
+  border-top-color: transparent;
+}
+.margin-minus {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.glass-footer img {
+  width: 100px;
+  display: block;
+  margin-right: 0px;
+  margin-left: auto;
+}
+.main-page .CoveoSearchInterface .CoveoSearchbox .magic-box,
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #ffffff;
+}
+.main-page .CoveoSearchInterface .CoveoSearchbox .magic-box .magic-box-input,
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box .magic-box-input {
+  background: transparent;
+}
+.main-page .CoveoSearchInterface .CoveoSearchbox .magic-box .magic-box-input > input,
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box .magic-box-input > input {
+  background: transparent;
+  color: #ffffff;
+}
+.main-page .CoveoSearchInterface .CoveoSearchbox .magic-box .magic-box-input > input::-webkit-input-placeholder,
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box .magic-box-input > input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #ffffff;
+}
+.main-page .CoveoSearchInterface .CoveoSearchbox .magic-box .magic-box-input > input::-moz-placeholder,
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box .magic-box-input > input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #ffffff;
+}
+.main-page .CoveoSearchInterface .CoveoSearchbox .magic-box .magic-box-input > input:-ms-input-placeholder,
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box .magic-box-input > input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #ffffff;
+}
+.main-page .CoveoSearchInterface .CoveoSearchbox .magic-box .magic-box-input > input:-moz-placeholder,
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box .magic-box-input > input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #ffffff;
+}
+.main-page .CoveoSearchInterface .CoveoSearchbox .magic-box .magic-box .magic-box-clear,
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box .magic-box .magic-box-clear,
+.main-page .CoveoSearchInterface .CoveoSearchbox .magic-box .magic-box-clear,
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box .magic-box-clear {
+  background: transparent;
+}
+.main-page .CoveoSearchInterface .CoveoSearchbox .magic-box .magic-box .magic-box-clear:before,
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box .magic-box .magic-box-clear:before,
+.main-page .CoveoSearchInterface .CoveoSearchbox .magic-box .magic-box-clear:before,
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box .magic-box-clear:before {
+  display: none;
+}
+.main-page .CoveoSearchInterface .CoveoSearchbox .magic-box .magic-box .magic-box-clear .magic-box-icon:before,
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box .magic-box .magic-box-clear .magic-box-icon:before,
+.main-page .CoveoSearchInterface .CoveoSearchbox .magic-box .magic-box-clear .magic-box-icon:before,
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box .magic-box-clear .magic-box-icon:before {
+  color: #ffffff;
+}
+.main-page .CoveoSearchInterface .CoveoSearchButton {
+  color: #ffffff;
+}
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box-hasFocus .magic-box-suggestions {
+  background: rgba(255, 255, 255, 0.8);
+}
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box-hasFocus .magic-box-suggestions .coveo-omnibox-result-list-header {
+  padding: 10px 10px 10px 36px;
+  font-weight: bold;
+  color: #000000;
+}
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box-hasFocus .magic-box-suggestions .CoveoResult {
+  border-color: #ffffff;
+}
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box-hasFocus .magic-box-suggestions .CoveoResult.coveo-omnibox-selectable .CoveoResultLink {
+  color: #000000;
+}
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box-hasFocus .magic-box-suggestions .CoveoResult.coveo-omnibox-selectable .CoveoResultLink:visited {
+  color: #000000;
+}
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box-hasFocus .magic-box-suggestions .CoveoResult.coveo-omnibox-selectable .CoveoResultLink:hover {
+  text-decoration: underline;
+}
+.main-page .CoveoSearchInterface .CoveoOmnibox.magic-box-hasFocus .magic-box-suggestions .CoveoResult.coveo-omnibox-selectable.coveo-omnibox-selected {
+  background-color: transparent;
+}
+.CoveoSearchInterface {
+  color: #000000;
+}
+.CoveoSearchInterface.coveo-small-search-interface .coveo-search-section {
+  background: transparent;
+}
+.CoveoSearchInterface .CoveoSearchbox .magic-box,
+.CoveoSearchInterface .CoveoOmnibox .magic-box {
+  border-radius: 0px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #000000;
+}
+.CoveoSearchInterface .CoveoSearchbox .magic-box .magic-box-input,
+.CoveoSearchInterface .CoveoOmnibox .magic-box .magic-box-input {
+  border-radius: 0px;
+}
+.CoveoSearchInterface .CoveoSearchbox .magic-box .magic-box-input > input,
+.CoveoSearchInterface .CoveoOmnibox .magic-box .magic-box-input > input {
+  color: #000000;
+  font-family: 'Basis Grotesque';
+}
+.CoveoSearchInterface .CoveoSearchbox .magic-box .magic-box-clear .magic-box-icon,
+.CoveoSearchInterface .CoveoOmnibox .magic-box .magic-box-clear .magic-box-icon,
+.CoveoSearchInterface .CoveoSearchbox .magic-box-clear .magic-box-icon,
+.CoveoSearchInterface .CoveoOmnibox .magic-box-clear .magic-box-icon {
+  padding-top: 13px;
+}
+.CoveoSearchInterface .CoveoSearchbox .magic-box .magic-box-clear .magic-box-icon:before,
+.CoveoSearchInterface .CoveoOmnibox .magic-box .magic-box-clear .magic-box-icon:before,
+.CoveoSearchInterface .CoveoSearchbox .magic-box-clear .magic-box-icon:before,
+.CoveoSearchInterface .CoveoOmnibox .magic-box-clear .magic-box-icon:before {
+  font-family: "Material Design Icons";
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga" 1;
+  font-style: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 24px;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  content: "close";
+  text-indent: 0px;
+  width: 24px;
+  height: 24px;
+  background: none;
+  color: #000000;
+}
+.CoveoSearchInterface .CoveoSearchbox .magic-box .magic-box-clear .magic-box-icon:hover:before,
+.CoveoSearchInterface .CoveoOmnibox .magic-box .magic-box-clear .magic-box-icon:hover:before,
+.CoveoSearchInterface .CoveoSearchbox .magic-box-clear .magic-box-icon:hover:before,
+.CoveoSearchInterface .CoveoOmnibox .magic-box-clear .magic-box-icon:hover:before {
+  color: #f28836;
+}
+.CoveoSearchInterface .CoveoSearchButton {
+  border-radius: 0px;
+  border: none;
+  color: #000000;
+}
+.CoveoSearchInterface .CoveoSearchButton:hover {
+  color: #f28836;
+}
+.CoveoSearchInterface .CoveoSearchButton:hover > .coveo-icon {
+  background: none;
+  text-indent: 0px;
+  width: 24px;
+  height: 24px;
+}
+.CoveoSearchInterface .CoveoSearchButton > .coveo-icon {
+  background: none;
+  text-indent: 0px;
+  width: 24px;
+  height: 24px;
+}
+.CoveoSearchInterface .CoveoSearchButton > .coveo-icon:before {
+  font-family: "Material Design Icons";
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga" 1;
+  font-style: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 24px;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  content: "search";
+}
+.CoveoSearchInterface .CoveoResult {
+  border-bottom-color: #000000;
+}
+.CoveoSearchInterface .coveo-results-header {
+  box-shadow: 0 -1px 0px 0px #000000 inset;
+}
+.CoveoSearchInterface .CoveoSort {
+  color: #000000;
+}
+.CoveoSearchInterface .CoveoSort:hover {
+  color: #f28836;
+}
+.CoveoSearchInterface .CoveoSort.coveo-selected {
+  border-bottom-color: #d33e1f;
+}
+.CoveoSearchInterface .CoveoSort.coveo-selected:hover {
+  color: #f28836;
+  border-bottom-color: #f28836;
+}
+a.CoveoResultLink,
+.CoveoResult a.CoveoResultLink,
+.CoveoSearchInterface a.CoveoResultLink,
+.CoveoSearchInterface .CoveoResult a.CoveoResultLink,
+a.CoveoResultLink:visited,
+.CoveoResult a.CoveoResultLink:visited,
+.CoveoSearchInterface a.CoveoResultLink:visited,
+.CoveoSearchInterface .CoveoResult a.CoveoResultLink:visited {
+  color: #000000;
+}
+a.CoveoResultLink:hover,
+.CoveoResult a.CoveoResultLink:hover,
+.CoveoSearchInterface a.CoveoResultLink:hover,
+.CoveoSearchInterface .CoveoResult a.CoveoResultLink:hover,
+a.CoveoResultLink:visited:hover,
+.CoveoResult a.CoveoResultLink:visited:hover,
+.CoveoSearchInterface a.CoveoResultLink:visited:hover,
+.CoveoSearchInterface .CoveoResult a.CoveoResultLink:visited:hover {
+  color: #d33e1f;
+}
+.CoveoSearchInterface {
+  font-family: 'Basis Grotesque';
+  color: #000000;
+}
+.CoveoSearchInterface .CoveoQueryDuration {
+  color: #000000;
+}
+.CoveoSearchInterface .CoveoQuerySummary {
+  color: #000000;
+}
+.CoveoSearchInterface .coveo-main-section {
+  font-family: 'Basis Grotesque';
+}
+.CoveoSearchInterface .coveo-main-section .coveo-facet-column .CoveoFacet {
+  font-family: 'Basis Grotesque';
+  border: none;
+  background: transparent;
+}
+.CoveoSearchInterface .coveo-main-section .coveo-facet-column .CoveoFacet .coveo-facet-header {
+  font-family: 'Basis Grotesque';
+  color: #000000;
+  border-bottom: 1px solid #000000;
+}
+.CoveoSearchInterface .coveo-main-section .coveo-facet-column .CoveoFacet .coveo-facet-value {
+  font-family: 'Basis Grotesque';
+  color: #000000;
+}
+.CoveoSearchInterface .coveo-main-section .coveo-facet-column .CoveoFacet .coveo-facet-value-checkbox {
+  border-color: #000000;
+  border-radius: 0px;
+}
+.CoveoSearchInterface .coveo-settings-advanced-menu {
+  background: #ffffff;
+  border-color: #000000;
+  border-radius: 0px;
+}
+.CoveoSearchInterface .CoveoPager .coveo-pager-list-item {
+  font-size: 14px;
+}
+.CoveoSearchInterface .CoveoPager .coveo-pager-list-item,
+.CoveoSearchInterface .CoveoPager .coveo-pager-list-item > a {
+  color: #000000;
+}
+.CoveoSearchInterface .CoveoPager .coveo-pager-list-item.coveo-active {
+  font-size: 14px;
+}
+.CoveoSearchInterface .CoveoPager .coveo-pager-list-item.coveo-active,
+.CoveoSearchInterface .CoveoPager .coveo-pager-list-item.coveo-active > a {
+  color: #f28836;
+}
+.modal-content {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0px;
+}
+.modal-header {
+  border-bottom: none;
+}
+#rating-row #rating-col span {
+  float: left;
+}
+#rating-row #rating-col span:first-child {
+  padding-right: 5px;
+}
+#rating-row #rating-col span:last-child {
+  padding-left: 5px;
+}
+#rating-row #rating-col .stars-wrapper {
+  padding-top: 1px;
+  float: left;
+}
+#rating-row #rating-col .stars-wrapper .stars {
+  display: table;
+}
+#rating-row #rating-col .stars-wrapper .stars div {
+  padding-right: 0px;
+  width: 22px;
+  height: 16px;
+  font: normal normal normal 16px/1 "Material Design Icons";
+  font-size: inherit;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 1;
+  position: relative;
+  word-wrap: normal;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+#rating-row #rating-col .stars-wrapper .stars div:before {
+  content: "\e83a";
+  font-size: 16px;
+}
+#rating-row #rating-col .stars-wrapper .stars div.chosenStar {
+  background: transparent;
+}
+#rating-row #rating-col .stars-wrapper .stars div.chosenStar:before {
+  content: "\e838";
+}
+#rating-row #rating-col .stars-wrapper .stars div.idleStar {
+  background: transparent;
+}
+#rating-row #rating-col .stars-wrapper .stars div.idleStar:before {
+  content: "\e83a";
+}
+/*# sourceMappingURL=glass.css.map */

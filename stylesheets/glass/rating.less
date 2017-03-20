@@ -1,0 +1,62 @@
+// star border
+// content: "\e83a";
+// star
+// content: "\e838";
+
+#rating-row {
+  #rating-col {
+    span {
+      float: left;
+      &:first-child {
+        padding-right: 5px;
+      }
+      &:last-child {
+        padding-left: 5px;
+      }
+    }
+    .stars-wrapper {
+      padding-top: 1px;
+      float: left;
+      .stars {
+        display: table;
+        div {
+          padding-right: 0px;
+          width: 22px;
+          height: 16px;
+          // float: left;
+          // padding: 0px 2px;
+
+          font: normal normal normal 16px/1 "Material Design Icons";
+          font-size: inherit;
+          text-transform: none;
+          letter-spacing: normal;
+          line-height: 1;
+          position: relative;
+          word-wrap: normal;
+          /* Support for all WebKit browsers. */
+          -webkit-font-smoothing: antialiased;
+          /* Support for Firefox. */
+          -moz-osx-font-smoothing: grayscale;
+          transform: translate(0, 0);
+
+          &:before {
+            content: "\e83a";
+            font-size: 16px;
+          }
+          &.chosenStar {
+            background: transparent;
+            &:before {
+              content: "\e838";
+            }
+          }
+          &.idleStar {
+            background: transparent;
+            &:before {
+              content: "\e83a";
+            }
+          }
+        }
+      }
+    }
+  }
+}
