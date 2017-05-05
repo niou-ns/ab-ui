@@ -1,8 +1,314 @@
+// calendar legend colors
+@public_holiday: #707070;
+@approved: #426949;
+@pending_bsc: orange;
+@pending_manager: #af0820;
+@pending_hrbp: #ad4902;
+@nwd: #a09c9b;
+@more_info: #135f90;
+@cancel_request: #a35d91;
+
 .cPP_LeaveRequestWrap {
-  .header-buttons-list {
-    padding: 0;
+	
+	.wrap {
+		&-sidebar {
+			padding-left: 0px;
+			padding-top: 17px;	
+		}
+
+		@media screen and (min-width: 992px) {
+			&-calendar {
+				border-left: 1px solid #000;
+			}
+		}
+
+	}
+
+	.alert-success {
+		color: #3c763d;
+		span {
+			color: #3c763d;
+		}
+	}
+
+	.links {
+		margin-left: 0px;
+		margin-bottom: 0px;
+		&-section {
+			margin-left: 0px;
+		}
+	}
+}
+
+.cPP_LeaveAbsenceSideBar {
+
+	.slds-table--bordered {
+	    border-top: 1px solid #000;
+    	border-bottom: 1px solid #000;
+	}
+
+	.table {
+		&-stacked {
+			&-xxs {
+				@media (min-width: 120px) {
+					.table-stacked();
+				}
+				tr {
+					padding: 10px 0;
+				}
+				.actions-cell {
+					padding: 0px!important;
+					.mdi {
+						color: #000;
+					}
+				}
+			}
+		}
+	}
+
+	.cPP_LeaveAbsenceQuotaTable {
+		tr {
+			font-size: 11px;
+		}
+	}
+}
+
+.calendar-cell {
+	&:before {
+		content: ' ';
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		position: absolute;
+		z-index: 0;
+		left: 50%;
+		top: 4px;
+		transform: translateX(-50%);
+	}
+	a {
+		position: relative;
+	}
+}
+
+.NWD {
+	background: @nwd !important;
+}
+
+.PH {
+	background: @public_holiday !important;
+	.calendar-cell {
+		&:before {
+			background-color: @public_holiday;
+		}
+	}
+	a {
+		color: #fff;
+	}
+}
+
+.public-holiday {
+    background: @public_holiday !important;
+    &-label {
+	    &:before {
+	    	background-color: @public_holiday;	
+	    }
+	}
+	.calendar-cell {
+		&:before {
+			background-color: @public_holiday;
+		}
+	}
+}
+
+.approved {
+	background: @approved !important;
+	&-label {
+	    &:before {
+			background-color: @approved;
+	    }
+	}
+	.calendar-cell {
+		&:before {
+			background-color: @approved;
+		}
+	}
+	a {
+		color: #fff;
+	}
+}
+
+.pending-bsc {
+	background: @pending_bsc !important;
+	&-label {
+	    &:before {
+	    	background-color: @pending_bsc;
+	    }
+	}
+	.calendar-cell {
+		&:before {
+			background-color: @pending_bsc;
+		}
+	}
+	a {
+		color: #fff;
+	}
+}
+
+.pending-manager {
+	background: @pending_manager !important;
+	&-label {
+	    &:before {
+	    	background-color: @pending_manager;
+	    }
+	}
+	.calendar-cell {
+		&:before {
+			background-color: @pending_manager;
+		}
+	}
+	a {
+		color: #fff;
+	}
+}
+
+.pending-hrbp {
+	background: @pending_hrbp !important;
+	&-label {
+	    &:before {
+	    	background-color: @pending_hrbp;
+	    }
+	}
+	.calendar-cell {
+		&:before {
+			background-color: @pending_hrbp;
+		}
+	}
+	a {
+		color: #fff;
+	}
+}
+
+.nwd {
+	a {
+		color: white;
+	}
+	background: @nwd !important;
+	&-label {
+	    &:before {
+	    	background-color: @nwd;	
+	    }
+	}
+}
+
+.more-info {
+	background: @more_info !important;
+	&-label {
+	    &:before {
+	    	background-color: @more_info;
+	    }
+	}
+	.calendar-cell {
+		&:before {
+			background-color: @more_info;
+		}
+	}
+	a {
+		color: #fff;
+	}
+}
+
+.cancel-request {
+	background: @cancel_request !important;
+	&-label {
+	    &:before {
+	    	background-color: @cancel_request;
+	    }
+	}
+	.calendar-cell {
+		&:before {
+			background-color: @cancel_request;
+		}
+	}
+	a {
+		color: #fff;
+	}
+}
+
+.day-type-legend-container {
+    margin: auto;
+    margin-top: 10px;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-  }
+    align-items: center;
+    padding-bottom: 20px;
+    &-label {
+    	margin-right: 5px;
+    	&:before {
+		    content: "";
+		    width: 12px;
+		    height: 12px;
+		    border-radius: 3px;
+		    margin: 0px 3px;
+		    display: inline-block;
+    	}
+
+    }
 }
+
+.cPP_LeaveRequestFmlaWindow {
+
+    color: #000;
+
+	input[type="radio"] {
+	    float: left;
+	}
+
+	.uiInputRadio {
+	    width: 80px;
+	    display: inline-block;
+	}
+
+	p {
+	    padding-bottom: 15px;
+	    font-weight: 600;
+	}
+}
+
+.ladropdown {
+	position: relative;
+	z-index: 1;
+	&-disp {
+		min-height: 34px;
+	}
+	&-clist {
+	    background: rgba(255,255,255,0);
+    	background-color: #f9f9f9 !important;
+    	box-shadow: 0px 2px 15px -1px rgba(0,0,0,0.5);
+		border-radius: 6px;
+		position: absolute;
+		padding: 10px 0px;
+		li {
+    		float: none;
+    		background: #f7f6f6;
+			padding: 10px 15px;
+			background: #f7f6f6;
+			&:hover {
+				background: #4380e9;
+				color: #fff;
+			}
+		}
+		ul {
+			white-space: nowrap;
+    		background-color: #fff; 
+    		background: rgba(255,255,255,0);
+    		list-style: none;
+		}
+	}
+	.slds-backdrop {
+		z-index: -1; 
+		background: rgba(0, 0, 0, 0);
+	}
+}
+

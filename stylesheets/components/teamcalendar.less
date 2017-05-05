@@ -1,0 +1,273 @@
+.day-type-legend-label {
+    margin-right: 5px;
+    &:before {
+	    content: "";
+	    width: 12px;
+	    height: 12px;
+	    border-radius: 50%;
+	    margin: 0px 3px;
+	    display: inline-block;
+    }
+}
+
+.day-type-legend-container {
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+	.day-type-legend-container {
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+		justify-content: flex-start !important;
+		span {
+			width: 48%;
+			text-align: left;
+			padding-bottom: 5px;
+			font-size: 11px;
+		}
+	}
+}
+
+.cPP_LeaveAbsenceTeamCalendar {
+
+	@media screen and (max-width: 600px) {
+		.calendar-monthly-container {
+			display: none;
+		}
+		.owner-data-container {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		.slds-text-heading--large {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		.day-type-legend-container {
+			width: 100%;
+			padding-left: 15px;
+			padding-right: 15px;
+			justify-content: flex-start !important;
+			span {
+				width: 48%;
+				text-align: left;
+				padding-bottom: 5px;
+				font-size: 11px;
+			}
+		}
+	}
+
+	.slds-grid {
+	    width: 100%;
+	}
+
+	.owner-data-container {
+		font-size: 15px;
+		color: #000;
+		span {
+			display: inline-block;
+			vertical-align: middle;
+			line-height: 1em;
+		}
+	}
+
+	.team-calendar-header {
+		display: table;
+		width: 100%;
+		span {
+			background: #fff;
+			color: #000;
+			font-size: 13px;
+			border-radius: 5px;
+			height: 33px;
+			display: table-cell;
+			text-align: center;
+			vertical-align: middle;
+			&:not(.current-month-label) {
+				width: 30px;
+			}
+		}
+		.current-month-label {
+			border-left: 1px solid white;
+			border-right: 1px solid white;
+		}
+	}
+
+	table.calendar-table {
+		width: 100%;
+		height: 175px;
+		display: table;
+		table-layout: fixed;
+		color: #000;
+		thead {
+			width: 100%;
+			tr {
+				&:first-child {
+					position: relative;
+				}
+			}
+			.role-filter-container {
+				color: #000;
+				padding-right: 10px;
+			}
+			.select-month-header {
+				position: absolute;
+				bottom: 0px;
+				right: 0px;
+			}
+			th {
+				.day-no-header-label {
+					background: inherit;
+					width: 25px;
+				}
+			}
+		}
+		.calendar-day-cells-container {
+			width: 100%;
+			display: table;
+			table-layout: fixed;
+		}
+		th {
+			color: #000;
+			font-weight: lighter;
+			border: 0;
+			font-size: 13px;
+			border-radius: 5px;
+			height: 35px;
+			display: table-cell;
+			text-align: center;
+			vertical-align: middle;
+		}
+		tbody {
+			tr+tr {
+				border-top: 1px solid #ececec;
+				padding: 1px 0px;
+			}
+			tr {
+				td {
+					background: #ececec;
+					color: #666;
+					font-size: 15px;
+					height: 24px;
+					text-align: center;
+					border-radius: 3px;
+					border: 1px solid white;
+					background-clip: padding-box;
+				}
+			}
+		}
+	}
+	.alert-success {
+	    color: #3c763d;
+	}
+	.alert-success span {
+	    color: #3c763d;
+	}
+}
+
+.cPP_LeaveRequestCalendar {
+
+	.NWD {
+		background: #fff !important;
+		a {
+			color: @nwd;
+		}
+	}
+
+	table.calendar-table {
+		margin-top: 3%;
+		margin-bottom: 1%;
+		height: 250px;
+		thead {
+			th {
+				background: #fff;
+				font-weight: lighter;
+				color: #000;
+				font-size: 13px;
+				border-radius: 5px;
+				height: 33px;
+			}
+			tr .calendar-table-weekdays {
+				th {
+					background: #fff;
+					color: #000;
+					font-size: 13px;
+					font-weight: normal;
+				}
+			}
+		}
+		tbody {
+			tr {
+				td {
+					background: #fff !important;
+					padding: 0 5px;
+					font-size: 13px;
+					height: 25px;
+					text-align: center;
+					position: relative;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		.col-xxs {
+			width: 100%;
+		}
+	}
+}
+
+.cPP_LeaveAbsenceTeamCalendarWeekly {
+	
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 45px;
+
+	@media screen and (min-width: 600px) {
+	    .calendar-weekly-container {
+	        display: none !important;
+	    }
+	}
+
+	.weekday-names {
+	    border-bottom: 1px solid #ececec;
+	}
+
+	.name-overlay {
+		font-size: 12px;
+		&-row {
+			position: relative;
+		}
+	}
+
+	table.calendar-table.calendar-weekly-container tbody tr td {
+	    height: 47px;
+	}
+
+	.not-active {
+	   pointer-events: none;
+	   cursor: default;
+	}
+}
+
+.cPP_LeaveAbsenceAdministrationContainer {
+	
+	.enabled {
+    	border-bottom: 1px solid black;
+	}
+
+	a.label {
+		white-space: normal;
+		&:hover,
+		&:focus {
+			color: #000;
+		}
+	}
+}
+
