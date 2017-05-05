@@ -11558,7 +11558,7 @@ fieldset[disabled] .btn-brandy.focus {
 }
 .form-group-select:after {
   content: "\e5cf";
-  z-index: -1;
+  z-index: 1;
 }
 .form-group-search:after {
   content: "\e8b6";
@@ -12951,6 +12951,7 @@ textarea.form-control.has-error {
   font-size: 15px;
   font-weight: bold;
   margin: 0 0 5px;
+  word-break: break-word;
 }
 .my-info-data-text {
   color: #000000;
