@@ -48,7 +48,16 @@
 		.calendar-cell {
 			&:before {
 				background-color: @nwd;
-				border: 0!important;
+			}
+		}
+	}
+
+	.PH, .NWD, .public-holiday, .approved,
+	.pending-bsc, .pending-manager, 
+	.pending-hrbp, .more-info, .cancel-request {
+		.calendar-cell {
+			&:before {
+				border: 0;
 			}
 		}
 	}
