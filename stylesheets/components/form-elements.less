@@ -22,6 +22,18 @@
 	}
 }
 
+.placeholder-text {
+	&-empty {
+		color: lightgrey;
+		font-weight: lighter;
+		position: absolute;
+    	bottom: 23px;
+	}
+	&-full {
+		display: none;
+	}
+}
+
 .form-control {
   .placeholder-fix();
 }
@@ -57,7 +69,7 @@
 	&-select {
 		&:after {
 			content: "\e5cf";
-			z-index: -1;
+			z-index: 1;
 		}
 	}
 	&-search {
@@ -222,7 +234,7 @@ textarea {
 		&:focus, &:active {
 			outline: none;
 			box-shadow: none;
-			border-color: @brandy-punch;
+			border-color: @black
 		}
 		&.has-error {
 			border-color: @totem-pole;
@@ -344,6 +356,9 @@ textarea {
 
 .uiInput {
 	&--datetime {
+		.transparent {
+			background-color: transparent;
+		}
 		.datePicker-openIcon {
 			&.display {
 				display: none;
