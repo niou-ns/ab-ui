@@ -1,12 +1,12 @@
 // calendar legend colors
-@public_holiday: #707070;
-@approved: #426949;
-@pending_bsc: orange;
-@pending_manager: #af0820;
-@pending_hrbp: #ad4902;
+@public_holiday: #4294f7;
+@approved: #57bf95;
+@pending_bsc: #ff2600;
+@pending_manager: #ff9300;
+@pending_hrbp: #ffd479;
 @nwd: #a09c9b;
-@more_info: #135f90;
-@cancel_request: #a35d91;
+@more_info: #77caff;
+@cancel_request: #f293da;
 
 .cPP_LeaveRequestWrap {
 	
@@ -15,10 +15,12 @@
 			padding-left: 0px;
 			padding-top: 17px;	
 		}
-
 		@media screen and (min-width: 992px) {
 			&-calendar {
 				border-left: 1px solid #000;
+				padding-top: 15px;
+				padding-right: 50px;
+				padding-left: 50px;
 			}
 		}
 
@@ -82,7 +84,7 @@
 		position: absolute;
 		z-index: 0;
 		left: 50%;
-		top: 4px;
+		top: 20%;
 		transform: translateX(-50%);
 	}
 	a {
@@ -90,15 +92,12 @@
 	}
 }
 
-.NWD {
-	background: @nwd !important;
-}
 
 .PH {
-	background: @public_holiday !important;
 	.calendar-cell {
 		&:before {
 			background-color: @public_holiday;
+			border: 0!important;
 		}
 	}
 	a {
@@ -107,7 +106,6 @@
 }
 
 .public-holiday {
-    background: @public_holiday !important;
     &-label {
 	    &:before {
 	    	background-color: @public_holiday;	
@@ -116,12 +114,12 @@
 	.calendar-cell {
 		&:before {
 			background-color: @public_holiday;
+			border: 0!important;
 		}
 	}
 }
 
 .approved {
-	background: @approved !important;
 	&-label {
 	    &:before {
 			background-color: @approved;
@@ -130,6 +128,7 @@
 	.calendar-cell {
 		&:before {
 			background-color: @approved;
+			border: 0!important;
 		}
 	}
 	a {
@@ -138,7 +137,6 @@
 }
 
 .pending-bsc {
-	background: @pending_bsc !important;
 	&-label {
 	    &:before {
 	    	background-color: @pending_bsc;
@@ -147,6 +145,7 @@
 	.calendar-cell {
 		&:before {
 			background-color: @pending_bsc;
+			border: 0!important;
 		}
 	}
 	a {
@@ -155,7 +154,6 @@
 }
 
 .pending-manager {
-	background: @pending_manager !important;
 	&-label {
 	    &:before {
 	    	background-color: @pending_manager;
@@ -164,6 +162,7 @@
 	.calendar-cell {
 		&:before {
 			background-color: @pending_manager;
+			border: 0!important;
 		}
 	}
 	a {
@@ -172,7 +171,6 @@
 }
 
 .pending-hrbp {
-	background: @pending_hrbp !important;
 	&-label {
 	    &:before {
 	    	background-color: @pending_hrbp;
@@ -181,6 +179,7 @@
 	.calendar-cell {
 		&:before {
 			background-color: @pending_hrbp;
+			border: 0!important;
 		}
 	}
 	a {
@@ -192,7 +191,6 @@
 	a {
 		color: white;
 	}
-	background: @nwd !important;
 	&-label {
 	    &:before {
 	    	background-color: @nwd;	
@@ -201,7 +199,6 @@
 }
 
 .more-info {
-	background: @more_info !important;
 	&-label {
 	    &:before {
 	    	background-color: @more_info;
@@ -210,6 +207,7 @@
 	.calendar-cell {
 		&:before {
 			background-color: @more_info;
+			border: 0!important;
 		}
 	}
 	a {
@@ -218,7 +216,6 @@
 }
 
 .cancel-request {
-	background: @cancel_request !important;
 	&-label {
 	    &:before {
 	    	background-color: @cancel_request;
@@ -227,6 +224,7 @@
 	.calendar-cell {
 		&:before {
 			background-color: @cancel_request;
+			border: 0!important;
 		}
 	}
 	a {
