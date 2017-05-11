@@ -12949,6 +12949,15 @@ textarea.form-control.has-error {
   color: #000000;
   text-decoration: none;
 }
+@media (max-width: 767px) {
+  .my-info .title-container .actions-container {
+    margin-top: 0;
+  }
+  .my-info .title-container .actions-container .actions-link .mdi {
+    font-size: 3rem;
+    font-size: 30px;
+  }
+}
 .my-info-data .row {
   margin-bottom: 20px;
 }
