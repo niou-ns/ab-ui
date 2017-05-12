@@ -2,6 +2,14 @@
    Form Elements
    ========================================================================== */
 
+@click_blue : #0086F1;
+
+.btn {
+	&-submit {
+		color: @click_blue;
+	}
+}
+
 .custom-form-group {
 	input, select{
 		border: none;
@@ -27,7 +35,9 @@
 		color: lightgrey;
 		font-weight: lighter;
 		position: absolute;
-    	bottom: 23px;
+		top: 50%;
+		z-index: -1;
+		.transform(~"translate3d(0, -50%, 0)");
 	}
 	&-full {
 		display: none;
@@ -40,6 +50,9 @@
 
 .form-group {
 	word-wrap: break-word;
+	.slds-form-element__control {
+		position: relative;
+	}
 	.slds-form-element__static {
 		word-wrap: break-word;
 		display: inline;
