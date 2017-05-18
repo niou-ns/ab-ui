@@ -9938,6 +9938,13 @@ input {
 .mdi {
   font-size: 20px;
 }
+.glyphicon {
+  font-size: 16px;
+}
+.glyphicon.glyphicon-bullhorn {
+  top: -2px;
+  left: 2px;
+}
 @font-face {
   font-family: 'Boing';
   src: url('../fonts/Boing/Boing_RegularWEB.eot') format('enbedded-opentype'), url('../fonts/Boing/Boing_RegularWEB.woff2') format('woff2'), url('../fonts/Boing/Boing_RegularWEB.woff') format('woff'), url('../fonts/Boing/Boing_RegularWEB.svg#boing-regular') format('svg');
@@ -12941,6 +12948,15 @@ textarea.form-control.has-error {
 .my-info .title-container .actions-container .actions-link:visited {
   color: #000000;
   text-decoration: none;
+}
+@media (max-width: 767px) {
+  .my-info .title-container .actions-container {
+    margin-top: 0;
+  }
+  .my-info .title-container .actions-container .actions-link .mdi {
+    font-size: 3rem;
+    font-size: 30px;
+  }
 }
 .my-info-data .row {
   margin-bottom: 20px;
