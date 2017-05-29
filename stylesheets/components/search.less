@@ -1,15 +1,15 @@
 .home-wrapper {
   overflow: hidden;
   @media (max-width: @screen-xs-max) {
-    height: calc(~'(100vh - @{xs-height})' - 36px);
+    height: calc(~'(100vh - @{xs-height} * 3)' - 36px);
   }
 
   @media (min-width: @screen-sm-min) {
-    height: calc(~'(100vh - @{sm-height})' - 36px);
+    height: calc(~'(100vh - @{sm-height} * 2)' - 36px);
   }
 
   @media (min-width: @screen-md-min) {
-    height: calc(~'(100vh - @{md-height})' - 36px);
+    height: calc(~'(100vh - @{md-height} * 1.75)' - 36px);
   }
 
   &.mobile {
@@ -22,11 +22,8 @@
     & > .flex-center {
       flex: 1;
     }
-    @media (max-width: @screen-xs-max) {
-      height: 50vh;
-    }
     @media (min-width: @screen-sm-min) {
-      height: 55vh;
+      height: 60vh;
     }
     .logo {
       margin-bottom: 30px;
