@@ -76,6 +76,7 @@
 }
 
 .calendar-cell {
+	position: relative;
 	&:before {
 		content: ' ';
 		width: 25px;
@@ -84,7 +85,7 @@
 		position: absolute;
 		z-index: 0;
 		left: 50%;
-		top: 20%;
+		top: -5px;
 		transform: translateX(-50%);
 	}
 	a {
