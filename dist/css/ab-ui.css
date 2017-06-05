@@ -11497,6 +11497,9 @@ fieldset[disabled] .btn-brandy.focus {
 /* ==========================================================================
    Form Elements
    ========================================================================== */
+.btn-submit {
+  color: #0086F1;
+}
 .custom-form-group input,
 .custom-form-group select {
   border: none;
@@ -11523,6 +11526,20 @@ fieldset[disabled] .btn-brandy.focus {
 .custom-form-group select::-ms-expand {
   display: none;
 }
+.placeholder-text-empty {
+  color: lightgrey;
+  font-weight: lighter;
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  -webkit-transform: translate3d(0, -50%, 0);
+  -ms-transform: translate3d(0, -50%, 0);
+  -o-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+.placeholder-text-full {
+  display: none;
+}
 .form-control::-moz-placeholder {
   font-size: 14px;
 }
@@ -11534,6 +11551,9 @@ fieldset[disabled] .btn-brandy.focus {
 }
 .form-group {
   word-wrap: break-word;
+}
+.form-group .slds-form-element__control {
+  position: relative;
 }
 .form-group .slds-form-element__static {
   word-wrap: break-word;
@@ -11565,7 +11585,7 @@ fieldset[disabled] .btn-brandy.focus {
 }
 .form-group-select:after {
   content: "\e5cf";
-  z-index: 1;
+  z-index: -1;
 }
 .form-group-search:after {
   content: "\e8b6";
@@ -11653,7 +11673,7 @@ textarea.form-control:focus,
 textarea.form-control:active {
   outline: none;
   box-shadow: none;
-  border-color: #f28836;
+  border-color: #000000;
 }
 textarea.form-control.has-error {
   border-color: #ba1b13;
@@ -11883,6 +11903,9 @@ textarea.form-control.has-error {
 .uiInput--default .form-element {
   position: relative;
 }
+.uiInput--datetime .transparent {
+  background-color: transparent;
+}
 .uiInput--datetime .datePicker-openIcon {
   position: absolute;
   left: auto;
@@ -12003,7 +12026,7 @@ textarea.form-control.has-error {
 .uiInput--textarea.textarea.form-control:active {
   outline: none;
   box-shadow: none;
-  border-color: #f28836;
+  border-color: #000000;
 }
 .uiInput--textarea .textarea.form-control.has-error,
 .uiInput--textarea.textarea.form-control.has-error {
@@ -12386,7 +12409,7 @@ textarea.form-control.has-error {
 .navbar-ab {
   border-radius: 0px;
   border: none;
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   top: 0px;
   background: #ffffff;
@@ -13042,7 +13065,7 @@ textarea.form-control.has-error {
   text-align: center;
 }
 .pagination .mdi {
-  font-size: 14px;
+  font-size: 20px;
 }
 .pagination > li > a {
   border: none;
@@ -13490,11 +13513,456 @@ textarea.form-control.has-error {
   min-width: 160px;
   white-space: pre-line;
 }
-.cPP_LeaveRequestWrap .header-buttons-list {
-  padding: 0;
+.cPP_LeaveRequestWrap .wrap-sidebar {
+  padding-left: 0px;
+  padding-top: 17px;
+}
+@media screen and (min-width: 992px) {
+  .cPP_LeaveRequestWrap .wrap-calendar {
+    border-left: 1px solid #000;
+    padding-top: 15px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+.cPP_LeaveRequestWrap .alert-success {
+  color: #3c763d;
+}
+.cPP_LeaveRequestWrap .alert-success span {
+  color: #3c763d;
+}
+.cPP_LeaveRequestWrap .links {
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+.cPP_LeaveRequestWrap .links-section {
+  margin-left: 0px;
+}
+.cPP_LeaveAbsenceSideBar .slds-table--bordered {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+@media (min-width: 120px) {
+  .cPP_LeaveAbsenceSideBar .table-stacked-xxs > thead {
+    display: none;
+  }
+  .cPP_LeaveAbsenceSideBar .table-stacked-xxs > tbody > tr {
+    display: block;
+    border-bottom: 1px solid #000000;
+  }
+  .cPP_LeaveAbsenceSideBar .table-stacked-xxs > tbody > tr:first-child {
+    border-top: 1px solid #000000;
+  }
+  .cPP_LeaveAbsenceSideBar .table-stacked-xxs > tbody > tr > td {
+    display: block;
+    text-align: right;
+  }
+  .cPP_LeaveAbsenceSideBar .table-stacked-xxs > tbody > tr > td:before {
+    color: #000000;
+    font-weight: bold;
+    display: block;
+    content: attr(data-label);
+    float: left;
+  }
+  .cPP_LeaveAbsenceSideBar .table-stacked-xxs > tbody > tr > td:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+  .cPP_LeaveAbsenceSideBar .table-stacked-xxs .cell-shrink {
+    width: 100%;
+  }
+}
+.cPP_LeaveAbsenceSideBar .table-stacked-xxs tr {
+  padding: 10px 0;
+}
+.cPP_LeaveAbsenceSideBar .table-stacked-xxs .actions-cell {
+  padding: 0px!important;
+}
+.cPP_LeaveAbsenceSideBar .table-stacked-xxs .actions-cell .mdi {
+  color: #000;
+}
+.cPP_LeaveAbsenceSideBar .cPP_LeaveAbsenceQuotaTable tr {
+  font-size: 11px;
+}
+.calendar-cell {
+  position: relative;
+}
+.calendar-cell:before {
+  content: ' ';
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: -5px;
+  transform: translateX(-50%);
+}
+.calendar-cell a {
+  position: relative;
+}
+.day-type-legend-container {
+  margin: auto;
+  margin-top: 10px;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 600px) {
+  .day-type-legend-container {
+    width: 100%;
+  }
+  .day-type-legend-container span {
+    width: 48%;
+    text-align: left;
+    padding-bottom: 5px;
+    font-size: 11px;
+  }
+}
+.day-type-legend-label {
+  margin-right: 5px;
+}
+.day-type-legend-label:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0px 3px;
+  display: inline-block;
+}
+.PH .calendar-cell:before {
+  background-color: #4294f7;
+}
+.PH a {
+  color: #fff;
+}
+.public-holiday-label:before {
+  background-color: #4294f7;
+}
+.public-holiday .calendar-cell:before {
+  background-color: #4294f7;
+}
+.approved-label:before {
+  background-color: #57bf95;
+}
+.approved .calendar-cell:before {
+  background-color: #57bf95;
+}
+.approved a {
+  color: #fff;
+}
+.pending-bsc-label:before {
+  background-color: #ff9300;
+}
+.pending-bsc .calendar-cell:before {
+  background-color: #ff9300;
+}
+.pending-bsc a {
+  color: #fff;
+}
+.pending-manager-label:before {
+  background-color: #ff9300;
+}
+.pending-manager .calendar-cell:before {
+  background-color: #ff9300;
+}
+.pending-manager a {
+  color: #fff;
+}
+.pending-hrbp-label:before {
+  background-color: #ff9300;
+}
+.pending-hrbp .calendar-cell:before {
+  background-color: #ff9300;
+}
+.pending-hrbp a {
+  color: #fff;
+}
+.nwd a {
+  color: white;
+}
+.nwd-label:before {
+  background-color: #a09c9b;
+}
+.more-info-label:before {
+  background-color: #000000;
+}
+.more-info .calendar-cell:before {
+  background-color: #000000;
+}
+.more-info a {
+  color: #fff;
+}
+.cancel-request-label:before {
+  background-color: #ff2600;
+}
+.cancel-request .calendar-cell:before {
+  background-color: #ff2600;
+}
+.cancel-request a {
+  color: #fff;
+}
+.cPP_LeaveRequestFmlaWindow {
+  color: #000;
+}
+.cPP_LeaveRequestFmlaWindow input[type="radio"] {
+  float: left;
+}
+.cPP_LeaveRequestFmlaWindow .uiInputRadio {
+  width: 80px;
+  display: inline-block;
+}
+.cPP_LeaveRequestFmlaWindow p {
+  padding-bottom: 15px;
+  font-weight: 600;
+}
+.ladropdown {
+  position: relative;
+  z-index: 1;
+}
+.ladropdown-disp {
+  min-height: 34px;
+}
+.ladropdown-clist {
+  background: rgba(255, 255, 255, 0);
+  background-color: #f9f9f9;
+  box-shadow: 0px 2px 15px -1px rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  position: absolute;
+  padding: 10px 0px;
+}
+.ladropdown-clist li {
+  float: none;
+  padding: 10px 15px;
+  background: #f7f6f6;
+}
+.ladropdown-clist li:hover {
+  background: #4380e9;
+  color: #fff;
+}
+.ladropdown-clist ul {
+  white-space: nowrap;
+  background-color: #fff;
+  background: rgba(255, 255, 255, 0);
+  list-style: none;
+}
+.ladropdown .slds-backdrop {
+  z-index: -1;
+  background: rgba(0, 0, 0, 0);
+}
+.cPP_LeaveAbsenceTeamCalendar .calendar-cell:before {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: 4px;
+  border: 1px solid lightgrey;
+}
+.cPP_LeaveAbsenceTeamCalendar .NWD .calendar-cell:before {
+  background-color: #a09c9b;
+}
+.cPP_LeaveAbsenceTeamCalendar .PH .calendar-cell:before,
+.cPP_LeaveAbsenceTeamCalendar .NWD .calendar-cell:before,
+.cPP_LeaveAbsenceTeamCalendar .public-holiday .calendar-cell:before,
+.cPP_LeaveAbsenceTeamCalendar .approved .calendar-cell:before,
+.cPP_LeaveAbsenceTeamCalendar .pending-bsc .calendar-cell:before,
+.cPP_LeaveAbsenceTeamCalendar .pending-manager .calendar-cell:before,
+.cPP_LeaveAbsenceTeamCalendar .pending-hrbp .calendar-cell:before,
+.cPP_LeaveAbsenceTeamCalendar .more-info .calendar-cell:before,
+.cPP_LeaveAbsenceTeamCalendar .cancel-request .calendar-cell:before {
+  border: 0;
+}
+@media screen and (max-width: 600px) {
+  .cPP_LeaveAbsenceTeamCalendar .calendar-cell:before {
+    width: 25px;
+    height: 25px;
+  }
+  .cPP_LeaveAbsenceTeamCalendar .calendar-monthly-container {
+    display: none;
+  }
+  .cPP_LeaveAbsenceTeamCalendar .owner-data-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.cPP_LeaveAbsenceTeamCalendar a {
+  color: #000;
+}
+.cPP_LeaveAbsenceTeamCalendar .slds-grid {
+  width: 100%;
+}
+.cPP_LeaveAbsenceTeamCalendar .owner-data-container {
+  font-size: 15px;
+  color: #000;
+}
+.cPP_LeaveAbsenceTeamCalendar .owner-data-container span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1em;
+}
+.cPP_LeaveAbsenceTeamCalendar .team-calendar-header {
+  display: table;
+  width: 100%;
+}
+.cPP_LeaveAbsenceTeamCalendar .team-calendar-header span {
+  background: #ffffff;
+  color: #000000;
+  font-size: 13px;
+  border-radius: 5px;
+  height: 33px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.cPP_LeaveAbsenceTeamCalendar .team-calendar-header span:not(.current-month-label) {
+  width: 30px;
+}
+.cPP_LeaveAbsenceTeamCalendar .team-calendar-header .current-month-label {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+.cPP_LeaveAbsenceTeamCalendar table.calendar-table {
+  width: 100%;
+  height: 175px;
+  display: table;
+  table-layout: fixed;
+  color: #000;
+}
+.cPP_LeaveAbsenceTeamCalendar table.calendar-table thead {
+  width: 100%;
+}
+.cPP_LeaveAbsenceTeamCalendar table.calendar-table thead tr:first-child {
+  position: relative;
+}
+.cPP_LeaveAbsenceTeamCalendar table.calendar-table thead .role-filter-container {
+  color: #000;
+  padding-right: 10px;
+}
+.cPP_LeaveAbsenceTeamCalendar table.calendar-table thead .select-month-header {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+.cPP_LeaveAbsenceTeamCalendar table.calendar-table thead th .day-no-header-label {
+  background: inherit;
+  width: 25px;
+}
+.cPP_LeaveAbsenceTeamCalendar table.calendar-table .calendar-day-cells-container {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+.cPP_LeaveAbsenceTeamCalendar table.calendar-table th {
+  color: black;
+  font-weight: lighter;
+  border: 0;
+  font-size: 13px;
+  border-radius: 5px;
+  height: 35px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.cPP_LeaveAbsenceTeamCalendar table.calendar-table tbody tr + tr {
+  border-top: 1px solid #ececec;
+  padding: 1px 0px;
+}
+.cPP_LeaveAbsenceTeamCalendar table.calendar-table tbody tr td {
+  background: #fff;
+  color: #000000;
+  font-size: 15px;
+  height: 24px;
+  text-align: center;
+  background-clip: padding-box;
+  position: relative;
+}
+.cPP_LeaveAbsenceTeamCalendar label {
+  color: #000;
+}
+.cPP_LeaveAbsenceTeamCalendar .alert-success {
+  color: #3c763d;
+}
+.cPP_LeaveAbsenceTeamCalendar .alert-success span {
+  color: #3c763d;
+}
+.cPP_LeaveRequestCalendar .NWD a {
+  color: #a09c9b;
+}
+.cPP_LeaveRequestCalendar table.calendar-table {
+  margin-top: 3%;
+  margin-bottom: 1%;
+  height: 300px;
+}
+.cPP_LeaveRequestCalendar table.calendar-table thead th {
+  background: #737373;
+  font-weight: lighter;
+  text-align: center;
+  color: #fff;
+  border: 0;
+  background: #fff;
+  font-weight: 500;
+  color: #000;
+  font-size: 13px;
+  height: 33px;
+}
+.cPP_LeaveRequestCalendar table.calendar-table thead tr.weekDays th {
+  background: #fff;
+  color: #000000;
+  font-size: 13px;
+  font-weight: normal;
+}
+.cPP_LeaveRequestCalendar table.calendar-table tbody tr td {
+  background: #fff;
+  border: 1px solid #fff;
+  padding: 0 5px;
+  font-size: 13px;
+  height: 25px;
+  text-align: center;
+  position: relative;
+}
+@media screen and (max-width: 480px) {
+  .cPP_LeaveRequestCalendar .col-xxs {
+    width: 100%;
+  }
+}
+.cPP_LeaveAbsenceTeamCalendarWeekly {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 45px;
+}
+@media screen and (min-width: 600px) {
+  .cPP_LeaveAbsenceTeamCalendarWeekly .calendar-weekly-container {
+    display: none !important;
+  }
+}
+.cPP_LeaveAbsenceTeamCalendarWeekly .weekday-names {
+  border-bottom: 1px solid #ececec;
+}
+.cPP_LeaveAbsenceTeamCalendarWeekly .name-overlay {
+  font-size: 12px;
+}
+.cPP_LeaveAbsenceTeamCalendarWeekly .name-overlay-row {
+  position: relative;
+}
+.cPP_LeaveAbsenceTeamCalendarWeekly table.calendar-table.calendar-weekly-container tbody tr td {
+  height: 47px;
+}
+.cPP_LeaveAbsenceTeamCalendarWeekly .not-active {
+  pointer-events: none;
+  cursor: default;
+}
+.cPP_LeaveAbsenceAdministrationContainer .enabled {
+  border-bottom: 1px solid black;
+}
+.cPP_LeaveAbsenceAdministrationContainer a.label {
+  white-space: normal;
+}
+.cPP_LeaveAbsenceAdministrationContainer a.label:hover,
+.cPP_LeaveAbsenceAdministrationContainer a.label:focus {
+  color: #000;
 }
 .mycompany-page .cCenterPanel > .siteforceSldsOneColLayout > .contentRegion > div > .ui-widget,
 .ppmycompanychild-page .cCenterPanel > .siteforceSldsOneColLayout > .contentRegion > div > .ui-widget {
