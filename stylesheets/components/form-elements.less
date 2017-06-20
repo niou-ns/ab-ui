@@ -56,6 +56,9 @@
 	.slds-form-element__static {
 		word-wrap: break-word;
 		display: inline;
+		.read-only {
+			color: @space-gray;
+		}
 	}
 	.form-label-tooltip {
 		display: flex;
@@ -193,13 +196,13 @@ textarea {
 /** Override Bootstrap styles **/
 /*******************************/
 
-@padding-inputs-horizontal: 0px;
+@padding-inputs-horizontal: 10px;
 
 .form-control-function() {
 	//* From git commit - client requested to remove borders *//
-	border: none;
+	border: 1px solid @space-gray;
 	/* border-color: @black; */
-	border-radius: 0px;
+	border-radius: 3px;
 	color: @black;
 	-webkit-box-shadow: none;
 					box-shadow: none;
@@ -210,8 +213,8 @@ textarea {
 	// **** //
 	.transition(~"250ms border-color ease");
 	&:focus, &:active {
-		outline: none;
-		box-shadow: none;
+		outline: @brandy-punch;
+		box-shadow: 0px 0px 1px @brandy-punch;
 		border-color: @brandy-punch;
 	}
 }
