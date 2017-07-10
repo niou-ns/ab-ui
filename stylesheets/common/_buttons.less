@@ -31,6 +31,25 @@
       color: @brandy-punch;
     }
   }
+
+  &-submit, &-cancel {
+    text-transform: uppercase;   
+    font-weight: bold;   
+  }
+
+  &-submit {    
+    color: @click-blue;
+    &:active, &:focus, &:hover {
+       color: @click-blue;  
+    }
+  }
+
+  &-cancel {  
+    color: @space-gray; 
+    &:active, &:focus, &:hover {
+       color: @space-gray;  
+    }
+  }
 }
 
 .btn-totem {
