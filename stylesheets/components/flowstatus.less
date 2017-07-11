@@ -1,0 +1,35 @@
+.flow-status{
+	.mdi{
+		&.mdi-status-pending{
+			// workaround to make circular icon
+		    font-size: 20px;
+		    border-style: solid;
+		    border-width: 2px;
+		    border-color: #ff9300;		   
+			color: white;
+			background-color: @brandy-punch;
+			border-radius: 50%;
+		}
+		&.mdi-status-approved{
+			color: @click-green;	
+		}
+	}
+
+	&-step{
+		display: inline-block;
+		text-transform: uppercase;
+
+		&-icon{
+			font-size: 25px;
+		}
+		&-icon-container {
+		    line-height: 0;
+		}
+		&-approved{
+			color: @click-green;	
+		}
+		&-pending{
+			color: @brandy-punch;	
+		}
+	}
+}
