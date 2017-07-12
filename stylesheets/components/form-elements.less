@@ -24,7 +24,7 @@
 
 .placeholder-text {
 	&-empty {
-		color: lightgrey;
+		color: @space-gray;
 		font-weight: lighter;
 		position: absolute;
 		padding-left: 5px;
@@ -359,16 +359,16 @@ textarea {
 }
 
 .uiInput--default {
+	&.transparent, transparent {
+		background-color: transparent;
+	}	
 	.form-element	{
 		position: relative;
 	}
 }
 
 .uiInput {
-	&--datetime {
-		.transparent {
-			background-color: transparent;
-		}
+	&--datetime {		
 		.datePicker-openIcon {
 			&.display {
 				display: none;
