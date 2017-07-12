@@ -2,14 +2,6 @@
    Form Elements
    ========================================================================== */
 
-@click_blue : #0086F1;
-
-.btn {
-	&-submit {
-		color: @click_blue;
-	}
-}
-
 .custom-form-group {
 	input, select{
 		border: none;
@@ -32,11 +24,12 @@
 
 .placeholder-text {
 	&-empty {
-		color: lightgrey;
+		color: @space-gray;
 		font-weight: lighter;
 		position: absolute;
+		padding-left: 5px;
 		top: 50%;
-		z-index: -1;
+		z-index: 0;
 		.transform(~"translate3d(0, -50%, 0)");
 	}
 	&-full {
@@ -83,6 +76,7 @@
 		}
 	}
 	&-select {
+
 		&:after {
 			content: "\e5cf";
 			z-index: -1;
@@ -282,7 +276,7 @@ textarea {
 .slds-form-element {
 	&__control {
 		.form-group-select {
-			z-index: 0;
+			z-index: 1;
 		}
 	}
 }
@@ -365,16 +359,16 @@ textarea {
 }
 
 .uiInput--default {
+	&.transparent, transparent {
+		background-color: transparent;
+	}	
 	.form-element	{
 		position: relative;
 	}
 }
 
 .uiInput {
-	&--datetime {
-		.transparent {
-			background-color: transparent;
-		}
+	&--datetime {		
 		.datePicker-openIcon {
 			&.display {
 				display: none;
