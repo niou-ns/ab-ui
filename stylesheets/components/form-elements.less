@@ -177,6 +177,32 @@ textarea {
 		}
 	}
 
+	&-circle {
+	    border-radius: 50%;
+    	border: 1px solid black;
+    	width: 20px;
+    	height: 20px;
+		position: relative;
+
+		& input[type="checkbox"]{
+    		display: none;
+		}
+
+		& input[type="checkbox"]:checked + div.checkbox-container:after {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    width: calc(100% - 8px);
+		    height: calc(100% - 8px);
+		    background-color: @space-gray;
+		    border-radius: 50%;
+		    content: "\00a0";
+		}
+	}
+
+
+
 	.checkbox-container {
 		border: 1px solid @black;
 		width: 24px;
