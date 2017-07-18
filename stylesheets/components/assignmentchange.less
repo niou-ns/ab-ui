@@ -4,6 +4,74 @@
 			float: right;
 		}
 	}
+	&-approvers{
+		@next-icon-size: 30px;
+		@step-image-size: 80px;
+		@step-number-size: 14px;
+		@step-name-size: 14px;
+		@step-space-size: 20px;
+		@step-image-top-space: 10px;
+		@step-image-bottom-space: 5px;
+
+		&-list{
+			display: flex;
+			text-align: center;		
+			flex-wrap: wrap;		
+
+			.eac-approvers-step{
+				position: relative;
+				min-width: @step-image-size;
+				height: (@step-image-size + @step-number-size + @step-image-top-space + @step-image-bottom-space+ @step-name-size);		
+				margin-bottom: 30px;
+
+				&-name{
+					position: absolute;
+				    top: (@step-image-size + @step-number-size + @step-image-top-space + @step-image-bottom-space);
+				    left: 0;
+				    right: 0;
+				    margin-left: auto;
+				    margin-right: auto;
+				    font-size: @step-name-size;
+				}
+
+				&-image{
+					text-align: center;
+				    margin-left: auto;
+				    margin-right: auto;
+				    left: 0;
+				    right: 0;
+				    top: (@step-number-size+@step-image-top-space);
+				    position: absolute;
+
+				    img{
+						border-radius: 50%;
+						margin: 0 auto;
+						display: block;
+						max-width: 100%;
+						height: @step-image-size;
+					}
+				}
+				
+				&-number{
+					font-weight: bold;
+					font-size: @step-number-size;
+				}
+			}
+
+			.eac-approvers-next{
+				position: relative;
+			    width: (@next-icon-size + @step-space-size);
+
+			    i.mdi{
+					left: 0;
+					right: 0;
+					position: absolute;
+					top: (@step-number-size+@step-image-top-space+@step-image-size/2-@next-icon-size/2);
+					font-size: @next-icon-size;
+				}
+			}			 
+		}
+	}
 }
 
 .cPP_MyTeamAssignmentChange{
