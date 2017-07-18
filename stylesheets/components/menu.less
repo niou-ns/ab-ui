@@ -67,6 +67,32 @@
       }
     }
 
+    &-buttons {
+      & li button {
+        border-left: 1px solid @black;
+        border-radius: 0;
+        text-decoration: none;
+        border-radius: 0;   
+      }
+      & li:first-child button {
+        border-left: 0;
+      }
+      & > li.active button {
+          border: 0;
+      }
+      .active-tab {
+        font-weight: bold;
+      }
+      .btn {
+        &:focus, :active, :hover, :active:focus {
+          background-color: transparent;
+        }
+        &:hover {
+          text-decoration: none;
+          color: #ff9300;
+        }
+      }
+    }
     .nav {
       & > li {
         &, &.open {
@@ -135,6 +161,7 @@
     }
 
     .navbar {
+
       &-center {
         @media (max-width: @screen-sm-max) {
           display: none;
