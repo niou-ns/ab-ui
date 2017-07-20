@@ -1,4 +1,65 @@
 .eac{
+	&-avatar {
+		& img {
+      margin-bottom: 30px;
+			border-radius: 70px;
+			width: 150px;
+		}
+		.profile-picture {
+			margin: 0 auto 30px;
+			border-radius: 60px;
+			width: 180px;
+			height: 180px;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+		}
+	}
+
+	&-data {
+	    .row {
+	      margin-bottom: 20px;
+	    }
+	  	&-label {
+	  		color: @black;
+	  		.font-size(1.5);
+	  		font-weight: bold;
+	  		margin: 0 0 5px;
+	  		word-break: break-word;
+	  	}
+	  	&-text {
+				color: @black;
+	  	}
+	}
+	
+	.title-container {
+	    border-bottom: 1px solid @black;
+	    margin-bottom: 20px;
+	    .title {
+	    	font-family: 'Boing';
+	    	font-size: 36px;
+	    	font-weight: bold;
+	      	color: @black;	      	
+	    }
+	    .actions-container {
+	    	margin-top: 5px;
+	      .actions-link, .actions-link:hover, .actions-link:visited {
+	        color: @black;
+	        text-decoration: none;
+	      }
+	    }
+	    @media (max-width: @screen-xs-max) {
+	    	.actions-container {
+	    		margin-top: 0;
+	        .actions-link {
+	    		 .mdi {
+	          	.font-size(3);
+	          }
+	        }
+	      }
+	    }
+	  }
+
 	&-flow-status{
 		@media (max-width: @screen-xs-max) {
 			float: right;
@@ -346,7 +407,6 @@
 
 	.table-cell-header{
 	    text-align: center;
-	    font-family: 'Boing';
 	    font-weight: bold;
 	    font-size: 20px;
 	}
