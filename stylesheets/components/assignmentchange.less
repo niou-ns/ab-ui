@@ -133,6 +133,37 @@
 			}			 
 		}
 	}
+
+	&.eac-policy-popup-static{		
+		&.popover {
+			background-color: #696969;
+			color: white;
+			max-width: 100vw;
+			font-size: 12px;
+			.popover-content {
+			    padding: 0;
+			}
+			a{
+				text-decoration: none;
+				font-weight: bold;
+				color: #23527c;
+			}
+			a:hover, a:focus{
+				color:	#337ab7;
+				text-decoration: underline;
+			}
+		}
+		ul{
+			list-style-type: circle;
+		}
+		.details-list{
+			margin-left: 20px;
+			margin-right: 20px;
+		}	
+		tr{
+		    border: 1px solid #fff;
+		}
+	}
 }
 
 .cPP_MyTeamAssignmentChange{
@@ -366,15 +397,15 @@
 		position: static;
 	}
 	.table-cell-field-container{
-		display: inline-block;
+		clear: both;
 		position: relative;
+		text-align: left;
 	}
 	.table-cell-field-container .form-label-tooltip {
-		display: inline-flex;
+		
 	}
 	.table-cell-field-container .slds-form-element__control {
-		display: inline-block;
-		/*width: 90%;*/
+				
 	}
 
 	.table-cell-field-container .table-cell-field-parent{
