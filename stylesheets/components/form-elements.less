@@ -27,7 +27,7 @@
 		color: @space-gray;
 		font-weight: lighter;
 		position: absolute;
-		padding-left: 5px;
+		// padding-left: 5px;
 		top: 50%;
 		z-index: 0;
 		.transform(~"translate3d(0, -50%, 0)");
@@ -49,7 +49,7 @@
 	.slds-form-element__static {
 		word-wrap: break-word;
 		display: inline;
-		.read-only {
+		&.read-only {
 			color: @space-gray;
 		}
 	}
@@ -213,6 +213,9 @@ textarea {
 		height: 24px;
 		vertical-align: middle;
 		display: inline-block;
+		.checkbox-field {
+			display: inline-block;
+		}
 	}
 }
 
@@ -220,13 +223,13 @@ textarea {
 /** Override Bootstrap styles **/
 /*******************************/
 
-@padding-inputs-horizontal: 10px;
+@padding-inputs-horizontal: 0px;
 
 .form-control-function() {
 	//* From git commit - client requested to remove borders *//
-	border: 1px solid @space-gray;
+	border: none;
 	/* border-color: @black; */
-	border-radius: 3px;
+	border-radius: 0px;
 	color: @black;
 	-webkit-box-shadow: none;
 					box-shadow: none;
@@ -237,8 +240,8 @@ textarea {
 	// **** //
 	.transition(~"250ms border-color ease");
 	&:focus, &:active {
-		outline: @brandy-punch;
-		box-shadow: 0px 0px 1px @brandy-punch;
+		outline: none;
+		box-shadow: none;
 		border-color: @brandy-punch;
 	}
 }
@@ -567,7 +570,6 @@ textarea {
 	.radioInputClass{
 		display: none;
 	}
-
 	.input-radio-element{
 		position: relative;
 		display: flex;
@@ -579,6 +581,7 @@ textarea {
 		.input-radio-icon{
 			font-size: 22px;
 			margin-right: 10px;
+			vertical-align: middle;
 		}
 		.uiInputRadio{
 		    display: inline-block;
@@ -586,6 +589,7 @@ textarea {
 		    margin-bottom: auto;
 		    font-weight: normal;
 		    margin-bottom: 0;
+		    vertical-align: middle;
 		}
 	}	
 
@@ -596,5 +600,12 @@ textarea {
 	label.input-radio-label.uiLabel-left.form-element__label.uiLabel span {
 	    color: black;
 	    font-weight: normal;
+	}
+
+	.radio-boolean-static {
+		display: inline-block;
+		&-label {
+			vertical-align: middle;
+		}
 	}
 }
