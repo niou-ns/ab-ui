@@ -1,5 +1,8 @@
 .cell-shrink {
   width: 1%;
+  &-wide {
+    width: 3%;
+  }
 }
 
 .table {
@@ -26,6 +29,16 @@
             right: 0px;
             left: auto;
           }
+        }
+      }
+    }
+  }
+
+  &.requestHistory {
+    & > thead {
+      & > tr {
+        & > th {
+          width: 12.5%;
         }
       }
     }

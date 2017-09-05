@@ -11573,7 +11573,6 @@ fieldset[disabled] .btn-brandy.focus {
   color: #a7aaa9;
   font-weight: lighter;
   position: absolute;
-  padding-left: 5px;
   top: 50%;
   z-index: 0;
   -webkit-transform: translate3d(0, -50%, 0);
@@ -13236,6 +13235,9 @@ textarea.form-control.has-error {
 .cell-shrink {
   width: 1%;
 }
+.cell-shrink-wide {
+  width: 3%;
+}
 .table > thead > tr > th {
   border-bottom: 1px solid #000000;
 }
@@ -13255,6 +13257,9 @@ textarea.form-control.has-error {
 .table > tbody > tr > td:last-child .dropdown-menu {
   right: 0px;
   left: auto;
+}
+.table.requestHistory > thead > tr > th {
+  width: 12.5%;
 }
 .table .is-sortable {
   cursor: pointer;
@@ -13886,10 +13891,12 @@ textarea.form-control.has-error {
   z-index: 2;
 }
 .ladropdown-disp {
-  padding: 6px 20px 6px 10px;
+  padding: 6px 20px 6px 0px;
   min-height: 34px;
-  border: 1px solid #a7aaa9;
-  border-radius: 3px;
+  /* 
+		    border: 1px solid #a7aaa9;
+	    	border-radius: 3px;
+	    */
 }
 .ladropdown-clist {
   background: rgba(255, 255, 255, 0);
