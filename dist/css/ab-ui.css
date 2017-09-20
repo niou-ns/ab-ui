@@ -13258,6 +13258,9 @@ textarea.form-control.has-error {
   right: 0px;
   left: auto;
 }
+.table > tbody > tr > td .pre-scrollable {
+  overflow-y: auto;
+}
 .table.requestHistory > thead > tr > th {
   width: 12.5%;
 }
@@ -14505,6 +14508,25 @@ textarea.form-control.has-error {
 }
 .flow-status-step-pending {
   color: #ff9300;
+}
+.delegation .title-container {
+  border-bottom: 1px solid #000000;
+  margin-bottom: 20px;
+}
+.delegation .title-container .title {
+  font-family: 'Boing';
+  font-size: 36px;
+  font-weight: bold;
+  color: #000000;
+}
+.delegation .title-container .actions-container {
+  margin-top: 5px;
+}
+.delegation .title-container .actions-container .actions-link,
+.delegation .title-container .actions-container .actions-link:hover,
+.delegation .title-container .actions-container .actions-link:visited {
+  color: #000000;
+  text-decoration: none;
 }
 .mycompany-page .cCenterPanel > .siteforceSldsOneColLayout > .contentRegion > div > .ui-widget,
 .ppmycompanychild-page .cCenterPanel > .siteforceSldsOneColLayout > .contentRegion > div > .ui-widget {
