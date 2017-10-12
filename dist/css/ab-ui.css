@@ -13690,7 +13690,7 @@ textarea.form-control.has-error {
   .cPP_LeaveRequestWrap .wrap-calendar {
     border-left: 1px solid #000;
     padding-top: 15px;
-    padding-right: 50px;
+    padding-right: 0px;
     padding-left: 50px;
   }
 }
