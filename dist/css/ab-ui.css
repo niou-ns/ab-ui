@@ -14316,7 +14316,7 @@ textarea.form-control.has-error {
   width: 150px;
 }
 .cPP_MyTeamAssignmentChangeAccept .warning-important {
-  color: #c23934;
+  color: #ff2600;
 }
 .cPP_MyTeamAssignmentChangeAccept .actions-column {
   text-align: right;
@@ -14386,6 +14386,9 @@ textarea.form-control.has-error {
 .cPP_MyTeamAssignmentChangeContainer .glyphicon-calendar {
   right: 15px !important;
 }
+.cPP_MyTeamAssignmentChangeContainer .text-warning {
+  color: #c23934;
+}
 .cPP_MyTeamAssignmentChangeEmployeeDetails .profile-photo {
   max-height: 200px;
   max-width: 200px;
@@ -14421,7 +14424,7 @@ textarea.form-control.has-error {
   padding: 0;
 }
 .cPP_MyTeamAssignmentChangeEmployeeDetails .warning-important {
-  color: #c23934;
+  color: #ff2600;
 }
 .cPP_MyTeamAssignmentChangeRelocation .row-address {
   margin-bottom: 30px;
@@ -14441,7 +14444,7 @@ textarea.form-control.has-error {
   font-weight: normal;
 }
 .cPP_MyTeamAssignmentChangeResponseForm .warning-important {
-  color: #c23934;
+  color: #ff2600;
 }
 .cPP_MyTeamAssignmentChangeResponseFormPBP .table-cell-with-field {
   overflow: visible;
