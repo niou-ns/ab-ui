@@ -14208,11 +14208,11 @@ textarea.form-control.has-error {
   position: relative;
   min-width: 80px;
   height: 123px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .eac-approvers-list .eac-approvers-step-name {
   position: absolute;
-  top: 109px;
+  top: 85px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -14225,7 +14225,6 @@ textarea.form-control.has-error {
   margin-right: auto;
   left: 0;
   right: 0;
-  top: 24px;
   position: absolute;
 }
 .eac-approvers-list .eac-approvers-step-image img {
@@ -14238,6 +14237,19 @@ textarea.form-control.has-error {
 .eac-approvers-list .eac-approvers-step-number {
   font-weight: bold;
   font-size: 14px;
+}
+.eac-approvers-list .eac-approvers-step-inner-wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.eac-approvers-list .eac-approvers-step-approver-inner-wrapper {
+  position: relative;
+  min-width: 80px;
+}
+.eac-approvers-list .eac-approvers-step-approver-wrapper {
+  margin-left: auto;
+  margin-right: auto;
 }
 .eac-approvers-list .eac-approvers-next {
   position: relative;

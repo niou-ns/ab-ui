@@ -83,11 +83,11 @@
 				position: relative;
 				min-width: @step-image-size;
 				height: (@step-image-size + @step-number-size + @step-image-top-space + @step-image-bottom-space+ @step-name-size);		
-				margin-bottom: 30px;
+				margin-bottom: 50px;
 
 				&-name{
 					position: absolute;
-				    top: (@step-image-size + @step-number-size + @step-image-top-space + @step-image-bottom-space);
+				    top: (@step-image-size + @step-image-bottom-space);
 				    left: 0;
 				    right: 0;
 				    margin-left: auto;
@@ -101,7 +101,6 @@
 				    margin-right: auto;
 				    left: 0;
 				    right: 0;
-				    top: (@step-number-size+@step-image-top-space);
 				    position: absolute;
 
 				    img{
@@ -117,6 +116,23 @@
 					font-weight: bold;
 					font-size: @step-number-size;
 				}
+
+				&-inner-wrapper {
+					position: relative;
+				    display: flex;
+				    flex-wrap: wrap;
+				}
+
+				&-approver-inner-wrapper {
+					position: relative;
+				    min-width: 80px;    
+				}
+
+				&-approver-wrapper {
+					margin-left: auto;
+					margin-right: auto;
+				}
+
 			}
 
 			.eac-approvers-next{
